@@ -24,10 +24,10 @@ interface World {
 }
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
-const FONT_URL = "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500&display=swap";
-const CG = "'Cormorant Garamond', serif";
-const DM = "'DM Sans', sans-serif";
-const MO = "'IBM Plex Mono', monospace";
+const FONT_URL = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap";
+const CG = "'Geom', sans-serif";
+const DM = "'Roboto', sans-serif";
+const MO = "'Roboto Mono', monospace";
 
 // ─── Tokens ───────────────────────────────────────────────────────────────────
 const C = {
