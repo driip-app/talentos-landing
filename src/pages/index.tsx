@@ -830,10 +830,7 @@ export default function TalentOSPage() {
         .agent-card.a3 .agent-num{color:#CEB5F8;}
         .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
         .agent-desc{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:18px;}
-        .agent-saving{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;margin-top:auto;align-self:flex-start;}
-        .agent-card.a1 .agent-saving{background:rgba(159,115,230,0.12);}
-        .agent-card.a2 .agent-saving{background:rgba(99,66,172,0.10);}
-        .agent-card.a3 .agent-saving{background:rgba(201,176,255,0.12);}
+        .agent-saving{display:inline-flex;align-items:center;gap:6px;padding:4px 0;margin-top:auto;align-self:flex-start;}
         .saving-icon{font-size:12px;filter:brightness(0) invert(1);}
         .saving-text{font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;color:#CEB5F8;}
 
