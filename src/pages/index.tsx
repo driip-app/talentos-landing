@@ -27,21 +27,21 @@ const STATIC_HTML = `
     <div class="platform-grid">
       <div class="agent-card a1">
         <div class="agent-num mono">Agent Scout</div>
-        <div class="agent-name syne">Talent Intelligence</div>
-        <div class="agent-before">"Before: 247 resumes sit unread for 2 weeks."</div>
-        <div class="agent-after">After: Ranked shortlist of 22 delivered by next morning — with a paragraph on each. Built on 4-dimension SCS framework. Bias-free by architecture.</div>
+        <div class="agent-name syne">Talent Acquisition Specialist</div>
+        <div class="agent-desc">Delivers a ranked shortlist by the next morning, built on a 4-dimensional SCS framework.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">38–40 HRS SAVED / POSTING</span></div>
       </div>
       <div class="agent-card a2">
         <div class="agent-num mono">Agent Sync</div>
         <div class="agent-name syne">Schedule Coordinator</div>
-        <div class="agent-before">"Before: 11 emails to find one 45-minute slot."</div>
-        <div class="agent-after">After: Panel identified, calendars checked, conflicts surfaced, interview mode confirmed, invite sent. You picked the candidate. Driip handled the rest.</div>
+        <div class="agent-desc">Identifies the panel, checks their calendar, resolves conflicts, confirms the interview mode, and sends the invitation.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">5–10 HRS SAVED / HIRE</span></div>
       </div>
       <div class="agent-card a3">
         <div class="agent-num mono">Agent Pulse</div>
         <div class="agent-name syne">Talent Relations Manager</div>
-        <div class="agent-before">"Before: Candidates ghost — nobody followed up."</div>
-        <div class="agent-after">After: Every applicant gets an automatic status email at every stage before 72 hours is up. Your employer brand stops being written by your silence.</div>
+        <div class="agent-desc">No more ghosting candidates. Every applicant receives an automatic status email at each stage within 72 hours.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">8–12 HRS SAVED / HIRE</span></div>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ const STATIC_HTML = `
       </div>
       <div>
         <div class="mc">
-          <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Senior React Engineer · 247 applicants</div></div>
+          <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Senior React Engineer · 258 applicants</div></div>
           <div class="mc-body">
             <div style="display:flex;gap:5px;margin-bottom:11px">
               <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(159,115,230,0.1);color:#00A87A;border:1px solid rgba(159,115,230,0.2)">STRONG 3</div>
@@ -83,7 +83,7 @@ const STATIC_HTML = `
             <div class="crow"><div class="sr m">71</div><div style="flex:1"><div class="cname">Ayla Torres</div><div class="crole">Senior Dev · 4y exp</div></div><div class="ctag m">MAYBE</div></div>
             <div style="margin-top:10px;padding:9px 11px;background:rgba(159,115,230,0.05);border-radius:7px;border:1px solid rgba(159,115,230,0.15);">
               <div style="font-size:11px;font-family:'Geom',sans-serif;font-weight:700;color:var(--teal);margin-bottom:2px">⏱ 38 hours returned</div>
-              <div style="font-size:10px;color:var(--sub)">247 CVs scored · delivered by next morning</div>
+              <div style="font-size:10px;color:var(--sub)">258 CVs scored · delivered by next morning</div>
             </div>
           </div>
         </div>
@@ -723,7 +723,7 @@ export default function TalentOSPage() {
             <em>To Fix Your Monday.</em>
           </h1>
           <p className="hero-sub">
-            Focus on the real conversations with talents - while we screen your pile, schedule your interviews, and handle every candidate communication in the loop before you burn another Tuesday.
+            Focus on the real conversations with talents - while we screen your pile, schedule your interviews, and handle every candidate communication in the loop.
           </p>
           <div className="hero-stats">
             <div>
@@ -803,7 +803,7 @@ export default function TalentOSPage() {
         .video-section{background:var(--dark);padding:0 48px 64px;}
         .video-section-inner{max-width:1100px;margin:0 auto;padding-top:32px;}
 
-        .offer-strip{background:var(--lime);padding:20px 48px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;}
+        .offer-strip{background:var(--lime);padding:20px 48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;}
         .offer-strip-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:var(--dark);}
         .offer-strip-sub{font-size:14px;color:rgba(8,8,11,0.6);}
         .offer-strip-btn{background:var(--dark);color:var(--lime);padding:10px 22px;border-radius:7px;font-size:13px;font-weight:700;font-family:'Geom',sans-serif;transition:all .18s;white-space:nowrap;}
@@ -816,7 +816,7 @@ export default function TalentOSPage() {
         .platform-title em{font-style:normal;color:var(--lime);}
         .platform-sub{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.65;text-align:center;max-width:520px;margin:0 auto 52px;}
         .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-        .agent-card{border-radius:var(--rl);padding:28px;border:1px solid;position:relative;overflow:hidden;}
+        .agent-card{border-radius:var(--rl);padding:28px;border:1px solid;position:relative;overflow:hidden;display:flex;flex-direction:column;}
         .agent-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;opacity:.12;pointer-events:none;}
         .agent-card.a1{background:rgba(159,115,230,0.07);border-color:rgba(159,115,230,0.25);}
         .agent-card.a1::before{background:var(--lime);}
@@ -829,8 +829,13 @@ export default function TalentOSPage() {
         .agent-card.a2 .agent-num{color:#CEB5F8;}
         .agent-card.a3 .agent-num{color:#CEB5F8;}
         .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
-        .agent-before{font-size:12px;color:var(--driip);font-style:italic;margin-bottom:5px;line-height:1.5;}
-        .agent-after{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.6;margin-bottom:18px;}
+        .agent-desc{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:18px;}
+        .agent-saving{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;margin-top:auto;align-self:flex-start;}
+        .agent-card.a1 .agent-saving{background:rgba(159,115,230,0.12);}
+        .agent-card.a2 .agent-saving{background:rgba(99,66,172,0.10);}
+        .agent-card.a3 .agent-saving{background:rgba(201,176,255,0.12);}
+        .saving-icon{font-size:12px;filter:brightness(0) invert(1);}
+        .saving-text{font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;color:#CEB5F8;}
 
         .features{background:#EFE4FF;padding:84px 48px;}
         .features-inner{max-width:1100px;margin:0 auto;}
