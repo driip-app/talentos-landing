@@ -30,21 +30,18 @@ const STATIC_HTML = `
         <div class="agent-name syne">Screener</div>
         <div class="agent-before">"Before: 247 resumes sit unread for 2 weeks."</div>
         <div class="agent-after">After: Ranked shortlist of 22 delivered by next morning — with a paragraph on each. Built on 4-dimension SCS framework. Bias-free by architecture.</div>
-        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">38–40 HRS SAVED / POSTING</span></div>
       </div>
       <div class="agent-card a2">
         <div class="agent-num mono">AGENT 02</div>
         <div class="agent-name syne">Scheduler</div>
         <div class="agent-before">"Before: 11 emails to find one 45-minute slot."</div>
         <div class="agent-after">After: Panel identified, calendars checked, conflicts surfaced, interview mode confirmed, invite sent. You picked the candidate. Driip handled the rest.</div>
-        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">5–10 HRS SAVED / HIRE</span></div>
       </div>
       <div class="agent-card a3">
         <div class="agent-num mono">AGENT 03</div>
         <div class="agent-name syne">Comms Bot</div>
         <div class="agent-before">"Before: Candidates ghost — nobody followed up."</div>
         <div class="agent-after">After: Every applicant gets an automatic status email at every stage before 72 hours is up. Your employer brand stops being written by your silence.</div>
-        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">8–12 HRS SAVED / HIRE</span></div>
       </div>
     </div>
   </div>
@@ -834,15 +831,6 @@ export default function TalentOSPage() {
         .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
         .agent-before{font-size:12px;color:var(--driip);font-style:italic;margin-bottom:5px;line-height:1.5;}
         .agent-after{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.6;margin-bottom:18px;}
-        .agent-saving{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:20px;}
-        .agent-card.a1 .agent-saving{background:rgba(159,115,230,0.12);border:1px solid rgba(159,115,230,0.25);}
-        .agent-card.a2 .agent-saving{background:rgba(99,66,172,0.10);border:1px solid rgba(99,66,172,0.22);}
-        .agent-card.a3 .agent-saving{background:rgba(201,176,255,0.12);border:1px solid rgba(201,176,255,0.28);}
-        .saving-icon{font-size:12px;filter:brightness(0) invert(1);}
-        .saving-text{font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;}
-        .agent-card.a1 .saving-text{color:#CEB5F8;}
-        .agent-card.a2 .saving-text{color:#CEB5F8;}
-        .agent-card.a3 .saving-text{color:#CEB5F8;}
 
         .features{background:#EFE4FF;padding:84px 48px;}
         .features-inner{max-width:1100px;margin:0 auto;}
@@ -973,7 +961,7 @@ export default function TalentOSPage() {
         .personas .pc-title{color:var(--dark);}
         .personas .pc-desc{color:rgba(14,14,16,0.65);}
         .personas .pc-pt{color:rgba(14,14,16,0.85);}
-        .personas .pc-chk{background:var(--dark);color:#9F73E6;}
+        .personas .pc-chk{background:#9F73E6;color:var(--dark);}
         .personas .pc-agent-badge{background:rgba(14,14,16,0.12);border-color:rgba(14,14,16,0.2);color:var(--dark);}
         .personas .pcar-dot{background:rgba(14,14,16,0.25);}
         .personas .pcar-dot.active{width:24px;background:var(--dark);}

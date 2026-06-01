@@ -433,23 +433,9 @@ function Scene({ world, idx, total, onChoose }: {
                       </span>
                       <div style={{ flex:1 }}>
                         {/* The choice itself */}
-                        <div style={{ fontSize:14, fontFamily:DM, color:isChosen?C.cream:C.text, fontWeight:500, lineHeight:1.55, marginBottom:isChosen?8:0 }}>
+                        <div style={{ fontSize:14, fontFamily:DM, color:isChosen?C.cream:C.text, fontWeight:500, lineHeight:1.55 }}>
                           {c.text}
                         </div>
-
-                        {/* Ryan: possible world consequence — only revealed after selection */}
-                        {/* This is the "world that opened" + "world that closed" */}
-                        {isChosen && (
-                          <div style={{ animation:"fadeSlide 0.35s ease", borderTop:`1px solid ${C.border}`, paddingTop:10, marginTop:6 }}>
-                            <div style={{ fontSize:12, fontFamily:CG, fontStyle:"italic", color:C.sub, lineHeight:1.65, marginBottom:6 }}>
-                              {c.world}
-                            </div>
-                            <div style={{ fontSize:11, fontFamily:DM, color:`${C.coral}cc`, lineHeight:1.55 }}>
-                              <span style={{ fontFamily:MO, fontSize:9, letterSpacing:"0.06em", marginRight:6, color:C.coral }}>COST</span>
-                              {c.cost}
-                            </div>
-                          </div>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -474,12 +460,12 @@ const RESULT_NARRATIVE: Record<PainKey, { reflection: string; future: string; re
   scheduling: {
     reflection: "The calendar wasn't a tool. It became a negotiation — slow, fragile, dependent on other people's attention at the right moment. Good candidates don't wait for three people to agree on a Thursday.",
     future:     "A world where a slot appears before you ask for one. Where the invite is already sent. Where Thursday has been on the calendar since Monday morning.",
-    reveal:     "Agent 02 of TalentOS pulls availability from every interviewer simultaneously, finds the window, sends the invite, and chases the confirmations. You find out when it's done.",
+    reveal:     "Agent 02 of Driip pulls availability from every interviewer simultaneously, finds the window, sends the invite, and chases the confirmations. You find out when it's done.",
   },
   comms: {
     reflection: "Every draft you didn't send was a small breach of the standard you hold yourself to. You knew what good looked like. You knew where the gap was. The gap was time — and time was already elsewhere.",
     future:     "A world where every candidate hears from you, specifically, within hours. Where rejection feels human. Where the people you couldn't hire still leave thinking well of you.",
-    reveal:     "Agent 03 of TalentOS keeps every candidate in the loop with personalised, thoughtful messages — while you spend your time only on the conversations that actually matter.",
+    reveal:     "Agent 03 of Driip keeps every candidate in the loop with personalised, thoughtful messages — while you spend your time only on the conversations that actually matter.",
   },
 };
 
