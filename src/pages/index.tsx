@@ -28,7 +28,7 @@ const STATIC_HTML = `
       <div class="agent-card a1">
         <div class="agent-num mono">Agent Scout</div>
         <div class="agent-name syne">Talent Acquisition Specialist</div>
-        <div class="agent-desc">Delivers a ranked shortlist by the next morning, built on a 4-dimensional SCS framework.</div>
+        <div class="agent-desc">Delivers a ranked shortlist by the next morning, built on a 4-dimensional SCS framework. No more resumes sitting unread for 2 weeks. </div>
         <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">38–40 HRS SAVED / POSTING</span></div>
       </div>
       <div class="agent-card a2">
