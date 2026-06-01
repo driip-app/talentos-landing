@@ -455,17 +455,17 @@ const RESULT_NARRATIVE: Record<PainKey, { reflection: string; future: string; re
     // Ryan: the result re-narrates the storyworld from outside — the reader now sees the pattern
     reflection: "Every morning you entered the same room and faced the same pile. The pile was never the problem. The problem was that the pile required *you* — every hour, every decision, every pair of eyes.",
     future:     "A world where Driip reads everything before you arrive. Where you walk in to a shortlist, not a stack. Where the pile doesn't exist because it was never yours to carry.",
-    reveal:     "Agent 01 of Driip screens every application the moment it arrives. It surfaces your top candidates by the time you finish your coffee.",
+    reveal:     "Agent Scout of Driip screens every application the moment it arrives. It surfaces your top candidates by the time you finish your coffee.",
   },
   scheduling: {
     reflection: "The calendar wasn't a tool. It became a negotiation — slow, fragile, dependent on other people's attention at the right moment. Good candidates don't wait for three people to agree on a Thursday.",
     future:     "A world where a slot appears before you ask for one. Where the invite is already sent. Where Thursday has been on the calendar since Monday morning.",
-    reveal:     "Agent 02 of Driip pulls availability from every interviewer simultaneously, finds the window, sends the invite, and chases the confirmations. You find out when it's done.",
+    reveal:     "Agent Sync of Driip pulls availability from every interviewer simultaneously, finds the window, sends the invite, and chases the confirmations. You find out when it's done.",
   },
   comms: {
     reflection: "Every draft you didn't send was a small breach of the standard you hold yourself to. You knew what good looked like. You knew where the gap was. The gap was time — and time was already elsewhere.",
     future:     "A world where every candidate hears from you, specifically, within hours. Where rejection feels human. Where the people you couldn't hire still leave thinking well of you.",
-    reveal:     "Agent 03 of Driip keeps every candidate in the loop with personalised, thoughtful messages — while you spend your time only on the conversations that actually matter.",
+    reveal:     "Agent Pulse of Driip keeps every candidate in the loop with personalised, thoughtful messages — while you spend your time only on the conversations that actually matter.",
   },
 };
 

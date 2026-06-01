@@ -26,20 +26,20 @@ const STATIC_HTML = `
     <p class="platform-sub">Driip agents return 51+ hours of everything else you've been putting off. </p>
     <div class="platform-grid">
       <div class="agent-card a1">
-        <div class="agent-num mono">AGENT 01</div>
-        <div class="agent-name syne">Screener</div>
+        <div class="agent-num mono">Agent Scout</div>
+        <div class="agent-name syne">Talent Intelligence</div>
         <div class="agent-before">"Before: 247 resumes sit unread for 2 weeks."</div>
         <div class="agent-after">After: Ranked shortlist of 22 delivered by next morning — with a paragraph on each. Built on 4-dimension SCS framework. Bias-free by architecture.</div>
       </div>
       <div class="agent-card a2">
-        <div class="agent-num mono">AGENT 02</div>
-        <div class="agent-name syne">Scheduler</div>
+        <div class="agent-num mono">Agent Sync</div>
+        <div class="agent-name syne">Schedule Coordinator</div>
         <div class="agent-before">"Before: 11 emails to find one 45-minute slot."</div>
         <div class="agent-after">After: Panel identified, calendars checked, conflicts surfaced, interview mode confirmed, invite sent. You picked the candidate. Driip handled the rest.</div>
       </div>
       <div class="agent-card a3">
-        <div class="agent-num mono">AGENT 03</div>
-        <div class="agent-name syne">Comms Bot</div>
+        <div class="agent-num mono">Agent Pulse</div>
+        <div class="agent-name syne">Talent Relations Manager</div>
         <div class="agent-before">"Before: Candidates ghost — nobody followed up."</div>
         <div class="agent-after">After: Every applicant gets an automatic status email at every stage before 72 hours is up. Your employer brand stops being written by your silence.</div>
       </div>
