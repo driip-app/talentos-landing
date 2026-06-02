@@ -127,8 +127,7 @@ export default function Threads({
   const animationFrameId = useRef<number>(0);
 
   useEffect(() => {
-    const container = containerRef.current;
-    if (!container) return;
+    const container: HTMLDivElement = containerRef.current!;
 
     const renderer = new Renderer({ alpha: true });
     const gl = renderer.gl;
