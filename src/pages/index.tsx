@@ -21,7 +21,7 @@ const STATIC_HTML = `
 
 <section class="platform" id="platform">
   <div class="platform-inner">
-    <div class="platform-eyebrow mono">OVERVIEW</div>
+    <div class="platform-eyebrow mono">MEET THE AGENTS</div>
     <h2 class="platform-title syne">3 agents. One OS.<br><em>Zero dropped tasks.</em></h2>
     <p class="platform-sub">Driip agents return 51+ hours of everything else you've been putting off. </p>
     <div class="platform-grid">
@@ -49,9 +49,9 @@ const STATIC_HTML = `
 
 <section class="features" id="features">
   <div class="features-inner">
-    <div class="section-eyebrow mono" style="color:#6342AC">WHAT DRIIP ACTUALLY DOES</div>
-    <h2 class="section-title syne">A hiring OS that reads people,<br>books calendars, and writes emails.<br>You just approve.</h2>
-    <p class="section-sub">Seven features. Three agents. All working together so you stop managing a process and start making actual hires.</p>
+    <div class="section-eyebrow mono" style="color:#fff">AGENT SUPERPOWERS</div>
+    <h2 class="section-title syne">Your hiring OS that reads people,<br>books calendars, and writes emails.<br>You just approve.</h2>
+    <p class="section-sub">Stop managing a process and start making actual hires.</p>
 
     <div class="features-carousel">
       <div class="pcar-track-wrap">
@@ -59,14 +59,14 @@ const STATIC_HTML = `
 
     <div class="feature-panel" id="p-screening">
       <div>
-        <div class="fp-agent-tag a1 mono">SMART SCREENING</div>
-        <h3 class="fp-title syne">Surface the right 20 from<br>the pile of 200. Automatically.</h3>
-        <p class="fp-desc">Driip uses the 4-dimension Structured Competency Scoring (SCS) framework to evaluate every candidate against a rubric you approved — before a single CV is processed.</p>
+        <div class="fp-agent-tag a1 mono">INTELLIGENT SCREENING</div>
+        <h3 class="fp-title syne">Surface 20 top talent from<br>a pile of 200.</h3>
+        <p class="fp-desc">Driip uses the 4-dimensional Structured Competency Scoring (SCS) framework to evaluate every candidate against a rubric you approved before a single CV is processed.</p>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Required Skills</strong> — technical must-haves, scored as present or absent in context</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Experience Band</strong> — matched against your approved range, not an arbitrary number</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Scope Signals</strong> — team size, industry, problem type: evidence they've been in the room</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Growth Markers</strong> — trajectory, not just tenure. Year 3 of a steep curve beats year 8 of flat</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Required Skills:</strong> Technical must-haves, scored as present or absent in context</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Experience Band:</strong> Matched against your approved range, not an arbitrary number</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Scope Signals:</strong> Team size, industry, problem type: evidence they've been in the room</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Growth Markers:</strong> Trajectory, not just tenure, where year 3 of a steep curve beats year 8 of a flat one.</span></div>
         </div>
       </div>
       <div>
@@ -74,16 +74,16 @@ const STATIC_HTML = `
           <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Senior React Engineer · 258 applicants</div></div>
           <div class="mc-body">
             <div style="display:flex;gap:5px;margin-bottom:11px">
-              <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(159,115,230,0.1);color:#00A87A;border:1px solid rgba(159,115,230,0.2)">STRONG 3</div>
-              <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:var(--light);color:var(--sub);border:1px solid var(--border)">MAYBE 2</div>
-              <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:var(--light);color:var(--sub);border:1px solid var(--border)">PASS 2</div>
+              <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(52,211,153,0.12);color:#34D399;border:1px solid rgba(52,211,153,0.3)">STRONG 3</div>
+              <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:#17171b;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.07)">MAYBE 2</div>
+              <div style="padding:3px 8px;border-radius:3px;font-size:9px;font-family:'Roboto Mono',monospace;background:#17171b;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.07)">PASS 2</div>
             </div>
-            <div class="crow"><div class="sr s">94</div><div style="flex:1"><div class="cname">Priya Chen</div><div class="crole">Staff Engineer · 8y exp</div></div><div class="ctag s">STRONG</div></div>
+            <div class="crow"><div class="sr s">94</div><div style="flex:1"><div class="cname">Alex Chen</div><div class="crole">Staff Engineer · 8y exp</div></div><div class="ctag s">STRONG</div></div>
             <div class="crow"><div class="sr s">88</div><div style="flex:1"><div class="cname">Marcus Webb</div><div class="crole">Lead Frontend · 6y exp</div></div><div class="ctag s">STRONG</div></div>
             <div class="crow"><div class="sr m">71</div><div style="flex:1"><div class="cname">Ayla Torres</div><div class="crole">Senior Dev · 4y exp</div></div><div class="ctag m">MAYBE</div></div>
             <div style="margin-top:10px;padding:9px 11px;background:rgba(159,115,230,0.05);border-radius:7px;border:1px solid rgba(159,115,230,0.15);">
               <div style="font-size:11px;font-family:'Geom',sans-serif;font-weight:700;color:var(--teal);margin-bottom:2px">⏱ 38 hours returned</div>
-              <div style="font-size:10px;color:var(--sub)">258 CVs scored · delivered by next morning</div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.5)">258 CVs scored · delivered by next morning</div>
             </div>
           </div>
         </div>
@@ -93,20 +93,20 @@ const STATIC_HTML = `
     <div class="feature-panel" id="p-bias">
       <div>
         <div class="fp-agent-tag a1 mono">BIAS-FREE</div>
-        <h3 class="fp-title syne">We strip the bias fields<br>before scoring runs.<br>Architecture, not intention.</h3>
-        <p class="fp-desc">Driip structurally excludes name, address, graduation year, and institution from the scoring context before the first criterion is evaluated. The score cannot see what it was never given.</p>
+        <h3 class="fp-title syne">We strip the bias fields<br>before scoring runs.</h3>
+        <p class="fp-desc">Driip structurally excludes name, address, graduation year, and institution from the scoring context before the first criterion is evaluated. The score cannot see what was never given.</p>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Name, address, institution stripped at ingestion — not as a guardrail, as structure</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Candidates scored against your rubric independently — no anchoring from other CVs</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Designed on Schmidt & Hunter validity research and Bohnet bias-interruption framework</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Shortlist is legally defensible — every score backed by criterion-level evidence</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Name, address, institution stripped at ingestion; not as a guardrail but a structure</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Candidates scored against your rubric independently, with no anchoring from other CVs</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Designed on validity research and bias-interruption framework</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Shortlist is legally defensible as every score is backed by criterion-level evidence</span></div>
         </div>
       </div>
       <div>
         <div class="mc">
           <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Field processing · before scoring</div></div>
           <div class="mc-body">
-            <div style="font-size:9px;font-family:'Roboto Mono',monospace;color:var(--sub);letter-spacing:.06em;margin-bottom:9px">EXCLUDED FROM SCORING LAYER</div>
+            <div style="font-size:9px;font-family:'Roboto Mono',monospace;color:rgba(255,255,255,0.4);letter-spacing:.06em;margin-bottom:9px">EXCLUDED FROM SCORING LAYER</div>
             <div class="bfield x"><span>🚫</span><span class="bname x">Full Name</span><span class="bst x">STRIPPED</span></div>
             <div class="bfield x"><span>🚫</span><span class="bname x">Home Address</span><span class="bst x">STRIPPED</span></div>
             <div class="bfield x"><span>🚫</span><span class="bname x">University Name</span><span class="bst x">STRIPPED</span></div>
@@ -122,13 +122,13 @@ const STATIC_HTML = `
 
     <div class="feature-panel" id="p-jd">
       <div>
-        <div class="fp-agent-tag a1 mono">JD BUILDER</div>
-        <h3 class="fp-title syne">No job description yet?<br>You'll have one in 10 minutes.<br>A good one.</h3>
-        <p class="fp-desc">Driip asks 9 specific questions about your actual role and writes a JD that attracts the people you want — not the people who are good at filling in job applications.</p>
+        <div class="fp-agent-tag a1 mono">SMART JD BUILDER</div>
+        <h3 class="fp-title syne">Have a job description ready<br>in less than a minute.</h3>
+        <p class="fp-desc">Driip understands the actual role and writes a JD that attracts the people you want, not the people who are good at filling in job applications.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Guided discovery across 9 dimensions: seniority, outcomes, skills, culture signals, compensation</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Generic phrases blocked — "fast-paced environment" will be kindly declined</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Review inline, edit by section, or regenerate fully — your approval gates the post</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Review inline, edit by section, or regenerate fully</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>One-click posting to LinkedIn, Indeed, and your careers page</span></div>
         </div>
       </div>
@@ -147,8 +147,8 @@ const STATIC_HTML = `
                   <div class="jdline" style="width:82%"></div>
                   <div class="jdline" style="width:60%"></div>
                   <div style="display:flex;gap:5px;margin-top:7px">
-                    <div style="padding:4px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(159,115,230,0.1);color:#059669;cursor:pointer;border:1px solid rgba(159,115,230,0.2)">✓ APPROVE</div>
-                    <div style="padding:4px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:var(--light);color:var(--sub);cursor:pointer;border:1px solid var(--border)">EDIT</div>
+                    <div style="padding:4px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(52,211,153,0.1);color:#34D399;cursor:pointer;border:1px solid rgba(52,211,153,0.25)">✓ APPROVE</div>
+                    <div style="padding:4px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:#17171b;color:rgba(255,255,255,0.4);cursor:pointer;border:1px solid rgba(255,255,255,0.07)">EDIT</div>
                   </div>
                 </div>
               </div>
@@ -160,14 +160,14 @@ const STATIC_HTML = `
 
     <div class="feature-panel" id="p-ats">
       <div>
-        <div class="fp-agent-tag a1 mono">ATS CONNECT</div>
-        <h3 class="fp-title syne">Already using Greenhouse<br>or Lever? Good. Keep<br>using them.</h3>
+        <div class="fp-agent-tag a1 mono">ATS INTEGRATION</div>
+        <h3 class="fp-title syne">Already using Greenhouse<br>or Lever? Connect them.</h3>
         <p class="fp-desc">Driip connects to your existing ATS, pulls your applications, scores them against your locked rubric, and returns a shortlist. Your ATS stays. It just gets a brain upgrade.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR supported</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>OAuth connection in under 2 minutes — no IT ticket required</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Incremental sync — new applications scored automatically as they arrive</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Manual upload also supported — PDF, .docx, or plain text. No chaos left behind.</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Incremental syncs with new applications are scored automatically as they arrive</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Manual upload also supported — PDF, .docx, or plain text.</span></div>
         </div>
       </div>
       <div>
@@ -175,13 +175,13 @@ const STATIC_HTML = `
           <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Connected ATS integrations</div></div>
           <div class="mc-body">
             <div class="ats-grid">
-              <div class="ats-item"><div class="ats-ico" style="background:#24CA71;color:#fff">Gh</div><div><div class="ats-nm syne">Greenhouse</div><div class="ats-st" style="color:#059669">● Connected</div></div></div>
-              <div class="ats-item"><div class="ats-ico" style="background:#5B36AC;color:#fff">Lv</div><div><div class="ats-nm syne">Lever</div><div class="ats-st" style="color:#059669">● Connected</div></div></div>
+              <div class="ats-item"><div class="ats-ico" style="background:#24CA71;color:#fff">Gh</div><div><div class="ats-nm syne">Greenhouse</div><div class="ats-st" style="color:#34D399">● Connected</div></div></div>
+              <div class="ats-item"><div class="ats-ico" style="background:#5B36AC;color:#fff">Lv</div><div><div class="ats-nm syne">Lever</div><div class="ats-st" style="color:#34D399">● Connected</div></div></div>
               <div class="ats-item"><div class="ats-ico" style="background:#0066FF;color:#fff">Wk</div><div><div class="ats-nm syne">Workable</div><div class="ats-st" style="color:var(--dim)">○ Connect</div></div></div>
               <div class="ats-item"><div class="ats-ico" style="background:#F65B37;color:#fff">As</div><div><div class="ats-nm syne">Ashby</div><div class="ats-st" style="color:var(--dim)">○ Connect</div></div></div>
-              <div class="ats-full"><div class="ats-ico" style="background:var(--light);color:var(--sub);border:1px solid var(--border);font-size:16px">📁</div><div><div class="ats-nm syne">Manual upload</div><div class="ats-st" style="color:var(--sub)">PDF · DOCX · Plain text</div></div></div>
+              <div class="ats-full"><div class="ats-ico" style="background:#17171b;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.07);font-size:16px">📁</div><div><div class="ats-nm syne">Manual upload</div><div class="ats-st" style="color:rgba(255,255,255,0.4)">PDF · DOCX · Plain text</div></div></div>
             </div>
-            <div style="margin-top:10px;padding:8px 11px;background:var(--light);border-radius:7px;font-size:10px;color:var(--sub);border:1px solid var(--border)"><span style="font-family:'Roboto Mono',monospace;color:var(--teal)">↻</span> Synced 14 min ago · <strong style="color:var(--text)">23 new applications</strong> scored</div>
+            <div style="margin-top:10px;padding:8px 11px;background:#17171b;border-radius:7px;font-size:10px;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.07)"><span style="font-family:'Roboto Mono',monospace;color:var(--teal)">↻</span> Synced 14 min ago · <strong style="color:rgba(255,255,255,0.85)">23 new applications</strong> scored</div>
           </div>
         </div>
       </div>
@@ -189,28 +189,28 @@ const STATIC_HTML = `
 
     <div class="feature-panel" id="p-transparency">
       <div>
-        <div class="fp-agent-tag a1 mono">TRANSPARENCY</div>
+        <div class="fp-agent-tag a1 mono">SCORE TRANSPARENCY</div>
         <h3 class="fp-title syne">Every score explained.<br>Override anything.<br>Log everything.</h3>
-        <p class="fp-desc">Every candidate score comes with a criterion-level breakdown — one row per criterion, showing exactly what evidence was found and what was absent. No black box. No "just trust us."</p>
+        <p class="fp-desc">Every candidate's score comes with a criterion-level breakdown showing exactly what evidence was found and what was absent.</p>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Criterion-level evidence breakdown on every candidate card — a full evidence log, not a summary</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Override any criterion in one click — add a reason, score recalculates</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Audit trail — every override logged with timestamp, operator, and reason</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Legally defensible — your shortlist comes with documentation if you ever need it</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Criterion-level evidence breakdown on every candidate card with a full evidence log</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Override any criterion in one click, add a reason, and the score recalculates</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Audit trail for every override logged with timestamp, operator, and reason</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Legally defensible, as your shortlist comes with documentation if you ever need it</span></div>
         </div>
       </div>
       <div>
         <div class="mc">
-          <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Priya Chen · Score breakdown</div></div>
+          <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl">Alex Chen · Score breakdown</div></div>
           <div class="mc-body">
             <div class="srow"><div class="slbl"><span class="slbl-t">Required Skills</span><span class="slbl-v mono">4/5 met</span></div><div class="sbar"><div class="sbar-f" style="width:80%"></div></div></div>
             <div class="srow"><div class="slbl"><span class="slbl-t">Experience Band</span><span class="slbl-v mono">Within range</span></div><div class="sbar"><div class="sbar-f" style="width:100%"></div></div></div>
             <div class="srow"><div class="slbl"><span class="slbl-t">Scope Signals</span><span class="slbl-v mono">3/4 present</span></div><div class="sbar"><div class="sbar-f" style="width:75%"></div></div></div>
             <div class="srow"><div class="slbl"><span class="slbl-t">Growth Markers</span><span class="slbl-v mono">Strong</span></div><div class="sbar"><div class="sbar-f" style="width:92%"></div></div></div>
-            <div class="stotal"><div><div class="stotal-lbl">Composite Score</div><div style="font-size:10px;color:var(--sub);margin-top:1px">Criterion-referenced</div></div><div class="stotal-val">94<span style="font-size:14px;color:var(--sub)">/100</span></div></div>
+            <div class="stotal"><div><div class="stotal-lbl">Composite Score</div><div style="font-size:10px;color:rgba(255,255,255,0.4);margin-top:1px">Criterion-referenced</div></div><div class="stotal-val">94<span style="font-size:14px;color:rgba(255,255,255,0.4)">/100</span></div></div>
             <div style="display:flex;gap:6px;margin-top:9px">
-              <div style="padding:5px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(159,115,230,0.08);color:#059669;border:1px solid rgba(159,115,230,0.2);cursor:pointer">OVERRIDE CRITERION</div>
-              <div style="padding:5px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:var(--light);color:var(--sub);border:1px solid var(--border);cursor:pointer">VIEW AUDIT LOG</div>
+              <div style="padding:5px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:rgba(52,211,153,0.1);color:#34D399;border:1px solid rgba(52,211,153,0.25);cursor:pointer">OVERRIDE CRITERION</div>
+              <div style="padding:5px 9px;border-radius:4px;font-size:9px;font-family:'Roboto Mono',monospace;background:#17171b;color:rgba(255,255,255,0.4);border:1px solid rgba(255,255,255,0.07);cursor:pointer">VIEW AUDIT LOG</div>
             </div>
           </div>
         </div>
@@ -219,20 +219,20 @@ const STATIC_HTML = `
 
     <div class="feature-panel" id="p-scheduling">
       <div>
-        <div class="fp-agent-tag a2 mono">SCHEDULING</div>
-        <h3 class="fp-title syne">No more 11-email threads<br>to find a 45-minute slot.<br>Never again.</h3>
-        <p class="fp-desc">Agent 02 identifies your panel, checks everyone's real calendar availability, surfaces any conflicts for you to resolve, confirms the interview mode, and sends the invite — all before you finish your coffee.</p>
+        <div class="fp-agent-tag a2 mono">SMART SCHEDULING</div>
+        <h3 class="fp-title syne">11 email threads<br>to find a 45-minute slot?<br>Never again.</h3>
+        <p class="fp-desc">Agent Sync identifies your panel, checks everyone's real calendar availability, surfaces any conflicts for you to resolve, confirms the interview mode, and sends the invite all before you finish your coffee.</p>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Panel identification</strong> — tell Driip who should join, it checks their calendars automatically</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Real availability</strong> — pulls from Google Calendar. No guesses, no invented slots</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Conflict surfacing</strong> — "Marcus is blocked Thursday. Proceed without him, or wait?" You decide.</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Mode confirmation</strong> — Zoom, Google Meet, Teams, in-person, or phone. Link auto-generated for Meet.</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Full dispatch</strong> — calendar event for panel, confirmation email for candidate. One click.</span></div>
+          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Panel identification:</strong> Tell Driip who should join, and it checks their calendars automatically</span></div>
+          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Real availability:</strong> Pulls from Google Calendar. No guesses, no invented slots</span></div>
+          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Conflict surfacing:</strong> "Marcus is blocked on Thursday. Proceed without him, or wait?" You decide.</span></div>
+          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Mode confirmation:</strong> Zoom, Google Meet, Teams, in-person, or phone. Link auto-generated for Meet.</span></div>
+          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Full dispatch:</strong> Calendar event for panel, confirmation email for candidate in one click.</span></div>
         </div>
       </div>
       <div>
         <div class="mc">
-          <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl mono">Interview Scheduler · Priya Chen</div></div>
+          <div class="mc-hdr"><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-dot"></div><div class="mc-ttl mono">Interview Scheduler · Alex Chen</div></div>
           <div class="mc-body">
             <div class="wf-steps">
               <div class="wf-step done">Panel ✓</div><div class="wf-arrow">›</div>
@@ -241,9 +241,9 @@ const STATIC_HTML = `
               <div class="wf-step next">Slots</div><div class="wf-arrow">›</div>
               <div class="wf-step next">Dispatch</div>
             </div>
-            <div style="font-size:9px;font-family:'Roboto Mono',monospace;color:var(--violet);letter-spacing:.06em;margin-bottom:7px">PANEL MEMBERS</div>
+            <div style="font-size:9px;font-family:'Roboto Mono',monospace;color:#CEB5F8;letter-spacing:.06em;margin-bottom:7px">PANEL MEMBERS</div>
             <div class="panel-member"><div class="pm-dot ok"></div><div style="flex:1"><div class="pm-name">Marcus H.</div><div class="pm-role">Hiring Manager</div></div><div class="pm-avail mono">Mon Wed Fri</div></div>
-            <div class="panel-member"><div class="pm-dot ok"></div><div style="flex:1"><div class="pm-name">Priya C.</div><div class="pm-role">Technical Lead</div></div><div class="pm-avail mono">Tue Wed Thu</div></div>
+            <div class="panel-member"><div class="pm-dot ok"></div><div style="flex:1"><div class="pm-name">Alex C.</div><div class="pm-role">Technical Lead</div></div><div class="pm-avail mono">Tue Wed Thu</div></div>
             <div class="panel-member"><div class="pm-dot warn"></div><div style="flex:1"><div class="pm-name">Sam W.</div><div class="pm-role">CTO</div></div><div class="pm-conflict mono">! Blocked Thu</div></div>
             <div class="slots-section">
               <div class="slots-label mono">2 MUTUAL WINDOWS FOUND</div>
@@ -251,7 +251,7 @@ const STATIC_HTML = `
               <div class="slot-item"><div class="slot-day">Fri Jan 24 · 10:00am</div><div class="slot-time mono">45 min</div></div>
             </div>
             <div class="mode-row"><div class="mode-ico">🎥</div><div class="mode-txt">Google Meet</div><div class="mode-gen mono">link auto-gen ✓</div></div>
-            <button class="sched-btn syne">SEND INVITE → PRIYA CHEN</button>
+            <button class="sched-btn syne">SEND INVITE → Alex CHEN</button>
           </div>
         </div>
       </div>
@@ -259,14 +259,14 @@ const STATIC_HTML = `
 
     <div class="feature-panel" id="p-comms">
       <div>
-        <div class="fp-agent-tag a3 mono">COMMS BOT</div>
-        <h3 class="fp-title syne">Every candidate hears<br>from you. Even when<br>you forget.</h3>
-        <p class="fp-desc">Driip keeps your entire candidate pipeline in the loop automatically. Status updates, rejections, confirmations, offer letters — all personalised, all on time, none of them written by you at 11pm.</p>
+        <div class="fp-agent-tag a3 mono">SEAMLESS COMMUNICATION</div>
+        <h3 class="fp-title syne">Every candidate hears<br>from you, even when<br>you forget.</h3>
+        <p class="fp-desc">Driip automatically keeps your entire candidate pipeline in the loop. Status updates, rejections, confirmations, offer letters — all personalized, all on time, none of them written by you at 11 pm.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check c">✓</div><span>Thanks for applying, interview confirmation, rejection, offer, status update — all handled</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Personalised to each candidate — not a mail merge from 2015, not a template you can tell is a template</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span><strong>Stale candidate detector</strong> — nudges you if no contact for 7 days. Your employer brand is watching.</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span><strong>Rejection SLA</strong> — prompts you if 72+ hours pass after a decision with no rejection sent</span></div>
+          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Personalized to each candidate and not a mail merge from 2015, nor a template you can tell is a template</span></div>
+          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Stale candidate detector nudges you if there is no contact for 7 days. Your employer brand is watching.</span></div>
+          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Rejection SLA prompts you if 72+ hours pass after a decision with no rejection sent</span></div>
           <div class="fp-bullet"><div class="fp-check c">✓</div><span>Bulk send with confirmation, copy-per-email, full audit log, GDPR compliant</span></div>
         </div>
       </div>
@@ -769,9 +769,9 @@ export default function TalentOSPage() {
         .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.02em;}
         .nav-logo img{width:90px;height:auto;display:block;}
         .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);transition:color .15s;}
-        .nav-links a:hover{color:#fff;}
+        .nav-links a:hover{color:var(--driip);}
         .nav-cta{background:var(--lime);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;font-family:'Geom',sans-serif;transition:all .18s;white-space:nowrap;}
-        .nav-cta:hover{background:var(--lime-mid);transform:translateY(-1px);}
+        .nav-cta:hover{background:var(--lime-mid);color:#fff;transform:translateY(-1px);}
 
         .hero{background:var(--dark);padding:96px 48px 88px;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
         .hero::before{content:'';position:absolute;top:-220px;right:-160px;width:750px;height:750px;border-radius:50%;background:radial-gradient(circle,rgba(159,115,230,0.05) 0%,transparent 65%);pointer-events:none;}
@@ -834,7 +834,7 @@ export default function TalentOSPage() {
         .saving-icon{font-size:12px;filter:brightness(0) invert(1);}
         .saving-text{font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;color:#CEB5F8;}
 
-        .features{background:#EFE4FF;padding:84px 48px;}
+        .features{background:var(--driip-dark);padding:84px 48px;}
         .features-inner{max-width:1100px;margin:0 auto;}
         .section-eyebrow{font-size:11px;font-family:'Roboto Mono',monospace;letter-spacing:.1em;margin-bottom:12px;}
         .section-title{font-family:'Geom',sans-serif;font-size:36px;font-weight:800;color:var(--text);line-height:1.15;letter-spacing:-.02em;margin-bottom:10px;}
@@ -851,9 +851,16 @@ export default function TalentOSPage() {
         .fp-check.t{background:var(--teal);}
         .fp-check.v{background:var(--violet);}
         .fp-check.c{background:var(--coral);}
+        .features .section-title{color:#CEB5F8;}
+        .features .section-sub{color:#fff;}
+        .features .fp-agent-tag{color:#CEB5F8;}
+        .features .fp-title{color:#CEB5F8;}
+        .features .fp-desc{color:rgba(255,255,255,0.6);}
+        .features .fp-bullet{color:rgba(255,255,255,0.7);}
+        .features .fp-bullet strong{color:#fff;}
 
-        .mc{background:#fff;border:1px solid var(--border);border-radius:var(--rl);overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.06),0 1px 4px rgba(0,0,0,0.04);}
-        .mc-hdr{padding:11px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px;background:var(--light);}
+        .mc{background:#0f0f14;border:1px solid rgba(255,255,255,0.07);border-radius:var(--rl);overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.3),0 1px 4px rgba(0,0,0,0.2);}
+        .mc-hdr{padding:11px 14px;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;gap:7px;background:#17171b;}
         .mc-dot{width:8px;height:8px;border-radius:50%;background:var(--border-2);}
         .mc-hdr .mc-dot:nth-child(1){background:#FF5F57;}
         .mc-hdr .mc-dot:nth-child(2){background:#FEBC2E;}
@@ -861,27 +868,27 @@ export default function TalentOSPage() {
         .mc-ttl{font-size:11px;font-family:'Roboto Mono',monospace;color:var(--sub);}
         .mc-body{padding:14px;}
         .sr{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-family:'Roboto Mono',monospace;font-weight:500;flex-shrink:0;}
-        .sr.s{background:rgba(159,115,230,0.08);color:#00A87A;box-shadow:inset 0 0 0 2.5px rgba(159,115,230,0.35);}
-        .sr.m{background:rgba(255,179,71,0.08);color:#E69500;box-shadow:inset 0 0 0 2.5px rgba(255,179,71,0.35);}
-        .sr.p{background:rgba(107,114,128,0.08);color:#9CA3AF;box-shadow:inset 0 0 0 2.5px rgba(107,114,128,0.2);}
-        .crow{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:6px;margin-bottom:5px;border:1px solid var(--border);transition:background .12s;cursor:default;}
-        .crow:hover{background:var(--light);}
+        .sr.s{background:rgba(16,185,129,0.15);color:#34D399;box-shadow:inset 0 0 0 2px rgba(52,211,153,0.8);}
+        .sr.m{background:rgba(251,191,36,0.15);color:#FCD34D;box-shadow:inset 0 0 0 2px rgba(252,211,77,0.8);}
+        .sr.p{background:rgba(156,163,175,0.1);color:#9CA3AF;box-shadow:inset 0 0 0 2px rgba(156,163,175,0.55);}
+        .crow{display:flex;align-items:center;gap:9px;padding:8px 9px;border-radius:6px;margin-bottom:5px;border:1px solid rgba(255,255,255,0.13);transition:background .12s;cursor:default;}
+        .crow:hover{background:#1e1e24;}
         .cname{font-size:11px;font-weight:600;font-family:'Geom',sans-serif;color:var(--text);}
         .crole{font-size:9px;color:var(--sub);margin-top:1px;}
         .ctag{font-size:7px;padding:1px 6px;border-radius:3px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;margin-left:auto;flex-shrink:0;}
-        .ctag.s{background:rgba(159,115,230,0.1);color:#00A87A;border:1px solid rgba(159,115,230,0.2);}
-        .ctag.m{background:rgba(255,179,71,0.1);color:#B8720A;border:1px solid rgba(255,179,71,0.2);}
-        .ctag.p{background:rgba(107,114,128,0.08);color:#9CA3AF;border:1px solid rgba(107,114,128,0.15);}
+        .ctag.s{background:rgba(52,211,153,0.12);color:#34D399;border:1px solid rgba(52,211,153,0.3);}
+        .ctag.m{background:rgba(252,211,77,0.12);color:#FCD34D;border:1px solid rgba(252,211,77,0.3);}
+        .ctag.p{background:rgba(156,163,175,0.1);color:#9CA3AF;border:1px solid rgba(156,163,175,0.2);}
         .bfield{display:flex;align-items:center;gap:9px;padding:8px 11px;border-radius:6px;margin-bottom:5px;border:1px solid;}
         .bfield.x{background:rgba(255,92,92,0.04);border-color:rgba(255,92,92,0.2);}
         .bfield.ok{background:rgba(159,115,230,0.04);border-color:rgba(159,115,230,0.2);}
         .bname{font-size:11px;font-family:'Geom',sans-serif;font-weight:600;flex:1;}
-        .bname.x{color:#F87171;}.bname.ok{color:#059669;}
+        .bname.x{color:#F87171;}.bname.ok{color:#34D399;}
         .bst{font-size:8px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;padding:2px 6px;border-radius:3px;}
-        .bst.x{background:rgba(255,92,92,0.1);color:#EF4444;}
-        .bst.ok{background:rgba(159,115,230,0.1);color:#059669;}
-        .bdiv{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:9px;font-family:'Roboto Mono',monospace;color:var(--dim);}
-        .bdiv::before,.bdiv::after{content:'';flex:1;height:1px;background:var(--border);}
+        .bst.x{background:rgba(255,92,92,0.15);color:#F87171;}
+        .bst.ok{background:rgba(52,211,153,0.12);color:#34D399;}
+        .bdiv{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:9px;font-family:'Roboto Mono',monospace;color:rgba(255,255,255,0.3);}
+        .bdiv::before,.bdiv::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.08);}
         .srow{margin-bottom:9px;}
         .slbl{display:flex;justify-content:space-between;margin-bottom:3px;}
         .slbl-t{font-size:11px;color:var(--sub);}
@@ -892,7 +899,7 @@ export default function TalentOSPage() {
         .stotal-lbl{font-size:11px;font-family:'Geom',sans-serif;font-weight:600;color:var(--text);}
         .stotal-val{font-size:22px;font-family:'Geom',sans-serif;font-weight:800;color:var(--teal);}
         .ats-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-        .ats-item{display:flex;align-items:center;gap:9px;padding:11px 12px;border-radius:7px;border:1px solid var(--border);background:#fff;}
+        .ats-item{display:flex;align-items:center;gap:9px;padding:11px 12px;border-radius:7px;border:1px solid rgba(255,255,255,0.07);background:#17171b;}
         .ats-ico{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;font-family:'Geom',sans-serif;flex-shrink:0;}
         .ats-nm{font-size:11px;font-weight:600;font-family:'Geom',sans-serif;color:var(--text);}
         .ats-st{font-size:9px;font-family:'Roboto Mono',monospace;}
@@ -900,10 +907,10 @@ export default function TalentOSPage() {
         .cbubble{margin-bottom:9px;max-width:90%;}
         .cbubble.u{margin-left:auto;}
         .cmsg{padding:8px 12px;border-radius:8px;font-size:11px;line-height:1.55;}
-        .cmsg.a{background:var(--light);color:var(--text);border-radius:4px 8px 8px 8px;}
+        .cmsg.a{background:#17171b;color:rgba(255,255,255,0.85);border-radius:4px 8px 8px 8px;}
         .cmsg.u{background:var(--dark);color:rgba(255,255,255,0.82);border-radius:8px 4px 8px 8px;}
-        .clbl{font-size:8px;font-family:'Roboto Mono',monospace;color:var(--dim);margin-bottom:3px;letter-spacing:.05em;}
-        .jdprev{margin-top:6px;padding:9px 11px;background:#fff;border:1px solid rgba(159,115,230,0.25);border-radius:7px;}
+        .clbl{font-size:8px;font-family:'Roboto Mono',monospace;color:rgba(255,255,255,0.35);margin-bottom:3px;letter-spacing:.05em;}
+        .jdprev{margin-top:6px;padding:9px 11px;background:#17171b;border:1px solid rgba(159,115,230,0.25);border-radius:7px;}
         .jdprev-lbl{font-size:8px;font-family:'Roboto Mono',monospace;color:var(--teal);letter-spacing:.06em;margin-bottom:5px;}
         .jdline{height:5px;border-radius:3px;background:var(--border);margin-bottom:4px;}
 
@@ -911,9 +918,9 @@ export default function TalentOSPage() {
         .wf-step{font-size:8px;font-family:'Roboto Mono',monospace;padding:3px 8px;border-radius:3px;white-space:nowrap;}
         .wf-step.done{background:rgba(99,66,172,0.1);color:var(--violet);border:1px solid rgba(99,66,172,0.2);}
         .wf-step.active{background:rgba(99,66,172,0.18);color:var(--violet);border:1px solid rgba(99,66,172,0.4);font-weight:600;}
-        .wf-step.next{background:var(--light);color:var(--dim);border:1px solid var(--border);}
+        .wf-step.next{background:#17171b;color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.07);}
         .wf-arrow{font-size:9px;color:var(--dim);}
-        .panel-member{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid var(--border);margin-bottom:5px;background:var(--light);}
+        .panel-member{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.07);margin-bottom:5px;background:#17171b;}
         .pm-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
         .pm-dot.ok{background:#10B981;}
         .pm-dot.warn{background:#F59E0B;}
@@ -923,9 +930,9 @@ export default function TalentOSPage() {
         .pm-conflict{font-size:9px;font-family:'Roboto Mono',monospace;color:#F59E0B;background:rgba(245,158,11,0.08);padding:2px 6px;border-radius:3px;}
         .slots-section{margin-top:10px;}
         .slots-label{font-size:9px;font-family:'Roboto Mono',monospace;color:var(--violet);letter-spacing:.06em;margin-bottom:6px;}
-        .slot-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid var(--border);margin-bottom:5px;cursor:pointer;transition:all .15s;}
-        .slot-item.sel{background:rgba(99,66,172,0.08);border-color:rgba(99,66,172,0.35);}
-        .slot-item:hover:not(.sel){background:var(--light);}
+        .slot-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid rgba(255,255,255,0.07);margin-bottom:5px;cursor:pointer;transition:all .15s;background:#17171b;}
+        .slot-item.sel{background:rgba(99,66,172,0.2);border-color:rgba(99,66,172,0.5);}
+        .slot-item:hover:not(.sel){background:rgba(255,255,255,0.05);}
         .slot-day{font-size:11px;font-family:'Geom',sans-serif;font-weight:600;color:var(--text);flex:1;}
         .slot-time{font-size:9px;font-family:'Roboto Mono',monospace;color:var(--sub);}
         .mode-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:6px;border:1px solid rgba(99,66,172,0.3);background:rgba(99,66,172,0.06);margin-top:8px;}
@@ -938,19 +945,26 @@ export default function TalentOSPage() {
         .stale-warn{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:6px;background:rgba(255,179,71,0.08);border:1px solid rgba(255,179,71,0.25);margin-bottom:8px;}
         .stale-warn-txt{font-size:10px;color:#B8720A;font-family:'Roboto',sans-serif;flex:1;}
         .stale-warn-cta{font-size:9px;font-family:'Roboto Mono',monospace;color:var(--coral);background:rgba(206,181,248,0.1);border:1px solid rgba(206,181,248,0.25);padding:2px 8px;border-radius:3px;cursor:pointer;white-space:nowrap;}
-        .email-draft{border:1px solid var(--border);border-radius:7px;margin-bottom:6px;overflow:hidden;}
-        .email-hdr{display:flex;align-items:center;gap:8px;padding:8px 11px;cursor:pointer;transition:background .12s;background:#fff;}
-        .email-hdr:hover{background:var(--light);}
+        .email-draft{border:1px solid rgba(255,255,255,0.07);border-radius:7px;margin-bottom:6px;overflow:hidden;}
+        .email-hdr{display:flex;align-items:center;gap:8px;padding:8px 11px;cursor:pointer;transition:background .12s;background:#0f0f14;}
+        .email-hdr:hover{background:#17171b;}
         .email-to{font-size:11px;font-weight:600;font-family:'Geom',sans-serif;color:var(--text);flex:1;}
         .email-subj{font-size:10px;color:var(--sub);margin-top:1px;}
         .email-toggle{font-size:10px;color:var(--dim);font-family:'Roboto Mono',monospace;flex-shrink:0;}
-        .email-body{padding:10px 11px;background:var(--light);border-top:1px solid var(--border);}
+        .email-body{padding:10px 11px;background:#17171b;border-top:1px solid rgba(255,255,255,0.07);}
         .email-body-txt{font-size:11px;color:var(--text);line-height:1.6;margin-bottom:7px;font-style:italic;}
         .copy-btn{font-size:9px;font-family:'Roboto Mono',monospace;color:var(--teal);background:rgba(159,115,230,0.06);border:1px solid rgba(159,115,230,0.2);padding:2px 8px;border-radius:3px;cursor:pointer;}
         .comms-type-bar{display:flex;gap:5px;margin-bottom:10px;}
         .ct-chip{font-size:8px;padding:2px 8px;border-radius:3px;font-family:'Roboto Mono',monospace;cursor:pointer;}
-        .ct-chip.active-rej{background:rgba(107,114,128,0.1);color:var(--sub);border:1px solid var(--border-2);}
-        .ct-chip.off{background:var(--light);color:var(--dim);border:1px solid var(--border);}
+        .ct-chip.active-rej{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.15);}
+        .ct-chip.off{background:#17171b;color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.07);}
+        .mc .mc-ttl{color:rgba(255,255,255,0.4);}
+        .mc .cname,.mc .stotal-lbl,.mc .ats-nm,.mc .pm-name,.mc .slot-day,.mc .email-to,.mc .email-body-txt,.mc .mode-txt{color:rgba(255,255,255,0.85);}
+        .mc .crole,.mc .slbl-t,.mc .pm-role,.mc .slot-time,.mc .email-subj,.mc .pm-avail,.mc .email-toggle,.mc .stale-warn-txt{color:rgba(255,255,255,0.4);}
+        .mc .sbar{background:rgba(255,255,255,0.08);}
+        .mc .jdline{background:rgba(255,255,255,0.08);}
+        .mc .send-all-btn{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.1);color:rgba(255,255,255,0.5);}
+        .mc .send-all-btn:hover{background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.85);}
         .send-all-btn{width:100%;margin-top:8px;padding:9px;border-radius:7px;background:rgba(107,114,128,0.1);border:1px solid var(--border-2);color:var(--sub);font-size:11px;font-family:'Geom',sans-serif;font-weight:700;cursor:pointer;transition:all .18s;}
         .send-all-btn:hover{background:rgba(107,114,128,0.2);color:var(--text);}
 
@@ -968,12 +982,12 @@ export default function TalentOSPage() {
         .personas .pcar-dot{background:rgba(14,14,16,0.25);}
         .personas .pcar-dot.active{width:24px;background:var(--dark);}
         .personas-carousel{margin-top:48px;}
-        .pcar-track-wrap{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:var(--rl);background:#fff;}
+        .pcar-track-wrap{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,0.08);border-radius:var(--rl);background:#13131a;}
         .pcar-track{display:flex;width:300%;transition:transform .4s cubic-bezier(.4,0,.2,1);}
         .pc{min-width:33.333%;padding:40px 48px;box-sizing:border-box;}
         .pcar-dots{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;}
         .pcar-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(159,115,230,0.25);cursor:pointer;padding:0;transition:all .3s;}
-        .pcar-dot.active{width:24px;border-radius:4px;background:var(--driip);}
+        .pcar-dot.active{width:24px;border-radius:4px;background:#CEB5F8;}
         .pc-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-family:'Roboto Mono',monospace;letter-spacing:.06em;margin-bottom:16px;color:#6342AC;}
         .pc-title{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.2;}
         .pc-title em{font-style:italic;color:var(--teal);}
