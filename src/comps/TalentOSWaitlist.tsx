@@ -301,10 +301,6 @@ function Opening({ onEnter }: { onEnter: () => void }) {
           We want to show<br/>you <em style={{ fontStyle:"italic", color:C.gold }}>your Monday</em><br/>before we fix it.
         </h1>
 
-        <p style={{ fontSize:15, color:C.sub, fontFamily:DM, lineHeight:1.75, marginBottom:16, maxWidth:400, margin:"0 auto 16px" }}>
-          Four scenes. Each one a place you've already been. At the end, we'll tell you exactly which part of your week we're building an agent for.
-        </p>
-
         {/* Ryan: threshold marker — the moment of world-entry */}
         <div style={{ width:1, height:40, background:`linear-gradient(${C.gold}60, transparent)`, margin:"24px auto" }}/>
 

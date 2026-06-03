@@ -14,13 +14,6 @@ const STATIC_HTML = `
   <div class="video-section-inner"></div>
 </section>
 
-<div class="offer-strip" id="offer">
-  <div>
-    <div class="offer-strip-text syne">Driip can recover up to 51 hours per hire.</div>
-  </div>
-  <a href="#" class="offer-strip-btn syne">Find Out How</a>
-</div>
-
 <section class="platform" id="platform">
   <div class="platform-inner">
     <div class="platform-eyebrow mono">MEET THE AGENTS</div>
@@ -63,7 +56,6 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a1 mono">INTELLIGENT SCREENING</div>
         <h3 class="fp-title syne">Surface 20 top talent from<br>a pile of 200.</h3>
-        <p class="fp-desc">Driip uses the 4-dimensional Structured Competency Scoring (SCS) framework to evaluate every candidate against a rubric you approved before a single CV is processed.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Required Skills:</strong> Technical must-haves, scored as present or absent in context</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Experience Band:</strong> Matched against your approved range, not an arbitrary number</span></div>
@@ -96,7 +88,6 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a1 mono">BIAS-FREE</div>
         <h3 class="fp-title syne">We strip the bias fields<br>before scoring runs.</h3>
-        <p class="fp-desc">Driip structurally excludes name, address, graduation year, and institution from the scoring context before the first criterion is evaluated. The score cannot see what was never given.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Name, address, institution stripped at ingestion; not as a guardrail but a structure</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Candidates scored against your rubric independently, with no anchoring from other CVs</span></div>
@@ -126,7 +117,6 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a1 mono">SMART JD BUILDER</div>
         <h3 class="fp-title syne">Have a job description ready<br>in less than a minute.</h3>
-        <p class="fp-desc">Driip understands the actual role and writes a JD that attracts the people you want, not the people who are good at filling in job applications.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Guided discovery across 9 dimensions: seniority, outcomes, skills, culture signals, compensation</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Generic phrases blocked — "fast-paced environment" will be kindly declined</span></div>
@@ -164,7 +154,6 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a1 mono">ATS INTEGRATION</div>
         <h3 class="fp-title syne">Already using Greenhouse<br>or Lever? Connect them.</h3>
-        <p class="fp-desc">Driip connects to your existing ATS, pulls your applications, scores them against your locked rubric, and returns a shortlist. Your ATS stays. It just gets a brain upgrade.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR supported</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
@@ -193,7 +182,6 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a1 mono">SCORE TRANSPARENCY</div>
         <h3 class="fp-title syne">Every score explained.<br>Override anything.<br>Log everything.</h3>
-        <p class="fp-desc">Every candidate's score comes with a criterion-level breakdown showing exactly what evidence was found and what was absent.</p>
         <div class="fp-bullets">
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Criterion-level evidence breakdown on every candidate card with a full evidence log</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Override any criterion in one click, add a reason, and the score recalculates</span></div>
@@ -223,13 +211,12 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a2 mono">SMART SCHEDULING</div>
         <h3 class="fp-title syne">11 email threads<br>to find a 45-minute slot?<br>Never again.</h3>
-        <p class="fp-desc">Agent Sync identifies your panel, checks everyone's real calendar availability, surfaces any conflicts for you to resolve, confirms the interview mode, and sends the invite all before you finish your coffee.</p>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Panel identification:</strong> Tell Driip who should join, and it checks their calendars automatically</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Real availability:</strong> Pulls from Google Calendar, no guesses, no invented slots</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Conflict surfacing:</strong> "Marcus is blocked on Thursday. Proceed without him, or wait?" You decide</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Mode confirmation:</strong> Zoom, Google Meet, Teams, in-person, or phone — link auto-generated for Meet</span></div>
-          <div class="fp-bullet"><div class="fp-check v">✓</div><span><strong>Full dispatch:</strong> Calendar event for panel, confirmation email for candidate in one click</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Panel identification:</strong> Tell Driip who should join, and it checks their calendars automatically</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Real availability:</strong> Pulls from Google Calendar, no guesses, no invented slots</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Conflict surfacing:</strong> "Marcus is blocked on Thursday. Proceed without him, or wait?" You decide</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Mode confirmation:</strong> Zoom, Google Meet, Teams, in-person, or phone — link auto-generated for Meet</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Full dispatch:</strong> Calendar event for panel, confirmation email for candidate in one click</span></div>
         </div>
       </div>
       <div>
@@ -263,13 +250,12 @@ const STATIC_HTML = `
       <div>
         <div class="fp-agent-tag a3 mono">SEAMLESS COMMUNICATION</div>
         <h3 class="fp-title syne">Every candidate hears<br>from you, even when<br>you forget.</h3>
-        <p class="fp-desc">Driip automatically keeps your entire candidate pipeline in the loop. Status updates, rejections, confirmations, offer letters - all personalized, all on time, none of them written by you at 11 pm.</p>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Thanks for applying, interview confirmation, rejection, offer, status update - all handled</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Personalized to each candidate and not a mail merge from 2015, nor a template you can tell is a template</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Stale candidate detector nudges you if there is no contact for 7 days - your employer brand is watching</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Rejection SLA prompts you if 72+ hours pass after a decision with no rejection sent</span></div>
-          <div class="fp-bullet"><div class="fp-check c">✓</div><span>Bulk send with confirmation, copy-per-email, full audit log, GDPR compliant</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Thanks for applying, interview confirmation, rejection, offer, status update - all handled</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Personalized to each candidate and not a mail merge from 2015, nor a template you can tell is a template</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Stale candidate detector nudges you if there is no contact for 7 days - your employer brand is watching</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Rejection SLA prompts you if 72+ hours pass after a decision with no rejection sent</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Bulk send with confirmation, copy-per-email, full audit log, GDPR compliant</span></div>
         </div>
       </div>
       <div>
@@ -341,34 +327,16 @@ const STATIC_HTML = `
             <div class="pc-tag t mono">FOR FOUNDERS</div>
             <h3 class="pc-title syne">You're hiring and building and<br>fundraising and keeping the <em style="font-style:normal;color:#9F73E6">lights on</em>.</h3>
             <p class="pc-desc">You posted a role. You have 180 applications, 3 investor meetings, a product sprint, and a board update. The good news: Driip has already read all 180, scheduled interviews for the top 4, and sent rejections to the rest. The bad news: there isn't any.</p>
-            <div class="pc-pts">
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Shortlist of 20 delivered within 24 hours of role creation</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Write your JD in less than a minute, guided discovery with no generic copy-paste</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Interviews auto-scheduled, candidates auto-updated - you just show up</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>100% shortlist trust rate in early testing because the output quality earns it</span></div>
-            </div>
           </div>
           <div class="pc" id="pc-managers">
             <div class="pc-tag t mono">FOR HIRING MANAGERS</div>
             <h3 class="pc-title syne">Get a shortlist you can<br><em style="font-style:normal;color:#9F73E6">explain,</em> not just defend.</h3>
             <p class="pc-desc">You're not just reviewing candidates. You're going to have to justify this shortlist to your VP, your founder, and eventually yourself at 11 pm. Every Driip score comes with a criterion-level breakdown, so you're sharing evidence, not hunches.</p>
-            <div class="pc-pts">
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>You approved the rubric before the scoring run, where the shortlist is already yours to own</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Override any criterion with one click, add a reason, audit trail stays clean</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Interviews scheduled against your real calendar with zero availability ping-pong</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Every candidate receives a professional update at every stage</span></div>
-            </div>
           </div>
           <div class="pc" id="pc-ta">
             <div class="pc-tag t mono">FOR TA TEAMS</div>
             <h3 class="pc-title syne">Start spending<br>Monday <em style="font-style:normal;color:#9F73E6">recruiting</em>,<br>not screening.</h3>
             <p class="pc-desc">The best part of your job isn't reading CVs, chasing calendar slots, or writing the same rejection for the fourteenth time this week. Driip eliminates all three, so you can spend your time on the part that actually requires a human.</p>
-            <div class="pc-pts">
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Pulls from your ATS: Greenhouse, Lever, Workable, Ashby - scores everything automatically</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Incremental sync: New applications scored as they arrive, no batch required</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>Interview scheduling: Handled end-to-end, you review the invite, not build it</span></div>
-              <div class="pc-pt"><div class="pc-chk">✓</div><span>51+ hours per hire returned to you so that you can focus on achieving greater productivity</span></div>
-            </div>
           </div>
         </div>
       </div>
@@ -743,20 +711,10 @@ export default function TalentOSPage() {
           <p className="hero-sub">
             Your agents handle every candidate touchpoint, so your team moves at the speed you need
           </p>
-          <div className="hero-stats">
-            <div>
-              <div className="stat-num syne">51<span>h+</span></div>
-              <div className="stat-label mono">SAVED / HIRE</div>
-            </div>
-            <div>
-              <div className="stat-num syne">100<span>%</span></div>
-              <div className="stat-label mono">SHORTLIST TRUST</div>
-            </div>
-            <div>
-              <div className="stat-num syne">&lt;24<span>h</span></div>
-              <div className="stat-label mono">TO SHORTLIST</div>
-            </div>
-          </div>
+        </div>
+        <div className="hero-banner">
+          <span className="hero-banner-text syne">Driip can recover up to 51 hours per hire.</span>
+          <button onClick={() => setShowWaitlist(true)} className="hero-cta syne">Find Out How</button>
         </div>
       </section>
 
@@ -807,13 +765,17 @@ export default function TalentOSPage() {
         .hero-badge span{font-size:11px;font-family:'Roboto Mono',monospace;color:#CEB5F8;letter-spacing:.06em;}
         .hero h1{font-family:'Geom',sans-serif;font-size:44px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:18px;}
         .hero h1 em{font-style:normal;color:var(--lime);}
-        .hero-sub{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.7;margin-bottom:30px;max-width:600px;}
+        .hero-sub{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.7;margin-bottom:30px;max-width:780px;white-space:nowrap;}
         .hero-agents{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;}
         .hero-agent-chip{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;}
         .hero-agent-chip.a1{background:rgba(159,115,230,0.12);border:1px solid rgba(159,115,230,0.32);color:#CEB5F8;}
         .hero-agent-chip.a2{background:rgba(99,66,172,0.10);border:1px solid rgba(99,66,172,0.30);color:var(--lime-mid);}
         .hero-agent-chip.a3{background:rgba(159,115,230,0.18);border:1px solid rgba(159,115,230,0.45);color:#CEB5F8;}
         .chip-dot{width:5px;height:5px;border-radius:50%;}
+        .hero-banner{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:20px;background:var(--lime);padding:18px 48px;}
+        .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:var(--dark);}
+        .hero-cta{background:var(--dark);color:var(--lime);padding:9px 22px;border-radius:7px;font-size:13px;font-weight:800;letter-spacing:.01em;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;}
+        .hero-cta:hover{background:#1a1a24;transform:translateY(-1px);}
         .hero-stats{display:flex;gap:28px;padding:18px 0;}
         .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
         .stat-num span{font-size:18px;}
@@ -862,7 +824,7 @@ export default function TalentOSPage() {
         .features-carousel .pcar-track{width:700%;}
         .feature-panel{min-width:calc(100% / 7);display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;padding:40px 48px;}
         .fp-agent-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-family:'Roboto Mono',monospace;letter-spacing:.06em;margin-bottom:16px;color:#6342AC;}
-        .fp-title{font-family:'Geom',sans-serif;font-size:24px;font-weight:700;color:var(--text);margin-bottom:11px;line-height:1.25;}
+        .fp-title{font-family:'Geom',sans-serif;font-size:26px;font-weight:700;color:var(--text);margin-bottom:50px;line-height:1.25;}
         .fp-desc{font-size:15px;color:var(--sub);line-height:1.7;margin-bottom:20px;}
         .fp-bullets{display:flex;flex-direction:column;gap:9px;}
         .fp-bullet{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--text);}
@@ -1008,7 +970,7 @@ export default function TalentOSPage() {
         .pcar-dot{width:8px;height:8px;border-radius:50%;border:none;background:rgba(159,115,230,0.25);cursor:pointer;padding:0;transition:all .3s;}
         .pcar-dot.active{width:24px;border-radius:4px;background:#CEB5F8;}
         .pc-tag{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-family:'Roboto Mono',monospace;letter-spacing:.06em;margin-bottom:16px;color:#CEB5F8;}
-        .pc-title{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--text);margin-bottom:10px;line-height:1.2;}
+        .pc-title{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--text);margin-bottom:24px;line-height:1.2;}
         .pc-title em{font-style:italic;color:var(--teal);}
         .pc-desc{font-size:14px;color:var(--sub);line-height:1.7;margin-bottom:20px;max-width:480px;}
         .pc-pts{display:flex;flex-direction:column;gap:10px;}
@@ -1089,6 +1051,8 @@ export default function TalentOSPage() {
 
 
         @media(max-width:960px){
+          .hero-sub{white-space:normal;}
+          .hero-banner{flex-direction:column;gap:10px;text-align:center;padding:16px 20px;}
           .hero-inner,.feature-panel,.platform-grid,.tgrid{grid-template-columns:1fr;}
           .pc{padding:28px 20px;}
           .stats-grid{grid-template-columns:1fr 1fr;}
