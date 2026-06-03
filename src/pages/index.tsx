@@ -17,7 +17,7 @@ const STATIC_HTML = `
 <section class="platform" id="platform">
   <div class="platform-inner">
     <div class="platform-eyebrow mono">MEET THE AGENTS</div>
-    <h2 class="platform-title syne">3 agents. One OS.<br><em>Zero dropped tasks.</em></h2>
+    <h2 class="platform-title syne">6 agents. One OS.<br><em>Zero dropped tasks.</em></h2>
     <p class="platform-sub">Driip agents return 51+ hours of everything else you've been putting off</p>
     <div class="platform-grid">
       <div class="agent-card a1">
@@ -37,6 +37,24 @@ const STATIC_HTML = `
         <div class="agent-name syne">Talent Relations Manager</div>
         <div class="agent-desc">No more ghosting candidates. Every applicant receives an automatic status email at each stage within 72 hours.</div>
         <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">8–12 HRS SAVED / HIRE</span></div>
+      </div>
+      <div class="agent-card a1">
+        <div class="agent-num mono">Agent Brief</div>
+        <div class="agent-name syne">Job Description Writer</div>
+        <div class="agent-desc">Generates accurate, bias-free job descriptions from a role brief in minutes — aligned to your tone, level, and team context.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">3–5 HRS SAVED / ROLE</span></div>
+      </div>
+      <div class="agent-card a2">
+        <div class="agent-num mono">Agent Rank</div>
+        <div class="agent-name syne">Interview Evaluator</div>
+        <div class="agent-desc">Compiles structured scorecards from interviewer notes, surfaces consensus gaps, and flags any evaluation inconsistencies before debrief.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">4–6 HRS SAVED / HIRE</span></div>
+      </div>
+      <div class="agent-card a3">
+        <div class="agent-num mono">Agent Onboard</div>
+        <div class="agent-name syne">Onboarding Coordinator</div>
+        <div class="agent-desc">Sends offer letters, collects documents, assigns pre-boarding tasks, and ensures day-one readiness without a single manual follow-up.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">6–8 HRS SAVED / HIRE</span></div>
       </div>
     </div>
   </div>
@@ -711,10 +729,19 @@ export default function TalentOSPage() {
           <p className="hero-sub">
             Your agents handle every candidate touchpoint, so your team moves at the speed you need
           </p>
-        </div>
-        <div className="hero-banner">
-          <span className="hero-banner-text syne">Driip can recover up to 51 hours per hire.</span>
-          <button onClick={() => setShowWaitlist(true)} className="hero-cta syne">Find Out How</button>
+          <div
+            className="hero-banner"
+            onMouseMove={e => {
+              const r = e.currentTarget.getBoundingClientRect();
+              const x = (e.clientX - r.left) / r.width - 0.5;
+              const y = (e.clientY - r.top) / r.height - 0.5;
+              e.currentTarget.style.transform = `perspective(700px) rotateX(${-y * 5}deg) rotateY(${x * 5}deg) scale(1.015)`;
+            }}
+            onMouseLeave={e => { e.currentTarget.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)'; }}
+          >
+            <span className="hero-banner-text syne">Show us your Monday before we fix it.</span>
+            <button onClick={() => setShowWaitlist(true)} className="hero-cta syne">Let&apos;s Clock In</button>
+          </div>
         </div>
       </section>
 
@@ -765,17 +792,21 @@ export default function TalentOSPage() {
         .hero-badge span{font-size:11px;font-family:'Roboto Mono',monospace;color:#CEB5F8;letter-spacing:.06em;}
         .hero h1{font-family:'Geom',sans-serif;font-size:44px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em;margin-bottom:18px;}
         .hero h1 em{font-style:normal;color:var(--lime);}
-        .hero-sub{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.7;margin-bottom:30px;max-width:780px;white-space:nowrap;}
+        .hero-sub{font-size:16px;color:rgba(255,255,255,0.78);line-height:1.7;margin-bottom:30px;max-width:780px;}
         .hero-agents{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap;}
         .hero-agent-chip{display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:6px;font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.05em;}
         .hero-agent-chip.a1{background:rgba(159,115,230,0.12);border:1px solid rgba(159,115,230,0.32);color:#CEB5F8;}
         .hero-agent-chip.a2{background:rgba(99,66,172,0.10);border:1px solid rgba(99,66,172,0.30);color:var(--lime-mid);}
         .hero-agent-chip.a3{background:rgba(159,115,230,0.18);border:1px solid rgba(159,115,230,0.45);color:#CEB5F8;}
         .chip-dot{width:5px;height:5px;border-radius:50%;}
-        .hero-banner{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:20px;background:var(--lime);padding:18px 48px;}
-        .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:var(--dark);}
-        .hero-cta{background:var(--dark);color:var(--lime);padding:9px 22px;border-radius:7px;font-size:13px;font-weight:800;letter-spacing:.01em;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;}
-        .hero-cta:hover{background:#1a1a24;transform:translateY(-1px);}
+        .hero-banner{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:rgba(255,255,255,0.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 14px 14px 28px;margin-top:20px;position:relative;overflow:hidden;transition:border-color 0.4s,background 0.4s,box-shadow 0.4s,transform 0.25s ease;cursor:default;}
+        .hero-banner::after{content:'';position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(159,115,230,0.18),transparent);transform:skewX(-15deg);pointer-events:none;}
+        .hero-banner:hover{border-color:rgba(159,115,230,0.35);background:rgba(159,115,230,0.09);}
+        .hero-banner:hover::after{animation:bannerSheen 0.65s ease forwards;}
+        @keyframes bannerSheen{from{left:-70%}to{left:130%}}
+        .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:rgba(255,255,255,0.88);}
+        .hero-cta{background:var(--lime);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.01em;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;}
+        .hero-cta:hover{background:var(--lime);box-shadow:0 0 18px rgba(159,115,230,0.45);transform:translateY(-1px);}
         .hero-stats{display:flex;gap:28px;padding:18px 0;}
         .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
         .stat-num span{font-size:18px;}
@@ -790,7 +821,7 @@ export default function TalentOSPage() {
         .offer-strip-btn{background:var(--dark);color:var(--lime);padding:10px 22px;border-radius:7px;font-size:13px;font-weight:700;font-family:'Geom',sans-serif;transition:all .18s;white-space:nowrap;}
         .offer-strip-btn:hover{background:#1a1a24;transform:translateY(-1px);}
 
-        .platform{background:var(--dark);padding:84px 48px;}
+        .platform{background:var(--dark);padding:40px 48px 84px;}
         .platform-inner{max-width:1100px;margin:0 auto;}
         .platform-eyebrow{font-size:11px;font-family:'Roboto Mono',monospace;color:rgba(255,255,255,0.3);letter-spacing:.1em;margin-bottom:14px;text-align:center;}
         .platform-title{font-family:'Geom',sans-serif;font-size:38px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em;text-align:center;margin-bottom:10px;}
@@ -1051,14 +1082,17 @@ export default function TalentOSPage() {
 
 
         @media(max-width:960px){
-          .hero-sub{white-space:normal;}
-          .hero-banner{flex-direction:column;gap:10px;text-align:center;padding:16px 20px;}
+          .hero{padding:80px 20px 80px;box-sizing:border-box;width:100%;overflow:hidden;align-items:center;}
+          .hero h1{font-size:26px;letter-spacing:-.01em;word-break:break-word;overflow-wrap:break-word;max-width:100%;}
+          .hero-sub{font-size:14px;max-width:100%;}
+          .hero-inner{max-width:100%;width:100%;box-sizing:border-box;}
+          .hero-banner{flex-direction:column;gap:10px;text-align:center;padding:12px 16px;max-width:100%;box-sizing:border-box;}
+          .hero-cta{width:100%!important;justify-content:center;}
           .hero-inner,.feature-panel,.platform-grid,.tgrid{grid-template-columns:1fr;}
           .pc{padding:28px 20px;}
           .stats-grid{grid-template-columns:1fr 1fr;}
           .form-row{grid-template-columns:1fr;}
           nav,.hero,.video-section,.platform,.features,.personas,.testimonials,.signup{padding-left:20px;padding-right:20px;}
-          .hero h1{font-size:32px;}
           .platform-title{font-size:28px;}
           .signup-title{font-size:28px;}
           .platform-grid{display:flex!important;flex-direction:column;gap:16px;}

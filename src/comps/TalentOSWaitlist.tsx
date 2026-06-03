@@ -612,7 +612,7 @@ function Result({ dominant, scores, onReplay }: {
 const INITIAL_SCORES: Record<PainKey, number> = { screening: 0, scheduling: 0, comms: 0 };
 
 export default function TalentOSWaitlist() {
-  const [phase,  setPhase]  = useState<Phase>("opening");
+  const [phase,  setPhase]  = useState<Phase>("scene");
   const [wIdx,   setWIdx]   = useState(0);
   const [scores, setScores] = useState<Record<PainKey, number>>(INITIAL_SCORES);
 
@@ -650,7 +650,7 @@ export default function TalentOSWaitlist() {
   };
 
   const reset = () => {
-    setPhase("opening");
+    setPhase("scene");
     setWIdx(0);
     setScores({ ...INITIAL_SCORES });
   };
