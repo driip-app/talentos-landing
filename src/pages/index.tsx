@@ -741,7 +741,7 @@ export default function TalentOSPage() {
             <em>that shapes your company&apos;s future.</em>
           </h1>
           <p className="hero-sub">
-            Your agents handle every candidate touchpoint, so your team moves at the speed you need.
+            Your agents handle every candidate touchpoint, so your team moves at the speed you need
           </p>
           <div className="hero-stats">
             <div>
