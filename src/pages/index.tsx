@@ -595,6 +595,7 @@ export default function TalentOSPage() {
     <>
       <Head>
         <title>Driip — World&apos;s #1 Talent OS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap"
@@ -767,7 +768,7 @@ export default function TalentOSPage() {
         @font-face{font-family:'Geom';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/Geom-VariableFont_wght.ttf') format('truetype');}
         @font-face{font-family:'Geom';font-style:italic;font-weight:100 900;font-display:swap;src:url('/fonts/Geom-Italic-VariableFont_wght.ttf') format('truetype');}
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-        html{scroll-behavior:smooth;color-scheme:dark;}
+        html{scroll-behavior:smooth;color-scheme:dark;overflow-x:hidden;}
         body{font-family:'Roboto',sans-serif;color:#1A1A2E;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
         a{text-decoration:none;color:inherit;}
         button,input,select,textarea{font-family:inherit;}
@@ -1052,7 +1053,7 @@ export default function TalentOSPage() {
         .tname{font-size:13px;font-weight:600;font-family:'Geom',sans-serif;color:var(--text);}
         .ttitle{font-size:11px;color:var(--sub);margin-top:1px;}
 
-        .signup{background:var(--dark);padding:88px 48px;position:relative;}
+        .signup{background:var(--dark);padding:88px 48px;position:relative;overflow:hidden;}
         .signup::before{content:'';position:absolute;top:-220px;left:50%;transform:translateX(-50%);width:900px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(159,115,230,0.05) 0%,transparent 65%);pointer-events:none;}
         .signup-inner{max-width:700px;margin:0 auto;position:relative;z-index:2;}
         .signup-eyebrow{font-size:11px;font-family:'Roboto Mono',monospace;color:var(--lime);letter-spacing:.1em;margin-bottom:12px;text-align:center;}
