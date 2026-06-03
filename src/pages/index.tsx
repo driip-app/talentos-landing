@@ -738,7 +738,7 @@ export default function TalentOSPage() {
         <div className="hero-inner">
           <h1 className="syne">
             Focus on building the team<br/>
-            <em>that shapes your company&apos;s future.</em>
+            <em>that shapes your company&apos;s future</em>
           </h1>
           <p className="hero-sub">
             Your agents handle every candidate touchpoint, so your team moves at the speed you need
