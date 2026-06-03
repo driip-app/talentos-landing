@@ -469,7 +469,7 @@ export default function TalentOSPage() {
           const track = container.querySelector<HTMLElement>(".pcar-track");
           if (!track) return;
           goToSlide(container, (Number(track.dataset.idx) + 1) % total);
-        }, 3500);
+        }, 4000);
       };
       const stop = () => clearInterval(timer);
       const wrap = container.querySelector<HTMLElement>(".pcar-track-wrap");
@@ -737,12 +737,11 @@ export default function TalentOSPage() {
         </div>
         <div className="hero-inner">
           <h1 className="syne">
-            Talent OS Built
-            <br />
-            <em>To Fix Your Monday.</em>
+            Focus on building the team<br/>
+            <em>that shapes your company&apos;s future.</em>
           </h1>
           <p className="hero-sub">
-            Focus on the real conversations with talents - while we screen your pile, schedule your interviews, and handle every candidate communication in the loop
+            Your agents handle every candidate touchpoint, so your team moves at the speed you need.
           </p>
           <div className="hero-stats">
             <div>
