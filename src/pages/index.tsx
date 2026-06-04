@@ -10,14 +10,11 @@ const MagicRings = dynamic(() => import("@/comps/Global/MagicRings/MagicRings"),
 });
 
 const STATIC_HTML = `
-<section class="video-section">
-  <div class="video-section-inner"></div>
-</section>
 
 <section class="platform" id="platform">
   <div class="platform-inner">
     <div class="platform-eyebrow mono">MEET THE AGENTS</div>
-    <h2 class="platform-title syne">6 agents. One OS.<br><em>Zero dropped tasks.</em></h2>
+    <h2 class="platform-title syne">6 Agents. One OS.<br><em>Zero dropped tasks.</em></h2>
     <p class="platform-sub">Driip agents return 51+ hours of everything else you've been putting off</p>
     <div class="platform-grid">
       <div class="agent-card a1">
@@ -730,7 +727,7 @@ export default function TalentOSPage() {
             Your agents handle every candidate touchpoint, so your team moves at the speed you need
           </p>
           <div
-            className="hero-banner"
+            className={`hero-banner${isMobile ? " hero-banner-mobile" : ""}`}
             onMouseMove={e => {
               const r = e.currentTarget.getBoundingClientRect();
               const x = (e.clientX - r.left) / r.width - 0.5;
@@ -739,7 +736,7 @@ export default function TalentOSPage() {
             }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)'; }}
           >
-            <span className="hero-banner-text syne">Show us your Monday before we fix it.</span>
+            <span className="hero-banner-text syne">Show us your Monday before we fix it</span>
             <button onClick={() => setShowWaitlist(true)} className="hero-cta syne">Let&apos;s Clock In</button>
           </div>
         </div>
@@ -800,6 +797,9 @@ export default function TalentOSPage() {
         .hero-agent-chip.a3{background:rgba(159,115,230,0.18);border:1px solid rgba(159,115,230,0.45);color:#CEB5F8;}
         .chip-dot{width:5px;height:5px;border-radius:50%;}
         .hero-banner{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:rgba(255,255,255,0.07);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 14px 14px 28px;margin-top:20px;position:relative;overflow:hidden;transition:border-color 0.4s,background 0.4s,box-shadow 0.4s,transform 0.25s ease;cursor:default;}
+        .hero-banner-mobile{display:flex;flex-direction:column;align-items:center;width:100%;gap:10px;text-align:center;padding:12px 16px;max-width:100%;box-sizing:border-box;}
+        .hero-banner-mobile .hero-banner-text{white-space:normal;}
+        .hero-banner-mobile .hero-cta{width:100%;justify-content:center;}
         .hero-banner::after{content:'';position:absolute;top:0;left:-70%;width:50%;height:100%;background:linear-gradient(90deg,transparent,rgba(159,115,230,0.18),transparent);transform:skewX(-15deg);pointer-events:none;}
         .hero-banner:hover{border-color:rgba(159,115,230,0.35);background:rgba(159,115,230,0.09);}
         .hero-banner:hover::after{animation:bannerSheen 0.65s ease forwards;}
@@ -811,9 +811,6 @@ export default function TalentOSPage() {
         .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
         .stat-num span{font-size:18px;}
         .stat-label{font-size:10px;color:rgba(255,255,255,0.38);font-family:'Roboto Mono',monospace;letter-spacing:.05em;}
-
-        .video-section{background:var(--dark);padding:0 48px 64px;}
-        .video-section-inner{max-width:1100px;margin:0 auto;padding-top:32px;}
 
         .offer-strip{background:var(--lime);padding:20px 48px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;}
         .offer-strip-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:var(--dark);}
@@ -1084,15 +1081,17 @@ export default function TalentOSPage() {
         @media(max-width:960px){
           .hero{padding:80px 20px 80px;box-sizing:border-box;width:100%;overflow:hidden;align-items:center;}
           .hero h1{font-size:26px;letter-spacing:-.01em;word-break:break-word;overflow-wrap:break-word;max-width:100%;}
+          .hero h1 br,.platform-title br,.section-title br,.signup-title br,.fp-title br,.pc-title br{display:none;}
           .hero-sub{font-size:14px;max-width:100%;}
           .hero-inner{max-width:100%;width:100%;box-sizing:border-box;}
-          .hero-banner{flex-direction:column;gap:10px;text-align:center;padding:12px 16px;max-width:100%;box-sizing:border-box;}
+          .hero-banner{display:flex!important;flex-direction:column;align-items:center;width:100%;gap:10px;text-align:center;padding:12px 20px;max-width:300px;box-sizing:border-box;align-self:center;}
+          .hero-banner-text{white-space:normal;}
           .hero-cta{width:100%!important;justify-content:center;}
           .hero-inner,.feature-panel,.platform-grid,.tgrid{grid-template-columns:1fr;}
           .pc{padding:28px 20px;}
           .stats-grid{grid-template-columns:1fr 1fr;}
           .form-row{grid-template-columns:1fr;}
-          nav,.hero,.video-section,.platform,.features,.personas,.testimonials,.signup{padding-left:20px;padding-right:20px;}
+          nav,.hero,.platform,.features,.personas,.testimonials,.signup{padding-left:20px;padding-right:20px;}
           .platform-title{font-size:28px;}
           .signup-title{font-size:28px;}
           .platform-grid{display:flex!important;flex-direction:column;gap:16px;}
@@ -1108,6 +1107,9 @@ export default function TalentOSPage() {
         @media(max-width:900px){
           nav{padding:0 16px;justify-content:center;}
           .nav-hamburger{position:absolute;right:16px;top:50%;transform:translateY(-50%);}
+        }
+        @media(max-width:480px){
+          .hero h1{font-size:22px;}
         }
         @media(max-width:768px){
           .offer-strip{flex-direction:column;align-items:center;text-align:center;padding:18px 20px;gap:12px;}
