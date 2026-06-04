@@ -736,7 +736,7 @@ export default function TalentOSPage() {
             }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)'; }}
           >
-            <span className="hero-banner-text syne">Show us your Monday before we fix it</span>
+            <span className="hero-banner-text syne">Show us your Week before we fix it</span>
             <button onClick={() => setShowWaitlist(true)} className="hero-cta syne">Let&apos;s Clock In</button>
           </div>
         </div>
@@ -771,7 +771,7 @@ export default function TalentOSPage() {
         .nav-logo img{width:90px;height:auto;display:block;}
         .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);transition:color .15s;}
         .nav-links a:hover{color:var(--driip);}
-        .nav-cta{background:var(--lime);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;font-family:'Geom',sans-serif;transition:all .18s;white-space:nowrap;}
+        .nav-cta{background:var(--lime);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;font-family:'Roboto Mono',monospace;transition:all .18s;white-space:nowrap;}
         .nav-cta:hover{background:var(--lime-mid);color:#fff;transform:translateY(-1px);}
 
         .hero{background:var(--dark);padding:96px 48px 88px;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
@@ -805,7 +805,7 @@ export default function TalentOSPage() {
         .hero-banner:hover::after{animation:bannerSheen 0.65s ease forwards;}
         @keyframes bannerSheen{from{left:-70%}to{left:130%}}
         .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:rgba(255,255,255,0.88);}
-        .hero-cta{background:var(--lime);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.01em;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;}
+        .hero-cta{background:var(--lime);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.01em;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
         .hero-cta:hover{background:var(--lime);box-shadow:0 0 18px rgba(159,115,230,0.45);transform:translateY(-1px);}
         .hero-stats{display:flex;gap:28px;padding:18px 0;}
         .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
@@ -837,7 +837,7 @@ export default function TalentOSPage() {
         .agent-card.a1 .agent-num{color:#CEB5F8;}
         .agent-card.a2 .agent-num{color:#CEB5F8;}
         .agent-card.a3 .agent-num{color:#CEB5F8;}
-        .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
+        .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;text-transform:uppercase;}
         .agent-desc{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:18px;}
         .agent-saving{display:inline-flex;align-items:center;gap:6px;padding:4px 0;margin-top:auto;align-self:flex-start;}
         .saving-icon{font-size:12px;filter:brightness(0) invert(1);}
