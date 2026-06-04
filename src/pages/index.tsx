@@ -2,6 +2,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import React, { useEffect, useRef, useState } from "react";
 import TalentOSWaitlist from "@/comps/TalentOSWaitlist";
+import AgentFinderSection from "@/comps/AgentFinderSection";
 
 const Threads = dynamic(() => import("@/comps/Threads"), { ssr: false });
 
@@ -9,12 +10,12 @@ const MagicRings = dynamic(() => import("@/comps/Global/MagicRings/MagicRings"),
   ssr: false,
 });
 
-const STATIC_HTML = `
+const STATIC_HTML_1 = `
 
 <section class="platform" id="platform">
   <div class="platform-inner">
     <div class="platform-eyebrow mono">MEET THE AGENTS</div>
-    <h2 class="platform-title syne">6 Agents. One OS.<br><em>Zero dropped tasks.</em></h2>
+    <h2 class="platform-title syne">6 Agents. One OS.<br class="mobile-br"> <em>Zero dropped tasks.</em></h2>
     <p class="platform-sub">Driip agents return 51+ hours of everything else you've been putting off</p>
     <div class="platform-grid">
       <div class="agent-card a1">
@@ -36,22 +37,22 @@ const STATIC_HTML = `
         <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">8–12 HRS SAVED / HIRE</span></div>
       </div>
       <div class="agent-card a1">
-        <div class="agent-num mono">Agent Brief</div>
-        <div class="agent-name syne">Job Description Writer</div>
-        <div class="agent-desc">Generates accurate, bias-free job descriptions from a role brief in minutes — aligned to your tone, level, and team context.</div>
-        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">3–5 HRS SAVED / ROLE</span></div>
+        <div class="agent-num mono">Agent Hunt</div>
+        <div class="agent-name syne">Talent Sourcing Assistant</div>
+        <div class="agent-desc">Boolean search across LinkedIn/GitHub; builds outreach lists; generates personalized messages.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">15-25 HRS SAVED/HIRE</span></div>
       </div>
       <div class="agent-card a2">
-        <div class="agent-num mono">Agent Rank</div>
-        <div class="agent-name syne">Interview Evaluator</div>
-        <div class="agent-desc">Compiles structured scorecards from interviewer notes, surfaces consensus gaps, and flags any evaluation inconsistencies before debrief.</div>
-        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">4–6 HRS SAVED / HIRE</span></div>
+        <div class="agent-num mono">Agent Hub</div>
+        <div class="agent-name syne">Hiring Analyst</div>
+        <div class="agent-desc">Real-time pipeline view, time-to-hire tracking, bottleneck alerts, hire forecast.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">2–3 HRS SAVED / HIRE</span></div>
       </div>
       <div class="agent-card a3">
-        <div class="agent-num mono">Agent Onboard</div>
-        <div class="agent-name syne">Onboarding Coordinator</div>
-        <div class="agent-desc">Sends offer letters, collects documents, assigns pre-boarding tasks, and ensures day-one readiness without a single manual follow-up.</div>
-        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">6–8 HRS SAVED / HIRE</span></div>
+        <div class="agent-num mono">Agent Probe</div>
+        <div class="agent-name syne">Phone Screener</div>
+        <div class="agent-desc">5–7 standardized questions, transcription, scoring, advances top candidates only.</div>
+        <div class="agent-saving"><span class="saving-icon">⏱</span><span class="saving-text mono">10–15 HRS SAVED / HIRE</span></div>
       </div>
     </div>
   </div>
@@ -72,10 +73,10 @@ const STATIC_HTML = `
         <div class="fp-agent-tag a1 mono">INTELLIGENT SCREENING</div>
         <h3 class="fp-title syne">Surface 20 top talent from<br>a pile of 200.</h3>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Required Skills:</strong> Technical must-haves, scored as present or absent in context</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Experience Band:</strong> Matched against your approved range, not an arbitrary number</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Scope Signals:</strong> Team size, industry, problem type: evidence they've been in the room</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Growth Markers:</strong> Trajectory, not just tenure, where year 3 of a steep curve beats year 8 of a flat one</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Required skills are considered technical must-haves, scored as present or absent in context</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Experience band is matched against your approved range, not an arbitrary number</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Scope signals include team size, industry, and problem type, which provide evidence that candidates have been in the room</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Growth markers identify trajectory, not just tenure, where year 3 of a steep curve beats year 8 of a flat one</span></div>
         </div>
       </div>
       <div>
@@ -170,10 +171,10 @@ const STATIC_HTML = `
         <div class="fp-agent-tag a1 mono">ATS INTEGRATION</div>
         <h3 class="fp-title syne">Already using Greenhouse<br>or Lever? Connect them.</h3>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR supported</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR and others supported</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
           <div class="fp-bullet"><div class="fp-check t">✓</div><span>Incremental syncs with new applications are scored automatically as they arrive</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Manual upload also supported — PDF, .docx, or plain text</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Manual upload also supported as PDF or docx, or plain text</span></div>
         </div>
       </div>
       <div>
@@ -227,11 +228,11 @@ const STATIC_HTML = `
         <div class="fp-agent-tag a2 mono">SMART SCHEDULING</div>
         <h3 class="fp-title syne">11 email threads<br>to find a 45-minute slot?<br>Never again.</h3>
         <div class="fp-bullets">
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Panel identification:</strong> Tell Driip who should join, and it checks their calendars automatically</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Real availability:</strong> Pulls from Google Calendar, no guesses, no invented slots</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Conflict surfacing:</strong> "Marcus is blocked on Thursday. Proceed without him, or wait?" You decide</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Mode confirmation:</strong> Zoom, Google Meet, Teams, in-person, or phone — link auto-generated for Meet</span></div>
-          <div class="fp-bullet"><div class="fp-check t">✓</div><span><strong>Full dispatch:</strong> Calendar event for panel, confirmation email for candidate in one click</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Tell Driip who should join the interview panel, and it checks their calendars automatically</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Pulls availability from Google Calendar, no guesses or invented slots</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Resolves conflict when "Marcus is blocked on Thursday. Proceed without him, or wait?" You decide</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Interview mode selection available for Zoom, Google Meet, Teams, in-person, or phone. Link auto-generated for Meet</span></div>
+          <div class="fp-bullet"><div class="fp-check t">✓</div><span>Full dispatch</span></div>
         </div>
       </div>
       <div>
@@ -330,40 +331,9 @@ const STATIC_HTML = `
   </div>
 </section>
 
-<section class="personas" id="personas">
-  <div class="personas-inner">
-    <div class="section-eyebrow mono" style="color:var(--teal)">FIND YOUR AGENT</div>
-    <h2 class="section-title syne">Driip works <em style="font-style:normal;color:#9F73E6">differently</em><br>for everyone.</h2>
-    <p class="section-sub">Which means everyone stops doing the part they hate. The whole hiring cycle moves faster. And nobody goes home at 7 pm with 171 unread resumes.</p>
-    <div class="personas-carousel">
-      <div class="pcar-track-wrap">
-<div class="pcar-track" data-idx="0">
-          <div class="pc" id="pc-founders">
-            <div class="pc-tag t mono">FOR FOUNDERS</div>
-            <h3 class="pc-title syne">You're hiring and building and<br>fundraising and keeping the <em style="font-style:normal;color:#9F73E6">lights on</em>.</h3>
-            <p class="pc-desc">You posted a role. You have 180 applications, 3 investor meetings, a product sprint, and a board update. The good news: Driip has already read all 180, scheduled interviews for the top 4, and sent rejections to the rest. The bad news: there isn't any.</p>
-          </div>
-          <div class="pc" id="pc-managers">
-            <div class="pc-tag t mono">FOR HIRING MANAGERS</div>
-            <h3 class="pc-title syne">Get a shortlist you can<br><em style="font-style:normal;color:#9F73E6">explain,</em> not just defend.</h3>
-            <p class="pc-desc">You're not just reviewing candidates. You're going to have to justify this shortlist to your VP, your founder, and eventually yourself at 11 pm. Every Driip score comes with a criterion-level breakdown, so you're sharing evidence, not hunches.</p>
-          </div>
-          <div class="pc" id="pc-ta">
-            <div class="pc-tag t mono">FOR TA TEAMS</div>
-            <h3 class="pc-title syne">Start spending<br>Monday <em style="font-style:normal;color:#9F73E6">recruiting</em>,<br>not screening.</h3>
-            <p class="pc-desc">The best part of your job isn't reading CVs, chasing calendar slots, or writing the same rejection for the fourteenth time this week. Driip eliminates all three, so you can spend your time on the part that actually requires a human.</p>
-          </div>
-        </div>
-      </div>
-      <div class="pcar-dots">
-        <button class="pcar-dot active" data-idx="0" aria-label="Slide 1"></button>
-        <button class="pcar-dot" data-idx="1" aria-label="Slide 2"></button>
-        <button class="pcar-dot" data-idx="2" aria-label="Slide 3"></button>
-      </div>
-    </div>
-  </div>
-</section>
+`;
 
+const STATIC_HTML_2 = `
 <section class="signup" id="demo">
   <div class="signup-inner">
     <div class="signup-eyebrow mono">GET EARLY ACCESS</div>
@@ -417,6 +387,7 @@ function SignupThreads({ staticRef }: { staticRef: React.RefObject<HTMLDivElemen
 
 export default function TalentOSPage() {
   const staticRef = useRef<HTMLDivElement>(null);
+  const signupRef = useRef<HTMLDivElement>(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -467,7 +438,8 @@ export default function TalentOSPage() {
     };
 
     const cleanupFeatures = setupAutoplay(root.querySelector<HTMLElement>(".features-carousel")!);
-    const cleanupPersonas = setupAutoplay(root.querySelector<HTMLElement>(".personas-carousel")!);
+    const personasEl = root.querySelector<HTMLElement>(".personas-carousel");
+    const cleanupPersonas = personasEl ? setupAutoplay(personasEl) : () => {};
 
     const onClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -742,8 +714,10 @@ export default function TalentOSPage() {
         </div>
       </section>
 
-      <SignupThreads staticRef={staticRef} />
-      <div ref={staticRef} dangerouslySetInnerHTML={{ __html: STATIC_HTML }} />
+      <div ref={staticRef} dangerouslySetInnerHTML={{ __html: STATIC_HTML_1 }} />
+      <AgentFinderSection />
+      <SignupThreads staticRef={signupRef} />
+      <div ref={signupRef} dangerouslySetInnerHTML={{ __html: STATIC_HTML_2 }} />
 
       <style jsx global>{`
         @font-face{font-family:'Geom';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/Geom-VariableFont_wght.ttf') format('truetype');}
@@ -833,11 +807,11 @@ export default function TalentOSPage() {
         .agent-card.a2::before{background:var(--lime-mid);}
         .agent-card.a3{background:rgba(201,176,255,0.08);border-color:rgba(201,176,255,0.3);}
         .agent-card.a3::before{background:#CEB5F8;}
-        .agent-num{font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.1em;margin-bottom:14px;}
+        .agent-num{font-size:10px;font-family:'Roboto Mono',monospace;letter-spacing:.1em;margin-bottom:14px;text-transform:uppercase;}
         .agent-card.a1 .agent-num{color:#CEB5F8;}
         .agent-card.a2 .agent-num{color:#CEB5F8;}
         .agent-card.a3 .agent-num{color:#CEB5F8;}
-        .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;text-transform:uppercase;}
+        .agent-name{font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:8px;}
         .agent-desc{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.6;margin-bottom:18px;}
         .agent-saving{display:inline-flex;align-items:center;gap:6px;padding:4px 0;margin-top:auto;align-self:flex-start;}
         .saving-icon{font-size:12px;filter:brightness(0) invert(1);}
@@ -1076,12 +1050,14 @@ export default function TalentOSPage() {
         .ham-line.open:nth-child(1){transform:translateY(7px) rotate(45deg);}
         .ham-line.open:nth-child(2){opacity:0;}
         .ham-line.open:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+        .mobile-br{display:none;}
 
 
         @media(max-width:960px){
           .hero{padding:80px 20px 80px;box-sizing:border-box;width:100%;overflow:hidden;align-items:center;}
           .hero h1{font-size:26px;letter-spacing:-.01em;word-break:break-word;overflow-wrap:break-word;max-width:100%;}
           .hero h1 br,.platform-title br,.section-title br,.signup-title br,.fp-title br,.pc-title br{display:none;}
+          .mobile-br{display:block;}
           .hero-sub{font-size:14px;max-width:100%;}
           .hero-inner{max-width:100%;width:100%;box-sizing:border-box;}
           .hero-banner{display:flex!important;flex-direction:column;align-items:center;width:100%;gap:10px;text-align:center;padding:12px 20px;max-width:300px;box-sizing:border-box;align-self:center;}
