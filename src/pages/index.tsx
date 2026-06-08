@@ -596,7 +596,7 @@ export default function TalentOSPage() {
         />
       </Head>
 
-      <nav style={isMobile ? { justifyContent: "center", position: "relative" } : undefined}>
+      <nav style={isMobile ? { justifyContent: "center" } : undefined}>
         <a href="#top" className="nav-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/logo-beta-v2.png" alt="Driip" />
@@ -775,8 +775,8 @@ export default function TalentOSPage() {
         @font-face{font-family:'Geom';font-style:normal;font-weight:100 900;font-display:swap;src:url('/fonts/Geom-VariableFont_wght.ttf') format('truetype');}
         @font-face{font-family:'Geom';font-style:italic;font-weight:100 900;font-display:swap;src:url('/fonts/Geom-Italic-VariableFont_wght.ttf') format('truetype');}
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-        html{scroll-behavior:smooth;color-scheme:dark;overflow-x:hidden;}
-        body{font-family:'Roboto',sans-serif;color:#1A1A2E;background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+        html{scroll-behavior:smooth;color-scheme:dark;overflow-x:clip;}
+        body{font-family:'Roboto',sans-serif;color:#1A1A2E;background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased;}
         a{text-decoration:none;color:inherit;}
         button,input,select,textarea{font-family:inherit;}
         :root{
