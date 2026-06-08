@@ -346,17 +346,22 @@ const STATIC_HTML_2 = `
         </div>
         <div class="form-row full">
           <div class="form-group"><label class="form-label mono">WHAT'S YOUR BIGGEST HIRING HEADACHE?</label>
-            <select class="form-select" name="headache" required>
-              <option value="" disabled selected>Be honest. We've heard it all.</option>
-              <option>I have 200 CVs and no time to read them</option>
-              <option>Every interview takes 11 emails to schedule</option>
-              <option>Candidates are going dark — nobody's following up</option>
-              <option>I don't even have a job description yet</option>
-              <option>All of the above. It's a full disaster</option>
-            </select>
+            <div id="headache-select" style="position:relative;">
+              <input type="hidden" name="headache" id="headache-hidden" />
+              <button type="button" id="headache-trigger" class="form-select" style="width:100%;text-align:left;display:flex;align-items:center;justify-content:space-between;background-image:url('data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%278%27 viewBox=%270 0 12 8%27%3E%3Cpath d=%27M1 1l5 5 5-5%27 fill=%27none%27 stroke=%27rgba(255,255,255,0.3)%27 stroke-width=%271.5%27 stroke-linecap=%27round%27/%3E%3C/svg%3E');background-repeat:no-repeat;background-position:right 12px center;padding-right:34px;">
+                <span id="headache-value" style="color:rgba(255,255,255,0.2)">Be honest. We&#39;ve heard it all.</span>
+              </button>
+              <ul id="headache-menu" role="listbox" style="display:none;list-style:none;margin:0;padding:0;position:absolute;top:calc(100% + 4px);left:0;right:0;background:#0e0e10;border:1px solid rgba(159,115,230,0.3);border-radius:7px;overflow:hidden;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,0.5);">
+                <li role="option" style="padding:10px 14px;font-size:13px;color:#fff;cursor:pointer;" data-value="I have 200 CVs and no time to read them">I have 200 CVs and no time to read them</li>
+                <li role="option" style="padding:10px 14px;font-size:13px;color:#fff;cursor:pointer;" data-value="Every interview takes 11 emails to schedule">Every interview takes 11 emails to schedule</li>
+                <li role="option" style="padding:10px 14px;font-size:13px;color:#fff;cursor:pointer;" data-value="Candidates are going dark — nobody's following up">Candidates are going dark &#8212; nobody&#39;s following up</li>
+                <li role="option" style="padding:10px 14px;font-size:13px;color:#fff;cursor:pointer;" data-value="I don't even have a job description yet">I don&#39;t even have a job description yet</li>
+                <li role="option" style="padding:10px 14px;font-size:13px;color:#fff;cursor:pointer;" data-value="All of the above. It's a full disaster">All of the above. It&#39;s a full disaster</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <button type="submit" class="form-submit syne" style="width:100%;margin-top:20px;padding:14px;border-radius:9px;background:#9F73E6;border:none;color:#0E0E10;font-size:14px;font-family:'Geom',sans-serif;font-weight:800;letter-spacing:.02em;cursor:pointer;">Request Early Access Pass</button>
+        <button type="submit" class="form-submit mono" style="width:100%;margin-top:20px;padding:14px;border-radius:9px;background:#9F73E6;border:none;color:#0E0E10;font-size:14px;font-family:'Roboto Mono',monospace;font-weight:400;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;">Request Early Access Pass</button>
       </form>
       <div class="form-success" id="form-success" style="display:none;text-align:center;padding:44px 20px;">
         <div class="form-success-icon">🎉</div>
@@ -463,36 +468,11 @@ export default function TalentOSPage() {
       }
     };
 
-    const onSubmit = (e: SubmitEvent) => {
-      const form = e.target as HTMLFormElement;
-      if (form?.id !== "driip-form") return;
-      e.preventDefault();
-      const btn = form.querySelector<HTMLButtonElement>("button[type=submit]");
-      if (btn) btn.disabled = true;
-      fetch("https://formspree.io/f/xredlbnb", {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      })
-        .then(res => {
-          if (res.ok) {
-            setFormSubmitted(true);
-          } else {
-            if (btn) btn.disabled = false;
-          }
-        })
-        .catch(() => {
-          if (btn) btn.disabled = false;
-        });
-    };
-
     root.addEventListener("click", onClick);
-    root.addEventListener("submit", onSubmit as EventListener);
     return () => {
       cleanupFeatures();
       cleanupPersonas();
       root.removeEventListener("click", onClick);
-      root.removeEventListener("submit", onSubmit as EventListener);
     };
   }, []);
 
@@ -546,6 +526,64 @@ export default function TalentOSPage() {
     }
   }, [formSubmitted]);
 
+  useEffect(() => {
+    const root = signupRef.current;
+    if (!root) return;
+    const trigger = root.querySelector<HTMLButtonElement>("#headache-trigger");
+    const menu = root.querySelector<HTMLElement>("#headache-menu");
+    const valueEl = root.querySelector<HTMLElement>("#headache-value");
+    const hidden = root.querySelector<HTMLInputElement>("#headache-hidden");
+    const items = Array.from(root.querySelectorAll<HTMLElement>("#headache-menu li"));
+    const form = root.querySelector<HTMLFormElement>("#driip-form");
+    if (!trigger || !menu) return;
+
+    const open = () => { menu.style.display = "block"; trigger.style.borderColor = "rgba(159,115,230,0.4)"; };
+    const close = () => { menu.style.display = "none"; trigger.style.borderColor = ""; };
+    const toggle = (e: Event) => { e.preventDefault(); menu.style.display === "none" ? open() : close(); };
+
+    items.forEach(li => {
+      li.addEventListener("mouseenter", () => { li.style.background = "#9F73E6"; li.style.color = "#0E0E10"; });
+      li.addEventListener("mouseleave", () => { li.style.background = ""; li.style.color = "#fff"; });
+      li.addEventListener("click", () => {
+        const v = li.dataset.value || "";
+        if (hidden) hidden.value = v;
+        if (valueEl) { valueEl.textContent = v; valueEl.style.color = "#fff"; }
+        close();
+      });
+    });
+
+    const onOutside = (e: MouseEvent) => {
+      if (!root.querySelector("#headache-select")?.contains(e.target as Node)) close();
+    };
+    const onValidate = (e: Event) => {
+      if (hidden && !hidden.value) { e.preventDefault(); e.stopPropagation(); open(); }
+    };
+    const onSubmit = (e: SubmitEvent) => {
+      e.preventDefault();
+      const btn = form?.querySelector<HTMLButtonElement>("button[type=submit]");
+      if (btn) btn.disabled = true;
+      fetch("https://formspree.io/f/xredlbnb", {
+        method: "POST",
+        body: new FormData(form!),
+        headers: { Accept: "application/json" },
+      })
+        .then(res => { if (res.ok) { setFormSubmitted(true); } else { if (btn) btn.disabled = false; } })
+        .catch(() => { if (btn) btn.disabled = false; });
+    };
+
+    trigger.addEventListener("click", toggle);
+    document.addEventListener("click", onOutside);
+    form?.addEventListener("submit", onValidate, true);
+    form?.addEventListener("submit", onSubmit as EventListener);
+    return () => {
+      trigger.removeEventListener("click", toggle);
+      document.removeEventListener("click", onOutside);
+      form?.removeEventListener("submit", onValidate, true);
+      form?.removeEventListener("submit", onSubmit as EventListener);
+    };
+  }, []);
+
+
   return (
     <>
       <Head>
@@ -572,7 +610,7 @@ export default function TalentOSPage() {
           </div>
         )}
         {!isMobile && (
-          <a href="#demo" className="nav-cta syne">Join the Waitlist</a>
+          <a href="#demo" className="nav-cta">Join the Waitlist</a>
         )}
         <button
           className="nav-hamburger"
@@ -637,6 +675,12 @@ export default function TalentOSPage() {
             <a
               key={href}
               href={href}
+              onClick={e => {
+                e.preventDefault();
+                setNavOpen(false);
+                const el = document.querySelector(href);
+                if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
               style={{
                 padding: "14px 20px",
                 fontSize: 15,
@@ -649,14 +693,22 @@ export default function TalentOSPage() {
           ))}
           <a
             href="#demo"
+            onClick={e => {
+              e.preventDefault();
+              setNavOpen(false);
+              document.querySelector("#demo")?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
             style={{
               margin: "8px 20px 0",
               padding: "12px 20px",
               background: "#9F73E6",
               color: "#0E0E10",
               borderRadius: 7,
-              fontWeight: 700,
-              fontFamily: "'Geom', sans-serif",
+              fontWeight: 400,
+              fontFamily: "'Roboto Mono', monospace",
+              fontSize: 13,
+              letterSpacing: "0.04em",
+              textTransform: "uppercase",
               textAlign: "center",
               display: "block",
             }}
@@ -708,8 +760,8 @@ export default function TalentOSPage() {
             }}
             onMouseLeave={e => { e.currentTarget.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)'; }}
           >
-            <span className="hero-banner-text syne">Show us your Week before we fix it</span>
-            <button onClick={() => setShowWaitlist(true)} className="hero-cta syne">Let&apos;s Clock In</button>
+            <span className="hero-banner-text syne">Show us your week before we fix it</span>
+            <button onClick={() => setShowWaitlist(true)} className="hero-cta">Let&apos;s Clock In</button>
           </div>
         </div>
       </section>
@@ -745,7 +797,7 @@ export default function TalentOSPage() {
         .nav-logo img{width:90px;height:auto;display:block;}
         .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);transition:color .15s;}
         .nav-links a:hover{color:var(--driip);}
-        .nav-cta{background:var(--lime);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:700;font-family:'Roboto Mono',monospace;transition:all .18s;white-space:nowrap;}
+        .nav-cta{background:var(--lime);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;font-family:'Roboto Mono',monospace;transition:all .18s;white-space:nowrap;}
         .nav-cta:hover{background:var(--lime-mid);color:#fff;transform:translateY(-1px);}
 
         .hero{background:var(--dark);padding:96px 48px 88px;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
@@ -779,7 +831,7 @@ export default function TalentOSPage() {
         .hero-banner:hover::after{animation:bannerSheen 0.65s ease forwards;}
         @keyframes bannerSheen{from{left:-70%}to{left:130%}}
         .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:rgba(255,255,255,0.88);}
-        .hero-cta{background:var(--lime);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:800;letter-spacing:.01em;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
+        .hero-cta{background:var(--lime);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
         .hero-cta:hover{background:var(--lime);box-shadow:0 0 18px rgba(159,115,230,0.45);transform:translateY(-1px);}
         .hero-stats{display:flex;gap:28px;padding:18px 0;}
         .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
@@ -1031,9 +1083,9 @@ export default function TalentOSPage() {
         .form-input,.form-select{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:7px;padding:10px 13px;color:#fff;font-size:13px;transition:border-color .18s;outline:none;-webkit-appearance:none;appearance:none;color-scheme:dark;}
         .form-input::placeholder{color:rgba(255,255,255,0.2);}
         .form-input:focus,.form-select:focus{border-color:rgba(159,115,230,0.4);}
-        .form-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;}
-        .form-select option{background:#1a1a24;color:#fff;}
-        .form-select option:disabled{color:rgba(255,255,255,0.4);}
+        .form-select{cursor:pointer;font-family:inherit;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:34px;}
+        .form-select option{background:#1a1a22;color:#fff;}
+        .form-select option:disabled{color:rgba(255,255,255,0.35);}
         .form-select option:checked{background:#9F73E6;color:#0E0E10;}
         .form-submit{width:100%;margin-top:20px;padding:14px;border-radius:9px;background:var(--lime);border:none;color:var(--dark);font-size:14px;font-family:'Geom',sans-serif;font-weight:800;letter-spacing:.02em;cursor:pointer;transition:all .2s;}
         .form-submit:hover{background:var(--lime-mid);color:#fff;transform:translateY(-1px);}
