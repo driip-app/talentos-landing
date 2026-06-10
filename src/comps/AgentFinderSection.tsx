@@ -13,9 +13,10 @@ const cardClassName =
 const PERSONAS = [
   {
     label: "FOUNDERS",
-    image: "/images/persona-ta-teams-2.png",
-    objectPosition: "center center",
-    scale: 1.2,
+    image: "/images/persona-founders-new.png",
+    objectPosition: "center top",
+    transformOrigin: "center 50%",
+    scale: 1.7,
     title: "Focus on building, fundraising and keeping the lights on.",
     desc: "You posted a role. You have 180 applications, 3 investor meetings, a product sprint, and a board update. The good news: Driip has already read all 180, scheduled interviews for the top 4, and sent rejections to the rest. The bad news: there isn't any.",
   },
@@ -74,7 +75,7 @@ export default function AgentFinderSection() {
                 <img
                   src={p.image}
                   alt=""
-                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: p.objectPosition ?? "center top", transform: p.scale ? `scale(${p.scale})` : undefined }}
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: p.objectPosition ?? "center top", transform: p.scale ? `scale(${p.scale})` : undefined, transformOrigin: p.transformOrigin ?? (p.objectPosition?.includes("top") ? "center top" : "center center") }}
                 />
                 <CutoutCardOverlay />
                 <CutoutCardInsetLabel
