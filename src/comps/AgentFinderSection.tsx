@@ -1,7 +1,6 @@
 import {
   CutoutCard,
   CutoutCardContent,
-  CutoutCardFooter,
   CutoutCardInsetLabel,
   CutoutCardMedia,
   CutoutCardOverlay,
@@ -14,35 +13,29 @@ const cardClassName =
 const PERSONAS = [
   {
     label: "FOUNDERS",
-    gradient:
-      "linear-gradient(160deg, rgba(159,115,230,0.75) 0%, rgba(99,66,172,0.6) 40%, rgba(14,14,16,0.85) 100%)",
+    image: "/images/persona-ta-teams-2.png",
+    objectPosition: "center center",
+    scale: 1.2,
     title: "Focus on building, fundraising and keeping the lights on.",
     desc: "You posted a role. You have 180 applications, 3 investor meetings, a product sprint, and a board update. The good news: Driip has already read all 180, scheduled interviews for the top 4, and sent rejections to the rest. The bad news: there isn't any.",
   },
   {
     label: "HIRING MANAGERS",
-    gradient:
-      "linear-gradient(160deg, rgba(99,66,172,0.75) 0%, rgba(159,115,230,0.5) 40%, rgba(14,14,16,0.85) 100%)",
+    image: "/images/persona-hiring-managers-2.png",
+    objectPosition: "center center",
+    scale: 1.6,
     title: "Get a shortlist you can explain, not just defend.",
     desc: "You're not just reviewing candidates. You're going to have to justify this shortlist to your VP, your founder, and eventually yourself at 11 pm. Every Driip score comes with a criterion-level breakdown, so you're sharing evidence, not hunches.",
   },
   {
     label: "TA TEAMS",
-    gradient:
-      "linear-gradient(160deg, rgba(206,181,248,0.55) 0%, rgba(99,66,172,0.55) 45%, rgba(14,14,16,0.85) 100%)",
+    image: "/images/persona-founders.jpg",
+    objectPosition: "center center",
     title: "Start spending Monday recruiting, not screening.",
     desc: "The best part of your job isn't reading CVs, chasing calendar slots, or writing the same rejection for the fourteenth time this week. Driip eliminates all three, so you can spend your time on the part that actually requires a human.",
   },
 ]
 
-function ClockIcon() {
-  return (
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#9F73E6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <polyline points="12 6 12 12 16 14" />
-    </svg>
-  )
-}
 
 export default function AgentFinderSection() {
   return (
@@ -76,14 +69,12 @@ export default function AgentFinderSection() {
         >
           {PERSONAS.map((p) => (
             <CutoutCard key={p.label} trackPointerHover={false} className={cardClassName} style={{ display: "flex", flexDirection: "column" }}>
-              <CutoutCardMedia style={{ height: 180 }}>
-                <div style={{ position: "absolute", inset: 0, background: p.gradient }} />
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundImage: `radial-gradient(ellipse at 75% 25%, rgba(206,181,248,0.2) 0%, transparent 55%)`,
-                  }}
+              <CutoutCardMedia style={{ height: 220 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.image}
+                  alt=""
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: p.objectPosition ?? "center top", transform: p.scale ? `scale(${p.scale})` : undefined }}
                 />
                 <CutoutCardOverlay />
                 <CutoutCardInsetLabel

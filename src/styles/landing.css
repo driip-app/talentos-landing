@@ -57,8 +57,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filt
 .hero-banner:hover::after{animation:bannerSheen 0.65s ease forwards;}
 @keyframes bannerSheen{from{left:-70%}to{left:130%}}
 .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:rgba(255,255,255,0.88);}
-.hero-cta{background:var(--lime);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
-.hero-cta:hover{background:var(--lime);box-shadow:0 0 18px rgba(159,115,230,0.45);transform:translateY(-1px);}
+.hero-cta{background:var(--lime-mid);color:#fff;width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
+.hero-cta:hover{background:var(--lime);color:var(--dark);box-shadow:0 0 18px rgba(159,115,230,0.45);transform:translateY(-1px);}
 .hero-stats{display:flex;gap:28px;padding:18px 0;}
 .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
 .stat-num span{font-size:18px;}

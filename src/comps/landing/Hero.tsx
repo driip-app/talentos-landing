@@ -61,7 +61,7 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
           onMouseLeave={e => { e.currentTarget.style.transform = "perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)"; }}
         >
           <span className="hero-banner-text syne">Show us your week before we fix it</span>
-          <button onClick={onOpenWaitlist} className="hero-cta">Let&apos;s Clock In</button>
+          <button onClick={onOpenWaitlist} className="hero-cta" style={{ marginLeft: 16 }}>Let&apos;s Clock In</button>
         </div>
       </div>
     </section>
