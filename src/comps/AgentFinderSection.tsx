@@ -30,8 +30,9 @@ const PERSONAS = [
   },
   {
     label: "TA TEAMS",
-    image: "/images/persona-founders.jpg",
+    image: "/images/persona-ta-teams-new.png",
     objectPosition: "center center",
+    scale: 1.6,
     title: "Start spending Monday recruiting, not screening.",
     desc: "The best part of your job isn't reading CVs, chasing calendar slots, or writing the same rejection for the fourteenth time this week. Driip eliminates all three, so you can spend your time on the part that actually requires a human.",
   },
