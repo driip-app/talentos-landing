@@ -44,7 +44,9 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
       </div>
       <div className="hero-inner">
         <h1 className="syne">
-          Focus on building the team<br />
+          <span className="hero-title-word">Focus on building</span>{" "}
+          <span className="hero-title-word">the team</span>
+          <br />
           <em>that shapes your company&apos;s future</em>
         </h1>
         <p className="hero-sub">
