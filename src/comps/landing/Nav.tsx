@@ -26,7 +26,7 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
       <nav style={isMobile ? { justifyContent: "center" } : undefined}>
         <a href="#top" className="nav-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/driip-logo.png" alt="Driip" />
+          <img src="/images/driip-logo.png" alt="Driip" style={{ mixBlendMode: "screen" }} />
         </a>
         {!isMobile && (
           <div className="nav-links">
