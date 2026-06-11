@@ -47,7 +47,7 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
           <span className="hero-title-word">Focus on building</span>{" "}
           <span className="hero-title-word">the team</span>
           <br />
-          <em>that shapes your company&apos;s future</em>
+          <em>that shapes your<br className="mobile-br" /> company&apos;s future</em>
         </h1>
         <p className="hero-sub">
           Your agents handle every candidate touchpoint, so your team moves at the speed you need

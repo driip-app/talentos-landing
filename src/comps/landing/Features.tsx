@@ -19,7 +19,7 @@ export default function Features() {
     <section className="features" id="features">
       <div className="features-inner">
         <div className="section-eyebrow mono" style={{ color: "#fff" }}>AGENT SUPERPOWERS</div>
-        <h2 className="section-title syne">Your hiring OS that reads people,<br />books calendars, and writes emails.<br />You just approve.</h2>
+        <h2 className="section-title syne">Your hiring OS that reads people,<br />{" "}books calendars, and writes emails.<br />{" "}You just approve.</h2>
         <p className="section-sub">Stop managing a process and start making actual hires.</p>
         <div className="features-carousel">
           <div
@@ -34,7 +34,7 @@ export default function Features() {
               <div className="feature-panel" id="p-screening">
                 <div>
                   <div className="fp-agent-tag a1 mono">INTELLIGENT SCREENING</div>
-                  <h3 className="fp-title syne">Surface 20 top talent from<br />a pile of 200.</h3>
+                  <h3 className="fp-title syne">Surface 20 top talent from<br />{" "}a pile of 200.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Required skills are considered technical must-haves, scored as present or absent in context</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Experience band is matched against your approved range, not an arbitrary number</span></div>
@@ -66,7 +66,7 @@ export default function Features() {
               <div className="feature-panel" id="p-bias">
                 <div>
                   <div className="fp-agent-tag a1 mono">BIAS-FREE</div>
-                  <h3 className="fp-title syne">We strip the bias fields<br />before scoring runs.</h3>
+                  <h3 className="fp-title syne">We strip the bias fields<br />{" "}before scoring runs.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Name, address, institution stripped at ingestion; not as a guardrail but a structure</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Candidates scored against your rubric independently, with no anchoring from other CVs</span></div>
@@ -95,7 +95,7 @@ export default function Features() {
               <div className="feature-panel" id="p-jd">
                 <div>
                   <div className="fp-agent-tag a1 mono">SMART JD BUILDER</div>
-                  <h3 className="fp-title syne">Have a job description ready<br />in less than a minute.</h3>
+                  <h3 className="fp-title syne">Have a job description ready<br />{" "}in less than a minute.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Guided discovery across 9 dimensions: seniority, outcomes, skills, culture signals, compensation</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Generic phrases blocked — &quot;fast-paced environment&quot; will be kindly declined</span></div>
@@ -132,7 +132,7 @@ export default function Features() {
               <div className="feature-panel" id="p-ats">
                 <div>
                   <div className="fp-agent-tag a1 mono">ATS INTEGRATION</div>
-                  <h3 className="fp-title syne">Already using Greenhouse<br />or Lever? Connect them.</h3>
+                  <h3 className="fp-title syne">Already using Greenhouse<br />{" "}or Lever? Connect them.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR and others supported</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
@@ -160,7 +160,7 @@ export default function Features() {
               <div className="feature-panel" id="p-transparency">
                 <div>
                   <div className="fp-agent-tag a1 mono">SCORE TRANSPARENCY</div>
-                  <h3 className="fp-title syne">Every score explained.<br />Override anything.<br />Log everything.</h3>
+                  <h3 className="fp-title syne">Every score explained.<br />{" "}Override anything.<br />{" "}Log everything.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Criterion-level evidence breakdown on every candidate card with a full evidence log</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Override any criterion in one click, add a reason, and the score recalculates</span></div>
@@ -189,7 +189,7 @@ export default function Features() {
               <div className="feature-panel" id="p-scheduling">
                 <div>
                   <div className="fp-agent-tag a2 mono">SMART SCHEDULING</div>
-                  <h3 className="fp-title syne">11 email threads<br />to find a 45-minute slot?<br />Never again.</h3>
+                  <h3 className="fp-title syne">11 email threads<br />{" "}to find a 45-minute slot?<br />{" "}Never again.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Tell Driip who should join the interview panel, and it checks their calendars automatically</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Pulls availability from Google Calendar, no guesses or invented slots</span></div>
@@ -228,7 +228,7 @@ export default function Features() {
               <div className="feature-panel" id="p-comms">
                 <div>
                   <div className="fp-agent-tag a3 mono">SEAMLESS COMMUNICATION</div>
-                  <h3 className="fp-title syne">Every candidate hears<br />from you, even when<br />you forget.</h3>
+                  <h3 className="fp-title syne">Every candidate hears<br />{" "}from you, even when<br />{" "}you forget.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Thanks for applying, interview confirmation, rejection, offer, status update - all handled</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Personalized to each candidate and not a mail merge from 2015, nor a template you can tell is a template</span></div>

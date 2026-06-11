@@ -56,7 +56,7 @@ export default function Signup() {
       </div>
       <div className="signup-inner">
         <div className="signup-eyebrow mono">GET EARLY ACCESS</div>
-        <h2 className="signup-title syne">Your next great hire is<br />in that pile <em>right now.</em></h2>
+        <h2 className="signup-title syne">Your next great hire is<br className="mobile-br" /> in<br />{" "}that pile <em>right now.</em></h2>
         <p className="signup-sub">Join our waitlist. No enterprise pricing drama.</p>
         <div className="signup-form">
           {!submitted ? (
