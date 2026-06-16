@@ -14,7 +14,7 @@ export default function TalentOSPage() {
   return (
     <>
       <Head>
-        <title>Driip — World&apos;s #1 Talent OS</title>
+        <title>Driip — The AI-Powered Hiring OS for Growing Teams</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link

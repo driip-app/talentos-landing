@@ -4,7 +4,7 @@ export default function Platform() {
       <div className="platform-inner">
         <div className="platform-eyebrow mono">MEET THE AGENTS</div>
         <h2 className="platform-title syne">6 Agents. One OS.<br className="mobile-br" /> <em>Zero dropped tasks.</em></h2>
-        <p className="platform-sub">Driip agents return 51+ hours of everything else you&apos;ve been putting off</p>
+        <p className="platform-sub">Driip agents give back 51+ hours per hire — time you&apos;ve been burning on everything else</p>
         <div className="platform-grid">
           <div className="agent-card a1">
             <div className="agent-num mono">Agent Scout</div>
@@ -28,7 +28,7 @@ export default function Platform() {
             <div className="agent-num mono">Agent Hunt</div>
             <div className="agent-name syne">Talent Sourcing Assistant</div>
             <div className="agent-desc">Boolean search across LinkedIn/GitHub; builds outreach lists; generates personalized messages.</div>
-            <div className="agent-saving"><span className="saving-icon">⏱</span><span className="saving-text mono">15-25 HRS SAVED/HIRE</span></div>
+            <div className="agent-saving"><span className="saving-icon">⏱</span><span className="saving-text mono">15–25 HRS SAVED / HIRE</span></div>
           </div>
           <div className="agent-card a2">
             <div className="agent-num mono">Agent Hub</div>

@@ -58,7 +58,7 @@ export default function AgentFinderSection() {
           Driip works <em style={{ fontStyle: "normal", color: "#9F73E6" }}>differently</em><br />{" "}for everyone.
         </h2>
         <p className="section-sub" style={{ marginBottom: 48 }}>
-          Which means everyone stops doing the part they hate. The whole hiring cycle moves faster. And nobody goes home at 7 pm with 171 unread resumes.
+          That means everyone stops doing the part they hate. The whole hiring cycle moves faster. And nobody goes home at 7 pm with 171 unread resumes.
         </p>
 
         <div

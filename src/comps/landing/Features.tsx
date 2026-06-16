@@ -34,12 +34,12 @@ export default function Features() {
               <div className="feature-panel" id="p-screening">
                 <div>
                   <div className="fp-agent-tag a1 mono">INTELLIGENT SCREENING</div>
-                  <h3 className="fp-title syne">Surface 20 top talent from<br />{" "}a pile of 200.</h3>
+                  <h3 className="fp-title syne">Surface your top 20 candidates from<br />{" "}a pile of 200.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Required skills are considered technical must-haves, scored as present or absent in context</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Experience band is matched against your approved range, not an arbitrary number</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Scope signals include team size, industry, and problem type, which provide evidence that candidates have been in the room</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Growth markers identify trajectory, not just tenure, where year 3 of a steep curve beats year 8 of a flat one</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Scope signals — team size, industry, and problem type — surface candidates who&apos;ve operated at comparable scale</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Growth markers identify trajectory, not just tenure — year 3 of a steep curve outweighs year 8 of a flat one</span></div>
                   </div>
                 </div>
                 <div>
@@ -68,10 +68,10 @@ export default function Features() {
                   <div className="fp-agent-tag a1 mono">BIAS-FREE</div>
                   <h3 className="fp-title syne">We strip the bias fields<br />{" "}before scoring runs.</h3>
                   <div className="fp-bullets">
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Name, address, institution stripped at ingestion; not as a guardrail but a structure</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Name, address, institution stripped at ingestion — not as an afterthought, but as architecture</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Candidates scored against your rubric independently, with no anchoring from other CVs</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Designed on validity research and bias-interruption framework</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Shortlist is legally defensible as every score is backed by criterion-level evidence</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Grounded in validity research and bias-interruption frameworks</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Your shortlist is legally defensible because every score is backed by criterion-level evidence</span></div>
                   </div>
                 </div>
                 <div>
@@ -97,7 +97,7 @@ export default function Features() {
                   <div className="fp-agent-tag a1 mono">SMART JD BUILDER</div>
                   <h3 className="fp-title syne">Have a job description ready<br />{" "}in less than a minute.</h3>
                   <div className="fp-bullets">
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Guided discovery across 9 dimensions: seniority, outcomes, skills, culture signals, compensation</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Guided discovery across 9 dimensions: seniority, outcomes, skills, culture signals, compensation, and 4 more</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Generic phrases blocked — &quot;fast-paced environment&quot; will be kindly declined</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Review inline, edit by section, or regenerate fully</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>One-click posting to LinkedIn, Indeed, and your careers page</span></div>
@@ -132,12 +132,12 @@ export default function Features() {
               <div className="feature-panel" id="p-ats">
                 <div>
                   <div className="fp-agent-tag a1 mono">ATS INTEGRATION</div>
-                  <h3 className="fp-title syne">Already using Greenhouse<br />{" "}or Lever? Connect them.</h3>
+                  <h3 className="fp-title syne">Already on Greenhouse or Lever?<br />{" "}Connect in under 2 minutes.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR and others supported</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Incremental syncs with new applications are scored automatically as they arrive</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Manual upload also supported as PDF or docx, or plain text</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>New applications sync automatically and are scored as they arrive</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Manual upload supported: PDF, DOCX, or plain text</span></div>
                   </div>
                 </div>
                 <div>
@@ -164,8 +164,8 @@ export default function Features() {
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Criterion-level evidence breakdown on every candidate card with a full evidence log</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Override any criterion in one click, add a reason, and the score recalculates</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Audit trail for every override logged with timestamp, operator, and reason</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Legally defensible, as your shortlist comes with documentation if you ever need it</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Every override is logged with a timestamp, operator, and reason — full audit trail included</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Your shortlist is legally defensible — every decision is documented</span></div>
                   </div>
                 </div>
                 <div>
@@ -192,9 +192,9 @@ export default function Features() {
                   <h3 className="fp-title syne">11 email threads<br />{" "}to find a 45-minute slot?<br />{" "}Never again.</h3>
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Tell Driip who should join the interview panel, and it checks their calendars automatically</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Pulls availability from Google Calendar, no guesses or invented slots</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Resolves conflict when &quot;Marcus is blocked on Thursday. Proceed without him, or wait?&quot; You decide</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Interview mode selection available for Zoom, Google Meet, Teams, in-person, or phone. Link auto-generated for Meet</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Pulls availability from Google Calendar — no guesses, no invented slots</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Resolves conflicts when &quot;Marcus is blocked on Thursday. Proceed without him, or wait?&quot; You decide</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Interview mode selection available for Zoom, Google Meet, Teams, in-person, or phone. Meeting link auto-generated for Google Meet</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Full dispatch</span></div>
                   </div>
                 </div>
@@ -230,10 +230,10 @@ export default function Features() {
                   <div className="fp-agent-tag a3 mono">SEAMLESS COMMUNICATION</div>
                   <h3 className="fp-title syne">Every candidate hears<br />{" "}from you, even when<br />{" "}you forget.</h3>
                   <div className="fp-bullets">
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Thanks for applying, interview confirmation, rejection, offer, status update - all handled</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Personalized to each candidate and not a mail merge from 2015, nor a template you can tell is a template</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Stale candidate detector nudges you if there is no contact for 7 days - your employer brand is watching</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Rejection SLA prompts you if 72+ hours pass after a decision with no rejection sent</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Application receipts, interview confirmations, rejections, offers, status updates — all handled</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Personalized to each candidate — not a 2015 mail merge, not a template that reads like one</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Stale candidate detector nudges you if there&apos;s no contact for 7 days — your employer brand depends on it</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Rejection SLA: prompts you when a hiring decision sits for 72+ hours with no rejection sent to the candidate</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Bulk send with confirmation, copy-per-email, full audit log, GDPR compliant</span></div>
                   </div>
                 </div>
