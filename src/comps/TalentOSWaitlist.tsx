@@ -289,7 +289,7 @@ function Opening({ onEnter }: { onEnter: () => void }) {
 
         {/* Logo */}
         <div style={{ display:"flex", alignItems:"center", justifyContent:"center", marginBottom:56 }}>
-          <img src="/images/logo-beta-v2.png" alt="Driip" style={{ width:80, height:"auto" }} />
+          <img src="/images/driip-logo.png" alt="Driip" style={{ width:80, height:"auto", mixBlendMode:"screen" }} />
         </div>
 
         {/* Ryan: the threshold — invitation to enter the storyworld */}
@@ -356,7 +356,7 @@ function Scene({ world, idx, total, onChoose }: {
         {/* Navigation header */}
         <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:44 }}>
           <div style={{ display:"flex", alignItems:"center", gap:8 }}>
-            <img src="/images/logo-beta-v2.png" alt="Driip" style={{ width:52, height:"auto" }} />
+            <img src="/images/driip-logo.png" alt="Driip" style={{ width:52, height:"auto", mixBlendMode:"screen" }} />
           </div>
           <WorldMap total={total} current={idx}/>
           <button type="button" onClick={skip} style={{ background:"transparent", border:"none", color:C.dim, fontSize:9, fontFamily:MO, cursor:"pointer", letterSpacing:"0.06em", transition:"color 0.15s" }}
@@ -501,7 +501,7 @@ function Result({ dominant, scores, onReplay }: {
 
         {/* Header */}
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:56 }}>
-          <img src="/images/logo-beta-v2.png" alt="Driip" style={{ width:52, height:"auto" }} />
+          <img src="/images/driip-logo.png" alt="Driip" style={{ width:52, height:"auto", mixBlendMode:"screen" }} />
         </div>
 
 
