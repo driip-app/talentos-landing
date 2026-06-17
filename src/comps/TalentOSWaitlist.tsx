@@ -74,7 +74,8 @@ const WORLDS: World[] = [
       // "Your coffee is cold. You haven't touched it.",
     ],
     // The narrative tension — what Ryan calls the "narrative gap"
-    tension: "248 emails are waiting.\n180 of them are from candidates.\n\nSomewhere in that pile is your best hire of the year.\nYou have no way of knowing which one.",
+    tension: "248 emails are waiting.\n180 of them are from candidates.",
+    // \n\nSomewhere in that pile is your best hire of the year.\nYou have no way of knowing which one.
     question: "You open the laptop. Where do you go first?",
     choices: [
       {
@@ -139,7 +140,7 @@ const WORLDS: World[] = [
       "Three people you interviewed last month are now listed as 'Open to Work'.",
       "Someone just posted: 'Thrilled to start my new role at—'",
     ],
-    tension: "You recognise the name in the post.\n\nYou interviewed her six weeks ago.\nShe was your second choice.\nYour first choice fell through two weeks later.\n\nYou never followed up.",
+    tension: "You recognize the name in the post.\n\nYou interviewed her six weeks ago.\nShe was your second choice.\nYour first choice fell through two weeks later.\n\nYou never followed up.",
     question: "What do you feel in this moment?",
     choices: [
       {
@@ -347,7 +348,57 @@ function Scene({ world, idx, total, onChoose }: {
   };
 
   return (
-    <div style={{ minHeight:"100vh", display:"flex", flexDirection:"column", justifyContent:"center", padding:"32px 24px", position:"relative", zIndex:1 }}>
+    <div className={idx===0||idx===1||idx===2||idx===3 ? "scene-split" : undefined} style={{ minHeight:"100vh", display:"flex", position:"relative", zIndex:1 }}>
+      {idx===0 && (
+        <div className="scene-split-image" style={{ width:"50%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
+          opacity: leaving?0 : in_?1:0, transition:"opacity 1.2s ease" }}>
+          <div style={{ position:"absolute", inset:0,
+            backgroundImage:`url("/images/drrip-game-scene-1.jpg")`, backgroundSize:"cover", backgroundPosition:"center",
+            animation:"kenburns 16s ease-in-out infinite alternate" }}/>
+          {/* faint drift over the window light, echoing the morning beam */}
+          <div style={{ position:"absolute", inset:0, mixBlendMode:"screen",
+            background:`radial-gradient(ellipse at 50% 30%, ${C.gold}, transparent 55%)`,
+            opacity:0.2, animation:"lightDrift 9s ease-in-out infinite" }}/>
+          {/* soft edge so the photo dissolves into the panel rather than cutting */}
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(90deg, transparent 58%, ${C.bg} 100%)` }}/>
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(180deg, ${C.bg}55 0%, transparent 22%, transparent 78%, ${C.bg}66 100%)` }}/>
+        </div>
+      )}
+      {idx===1 && (
+        <div className="scene-split-image" style={{ width:"50%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
+          opacity: leaving?0 : in_?1:0, transition:"opacity 1.2s ease" }}>
+          <video autoPlay loop muted playsInline
+            style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover" }}>
+            <source src="/images/drrip-game-scene-2.mp4" type="video/mp4"/>
+          </video>
+          {/* soft edge so the clip dissolves into the panel rather than cutting */}
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(90deg, transparent 58%, ${C.bg} 100%)` }}/>
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(180deg, ${C.bg}55 0%, transparent 22%, transparent 78%, ${C.bg}66 100%)` }}/>
+        </div>
+      )}
+      {idx===2 && (
+        <div className="scene-split-image" style={{ width:"50%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
+          opacity: leaving?0 : in_?1:0, transition:"opacity 1.2s ease" }}>
+          <div style={{ position:"absolute", inset:0,
+            backgroundImage:`url("/images/drrip-game-scene-3.jpg")`, backgroundSize:"cover", backgroundPosition:"center",
+            animation:"kenburns 16s ease-in-out infinite alternate" }}/>
+          {/* soft edge so the photo dissolves into the panel rather than cutting */}
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(90deg, transparent 58%, ${C.bg} 100%)` }}/>
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(180deg, ${C.bg}55 0%, transparent 22%, transparent 78%, ${C.bg}66 100%)` }}/>
+        </div>
+      )}
+      {idx===3 && (
+        <div className="scene-split-image" style={{ width:"50%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
+          opacity: leaving?0 : in_?1:0, transition:"opacity 1.2s ease" }}>
+          <div style={{ position:"absolute", inset:0,
+            backgroundImage:`url("/images/drrip-game-scene-4.jpg")`, backgroundSize:"cover", backgroundPosition:"center",
+            animation:"kenburns 16s ease-in-out infinite alternate" }}/>
+          {/* soft edge so the photo dissolves into the panel rather than cutting */}
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(90deg, transparent 58%, ${C.bg} 100%)` }}/>
+          <div style={{ position:"absolute", inset:0, background:`linear-gradient(180deg, ${C.bg}55 0%, transparent 22%, transparent 78%, ${C.bg}66 100%)` }}/>
+        </div>
+      )}
+      <div style={{ flex:1, display:"flex", flexDirection:"column", justifyContent:"center", padding:"32px 24px" }}>
       <div style={{ maxWidth:580, width:"100%", margin:"0 auto",
         opacity: leaving?0 : in_?1:0,
         transform: leaving?"translateY(-14px)" : in_?"none":"translateY(18px)",
@@ -395,7 +446,7 @@ function Scene({ world, idx, total, onChoose }: {
 
         {/* Question + choices — only rendered when text is done */}
         <div style={{ opacity:done?1:0, transform:done?"none":"translateY(6px)", transition:"opacity 0.45s ease 0.15s, transform 0.45s ease 0.15s" }}>
-          <div style={{ width:"100%", height:1, background:`linear-gradient(to right, ${C.border2}, transparent)`, marginBottom:22 }}/>
+          <div style={{ width:"100%", height:1, background:`linear-gradient(to right, ${C.border2}, transparent)`, marginBottom:32 }}/>
 
           <div style={{ fontSize:10, fontFamily:MO, color:C.gold, letterSpacing:"0.1em", marginBottom:18 }}>
             {world.question.toUpperCase()}
@@ -440,6 +491,7 @@ function Scene({ world, idx, total, onChoose }: {
             })}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
@@ -661,11 +713,18 @@ export default function TalentOSWaitlist() {
         @keyframes blink    { 0%,100%{opacity:1} 45%,55%{opacity:0} }
         @keyframes fadeSlide{ from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:none} }
         @keyframes glow     { 0%,100%{opacity:.6} 50%{opacity:1} }
+        @keyframes kenburns { 0%{transform:scale(1.04) translate(0,0);} 100%{transform:scale(1.14) translate(-1.5%,-1%);} }
+        @keyframes lightDrift{ 0%,100%{opacity:.16;} 50%{opacity:.32;} }
         *{box-sizing:border-box;margin:0;padding:0;}
         ::placeholder{color:${C.dim};}
         ::-webkit-scrollbar{width:3px;}
         ::-webkit-scrollbar-thumb{background:${C.border2};border-radius:2px;}
         button:focus,input:focus{outline:none;}
+        .scene-split-image{ display:block; }
+        @media (max-width: 760px) {
+          .scene-split{ flex-direction:column; }
+          .scene-split-image{ display:none; }
+        }
       `}</style>
 
       <Grain/>
