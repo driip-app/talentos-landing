@@ -37,7 +37,7 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
           </div>
         )}
         {!isMobile && (
-          <a href="#demo" className="nav-cta">Join the Waitlist</a>
+          <a href="#demo" className="nav-cta" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none" }}>Join the waitlist</a>
         )}
         <button
           className="nav-hamburger"
@@ -126,12 +126,12 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
               fontFamily: "'Roboto Mono', monospace",
               fontSize: 13,
               letterSpacing: "0.04em",
-              textTransform: "uppercase",
+              textTransform: "none",
               textAlign: "center",
               display: "block",
             }}
           >
-            Join the Waitlist
+            Join the waitlist
           </a>
         </div>
       )}

@@ -49,7 +49,7 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
           <br />
           <em>that shapes your<br className="mobile-br" /> company&apos;s future</em>
         </h1>
-        <p className="hero-sub">
+        <p className="hero-sub" style={{ fontFamily: "'Inter', sans-serif" }}>
           Your agents handle every candidate touchpoint, so your team moves at the speed you need
         </p>
         <div
@@ -63,7 +63,7 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
           onMouseLeave={e => { e.currentTarget.style.transform = "perspective(700px) rotateX(0deg) rotateY(0deg) scale(1)"; }}
         >
           <span className="hero-banner-text syne">Show us your week before we fix it</span>
-          <button onClick={onOpenWaitlist} className="hero-cta">Let&apos;s Clock In</button>
+          <button onClick={onOpenWaitlist} className="hero-cta" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none" }}>Let&apos;s clock in</button>
         </div>
       </div>
     </section>

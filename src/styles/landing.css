@@ -2,7 +2,7 @@
 @font-face{font-family:'Geom';font-style:italic;font-weight:100 900;font-display:swap;src:url('/fonts/Geom-Italic-VariableFont_wght.ttf') format('truetype');}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;color-scheme:dark;overflow-x:clip;}
-body{font-family:'Roboto',sans-serif;color:#1A1A2E;background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased;}
+body{font-family:'Inter',sans-serif;color:#1A1A2E;background:#fff;overflow-x:clip;-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
 button,input,select,textarea{font-family:inherit;}
 :root{
@@ -17,7 +17,7 @@ button,input,select,textarea{font-family:inherit;}
 .syne{font-family:'Geom',sans-serif;}
 .mono{font-family:'Roboto Mono',monospace;}
 
-nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:62px;}
+nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,0.06);padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:62px;font-family:'Inter',sans-serif;}
 .nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:28px;}
 .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Geom',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.02em;}
 .nav-logo img{width:90px;height:auto;display:block;}
@@ -75,7 +75,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filt
 .platform-eyebrow{font-size:11px;font-family:'Roboto Mono',monospace;color:rgba(255,255,255,0.3);letter-spacing:.1em;margin-bottom:14px;text-align:center;}
 .platform-title{font-family:'Geom',sans-serif;font-size:38px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em;text-align:center;margin-bottom:10px;}
 .platform-title em{font-style:normal;color:var(--lime);}
-.platform-sub{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.65;text-align:center;max-width:520px;margin:0 auto 52px;}
+.platform-sub{font-size:15px;color:rgba(255,255,255,0.45);line-height:1.65;text-align:center;max-width:720px;white-space:nowrap;margin:0 auto 52px;}
 .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .agent-card{border-radius:var(--rl);padding:28px;border:1px solid;position:relative;overflow:hidden;display:flex;flex-direction:column;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 4px 32px rgba(0,0,0,0.3),inset 0 1px 0 rgba(255,255,255,0.06);}
 .agent-card::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;opacity:.15;pointer-events:none;}
@@ -204,7 +204,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filt
 .sched-btn:hover{opacity:.85;}
 
 .stale-warn{display:flex;align-items:center;gap:7px;padding:8px 10px;border-radius:6px;background:rgba(255,179,71,0.08);border:1px solid rgba(255,179,71,0.25);margin-bottom:8px;}
-.stale-warn-txt{font-size:10px;color:#B8720A;font-family:'Roboto',sans-serif;flex:1;}
+.stale-warn-txt{font-size:10px;color:#B8720A;font-family:'Inter',sans-serif;flex:1;}
 .stale-warn-cta{font-size:9px;font-family:'Roboto Mono',monospace;color:var(--coral);background:rgba(206,181,248,0.1);border:1px solid rgba(206,181,248,0.25);padding:2px 8px;border-radius:3px;cursor:pointer;white-space:nowrap;}
 .email-draft{border:1px solid rgba(255,255,255,0.07);border-radius:7px;margin-bottom:6px;overflow:hidden;}
 .email-hdr{display:flex;align-items:center;gap:8px;padding:8px 11px;cursor:pointer;transition:background .12s;background:#0f0f14;}
@@ -338,6 +338,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filt
   .mobile-br{display:block;}
   .hero-title-word{display:block;}
   .hero-sub{font-size:14px;max-width:100%;}
+  .platform-sub{white-space:normal;max-width:100%;}
   .hero-inner{max-width:100%;width:100%;box-sizing:border-box;}
   .hero-banner{display:flex!important;flex-direction:column;align-items:center;width:100%;gap:14px;text-align:center;padding:16px 20px;max-width:320px;box-sizing:border-box;align-self:center;}
   .hero-banner-text{white-space:normal;}

@@ -24,9 +24,9 @@ interface World {
 }
 
 // ─── Fonts ────────────────────────────────────────────────────────────────────
-const FONT_URL = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap";
+const FONT_URL = "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Mono:wght@400;500&display=swap";
 const CG = "'Geom', sans-serif";
-const DM = "'Roboto', sans-serif";
+const DM = "'Inter', sans-serif";
 const MO = "'Roboto Mono', monospace";
 
 // ─── Tokens ───────────────────────────────────────────────────────────────────

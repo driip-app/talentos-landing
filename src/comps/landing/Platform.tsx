@@ -4,7 +4,7 @@ export default function Platform() {
       <div className="platform-inner">
         <div className="platform-eyebrow mono">MEET THE AGENTS</div>
         <h2 className="platform-title syne">6 Agents. One OS.<br className="mobile-br" /> <em>Zero dropped tasks.</em></h2>
-        <p className="platform-sub">Driip agents give back 51+ hours per hire — time you&apos;ve been burning on everything else</p>
+        <p className="platform-sub">Driip agents give back 105+ hours per hire — time you&apos;ve been burning on everything else</p>
         <div className="platform-grid">
           <div className="agent-card a1">
             <div className="agent-num mono">Agent Scout</div>
