@@ -30,7 +30,7 @@ const PERSONAS = [
   },
   {
     label: "TA TEAMS",
-    image: "/images/persona-ta-teams-new.png",
+    image: "/images/drrip-result-hero.png",
     objectPosition: "center center",
     scale: 1.6,
     title: "Start spending Monday recruiting, not screening.",

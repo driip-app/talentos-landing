@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from "react";
+import TiltedCard from "./TiltedCard";
 
 type PainKey = "screening" | "scheduling" | "comms";
 type Phase = "opening" | "scene" | "result";
@@ -52,10 +53,10 @@ const C = {
 };
 
 // ─── Pain archetypes ──────────────────────────────────────────────────────────
-const PAIN: Record<PainKey, { label: string; agent: string; color: string; hours: string; stat: string }> = {
-  screening:  { label:"The Buried Screener",  agent:"Agent 01", color:C.teal,   hours:"38h", stat:"returned per hire" },
-  scheduling: { label:"The Calendar Hostage", agent:"Agent 02", color:C.violet, hours:"9h",  stat:"returned per hire" },
-  comms:      { label:"The Ghost Whisperer",  agent:"Agent 03", color:C.coral,  hours:"12h", stat:"returned per hire" },
+const PAIN: Record<PainKey, { label: string; agent: string; color: string; hours: string; stat: string; icon: string }> = {
+  screening:  { label:"The Buried Screener",  agent:"Agent 01", color:C.teal,   hours:"38h", stat:"returned per hire", icon:"/images/driip-pain-screening.png" },
+  scheduling: { label:"The Calendar Hostage", agent:"Agent 02", color:C.violet, hours:"9h",  stat:"returned per hire", icon:"/images/driip-pain-scheduling.png" },
+  comms:      { label:"The Ghost Whisperer",  agent:"Agent 03", color:C.coral,  hours:"12h", stat:"returned per hire", icon:"/images/driip-pain-comms.png" },
 };
 
 // ─── Ryan's storyworld — each scene is a PLACE, not an event ─────────────────
@@ -65,7 +66,7 @@ const WORLDS: World[] = [
   {
     id: 1,
     // Spatial anchor — Ryan: narrative begins when reader enters a place
-    location: "YOUR DESK · 08:47 ON A MONDAY",
+    location: "YOUR DESK · MONDAY · 08:47 AM",
     ambient: "The building is almost empty. The light hasn't warmed up yet.",
     // Environmental details build the textual actual world (TAW)
     env: [
@@ -138,9 +139,9 @@ const WORLDS: World[] = [
     env: [
       "A candidate has viewed your profile twice today.",
       "Three people you interviewed last month are now listed as 'Open to Work'.",
-      "Someone just posted: 'Thrilled to start my new role at—'",
+      "Someone just posted: 'Thrilled to start my new role'",
     ],
-    tension: "You recognize the name in the post.\n\nYou interviewed her six weeks ago.\nShe was your second choice.\nYour first choice fell through two weeks later.\n\nYou never followed up.",
+    tension: "You recognize the name in the post.\n\nYou interviewed her six weeks ago.\nShe was your second choice. \n\nYou never followed up.",
     question: "What do you feel in this moment?",
     choices: [
       {
@@ -168,27 +169,27 @@ const WORLDS: World[] = [
     location: "YOUR DESK AGAIN · FRIDAY · 6:08PM",
     ambient: "The building is empty now. The light has gone orange.",
     env: [
-      "You've been here since 7:45am.",
-      "You processed 31 applications today. There are 281 left.",
+      "You've been here since 9:00am.",
+      "You processed 107 applications today. There are 281 left.",
       "You have 3 interviews scheduled for next week that you haven't prepped for.",
     ],
-    tension: "You open a blank document to write your weekly update.\n\nYou stare at it for a long time.\n\nThe role has been open for 54 days.\nYour hiring manager asks about it every Monday.\nYou don't have a good answer.",
+    tension: "The role has been open for 54 days.\nYour hiring manager asks about it every Monday.\nYou don't have a good answer.",
     question: "If you're honest with yourself — what's actually broken?",
     choices: [
       {
-        text:  "\"I just need to get through the pile. Once it's clear, everything unblocks.\"",
+        text:  "I just need to get through the pile. Once it's clear, everything unblocks.",
         world: "The pile has never been clear. On your best week it grows slower than usual.",
         cost:  "Next Monday there will be a new pile. There will be the week after that.",
         pain: "screening",  w: 3,
       },
       {
-        text:  "\"If scheduling wasn't this painful, I'd have closed two roles by now.\"",
+        text:  "If scheduling wasn't this painful, I'd have closed two roles by now.",
         world: "You've sent 94 emails this week trying to align three people's calendars.",
         cost:  "That's before you factor in the rescheduling. There's always rescheduling.",
         pain: "scheduling", w: 3,
       },
       {
-        text:  "\"I'm letting candidates down. They deserve better communication than this.\"",
+        text:  "I'm letting candidates down. They deserve better communication than this.",
         world: "You know the experience you want to give people. You know how far short you're falling.",
         cost:  "Your employer brand is being written in inboxes you can't see, by people you couldn't get back to.",
         pain: "comms",      w: 3,
@@ -398,8 +399,8 @@ function Scene({ world, idx, total, onChoose }: {
           <div style={{ position:"absolute", inset:0, background:`linear-gradient(180deg, ${C.bg}55 0%, transparent 22%, transparent 78%, ${C.bg}66 100%)` }}/>
         </div>
       )}
-      <div style={{ flex:1, display:"flex", flexDirection:"column", justifyContent:"center", padding:"32px 24px" }}>
-      <div style={{ maxWidth:580, width:"100%", margin:"0 auto",
+      <div className="scene-content" style={{ flex:1, display:"flex", flexDirection:"column", justifyContent:"center", padding:"32px 24px" }}>
+      <div className="scene-inner" style={{ maxWidth:580, width:"100%", margin:"0 auto",
         opacity: leaving?0 : in_?1:0,
         transform: leaving?"translateY(-14px)" : in_?"none":"translateY(18px)",
         transition:"all 0.55s ease" }}>
@@ -547,15 +548,15 @@ function Result({ dominant, scores, onReplay }: {
   };
 
   return (
-    <div style={{ minHeight:"100vh", display:"flex", flexDirection:"column", justifyContent:"center", padding:"48px 24px 60px", position:"relative", zIndex:1 }}>
-      <div style={{ maxWidth:560, width:"100%", margin:"0 auto",
+    <div className="scene-split" style={{ height:"100vh", overflow:"hidden", display:"flex", position:"relative", zIndex:1 }}>
+      <div className="scene-content" style={{ flex:1, height:"100vh", overflowY:"auto", display:"flex", flexDirection:"column", justifyContent:"flex-start", padding:"48px 24px 60px" }}>
+      <div className="scene-inner" style={{ maxWidth:560, width:"100%", margin:"0 auto",
         opacity:v?1:0, transform:v?"none":"translateY(18px)", transition:"all 0.75s ease" }}>
 
         {/* Header */}
         <div style={{ display:"flex", alignItems:"center", gap:8, marginBottom:56 }}>
           <img src="/images/driip-logo.png" alt="Driip" style={{ width:52, height:"auto", mixBlendMode:"screen" }} />
         </div>
-
 
         {/* Ryan: the re-narration — the reader sees their world clearly for the first time */}
         <h2 style={{ fontSize:36, fontFamily:CG, fontWeight:700, color:C.cream, lineHeight:1.2, marginBottom:24 }}>
@@ -575,8 +576,10 @@ function Result({ dominant, scores, onReplay }: {
             const isD = key === dominant;
             return (
               <div key={key} style={{ marginBottom:12 }}>
-                <div style={{ display:"flex", justifyContent:"space-between", marginBottom:5 }}>
-                  <span style={{ fontSize:11, fontFamily:DM, color:isD?p.color:C.sub }}>{p.label}</span>
+                <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center", marginBottom:5 }}>
+                  <span style={{ display:"flex", alignItems:"center", gap:8 }}>
+                    <span style={{ fontSize:11, fontFamily:DM, color:isD?p.color:C.sub }}>{p.label}</span>
+                  </span>
                   <span style={{ fontSize:10, fontFamily:MO, color:isD?p.color:C.dim }}>{pct}%</span>
                 </div>
                 <div style={{ height:2, background:C.border2, borderRadius:1, overflow:"hidden" }}>
@@ -656,6 +659,33 @@ function Result({ dominant, scores, onReplay }: {
           </button>
         </div>
       </div>
+      </div>
+      {/* Right panel — the dominant pain made visible, picked from the reader's own answers */}
+      <div className="scene-split-image" style={{ width:"30%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
+        display:"flex", alignItems:"center", justifyContent:"center",
+        opacity:v?1:0, transition:"opacity 1.2s ease" }}>
+        <TiltedCard
+          imageSrc={pain.icon}
+          altText={pain.label}
+          captionText={pain.label}
+          containerHeight="560px"
+          containerWidth="340px"
+          imageHeight="440px"
+          imageWidth="340px"
+          rotateAmplitude={12}
+          scaleOnHover={1.08}
+          showMobileWarning={false}
+          showTooltip={true}
+          displayOverlayContent={true}
+          overlayContent={
+            <div style={{ position:"absolute", top:18, left:0, width:"340px", textAlign:"center",
+              fontSize:13, fontFamily:CG, fontWeight:700, color:"#fff", letterSpacing:"0.01em",
+              textShadow:"0 1px 6px rgba(0,0,0,0.6)" }}>
+              {pain.label}
+            </div>
+          }
+        />
+      </div>
     </div>
   );
 }
@@ -723,7 +753,32 @@ export default function TalentOSWaitlist() {
         .scene-split-image{ display:block; }
         @media (max-width: 760px) {
           .scene-split{ flex-direction:column; }
-          .scene-split-image{ display:none; }
+          .scene-split-image{
+            position:absolute !important;
+            inset:0 !important;
+            width:100% !important;
+            height:100% !important;
+            min-height:0 !important;
+            z-index:0;
+          }
+          .scene-split-image::after{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:rgba(8,6,8,0.78);
+          }
+          .scene-content{
+            position:relative !important;
+            z-index:1;
+          }
+          .scene-inner{
+            background:rgba(8,6,8,0.6);
+            backdrop-filter:blur(8px);
+            -webkit-backdrop-filter:blur(8px);
+            border-radius:10px;
+            padding:20px 18px;
+            border:1px solid rgba(255,255,255,0.06);
+          }
         }
       `}</style>
 
