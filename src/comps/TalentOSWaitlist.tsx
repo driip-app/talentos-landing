@@ -54,9 +54,9 @@ const C = {
 
 // ─── Pain archetypes ──────────────────────────────────────────────────────────
 const PAIN: Record<PainKey, { label: string; agent: string; color: string; hours: string; stat: string; icon: string }> = {
-  screening:  { label:"The Buried Screener",  agent:"Agent 01", color:C.teal,   hours:"38h", stat:"returned per hire", icon:"/images/driip-pain-screening.png" },
-  scheduling: { label:"The Calendar Hostage", agent:"Agent 02", color:C.violet, hours:"9h",  stat:"returned per hire", icon:"/images/driip-pain-scheduling.png" },
-  comms:      { label:"The Ghost Whisperer",  agent:"Agent 03", color:C.coral,  hours:"12h", stat:"returned per hire", icon:"/images/driip-pain-comms.png" },
+  screening:  { label:"The Buried Screener",  agent:"Agent 01", color:C.teal,   hours:"38h", stat:"returned per hire", icon:"/images/drrip-result-screening.png" },
+  scheduling: { label:"The Calendar Hostage", agent:"Agent 02", color:C.violet, hours:"9h",  stat:"returned per hire", icon:"/images/drrip-result-scheduling.png" },
+  comms:      { label:"The Ghost Whisperer",  agent:"Agent 03", color:C.coral,  hours:"12h", stat:"returned per hire", icon:"/images/drrip-result-comms.png" },
 };
 
 // ─── Ryan's storyworld — each scene is a PLACE, not an event ─────────────────
