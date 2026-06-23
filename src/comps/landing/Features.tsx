@@ -134,7 +134,7 @@ export default function Features() {
                   <div className="fp-agent-tag a1 mono">ATS INTEGRATION</div>
                   <h3 className="fp-title syne">Already on Greenhouse or Lever?<br />{" "}Connect in under 2 minutes.</h3>
                   <div className="fp-bullets">
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR and others supported</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR, and others supported</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>New applications sync automatically and are scored as they arrive</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Manual upload supported: PDF, DOCX, or plain text</span></div>
@@ -193,8 +193,8 @@ export default function Features() {
                   <div className="fp-bullets">
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Tell Driip who should join the interview panel, and it checks their calendars automatically</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Pulls availability from Google Calendar — no guesses, no invented slots</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Resolves conflicts when &quot;Marcus is blocked on Thursday. Proceed without him, or wait?&quot; You decide</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Interview mode selection available for Zoom, Google Meet, Teams, in-person, or phone. Meeting link auto-generated for Google Meet</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Spots conflicts and puts the decision back on you — &quot;Marcus is blocked Thursday. Proceed without him, or wait?&quot; Your call</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Interview mode selection available for Zoom, Google Meet, Microsoft Teams, in-person, or phone. Meeting link auto-generated for Google Meet</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Full dispatch</span></div>
                   </div>
                 </div>
@@ -234,7 +234,7 @@ export default function Features() {
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Personalized to each candidate — not a 2015 mail merge, not a template that reads like one</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Stale candidate detector nudges you if there&apos;s no contact for 7 days — your employer brand depends on it</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Rejection SLA: prompts you when a hiring decision sits for 72+ hours with no rejection sent to the candidate</span></div>
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Bulk send with confirmation, copy-per-email, full audit log, GDPR compliant</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Bulk send with per-email copy, full audit log, and GDPR compliance built in</span></div>
                   </div>
                 </div>
                 <div>

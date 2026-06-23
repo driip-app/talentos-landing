@@ -26,14 +26,14 @@ const PERSONAS = [
     objectPosition: "center center",
     scale: 1.6,
     title: "Get a shortlist you can explain, not just defend.",
-    desc: "You're not just reviewing candidates. You're going to have to justify this shortlist to your VP, your founder, and eventually yourself at 11 pm. Every Driip score comes with a criterion-level breakdown, so you're sharing evidence, not hunches.",
+    desc: "You're not just reviewing candidates. You're going to have to justify this shortlist to your VP, your founder, and yourself at 11 pm. Every Driip score comes with a criterion-level breakdown, so you're sharing evidence, not hunches.",
   },
   {
     label: "TA TEAMS",
     image: "/images/drrip-result-hero.png",
     objectPosition: "center center",
     scale: 1.6,
-    title: "Start spending Monday recruiting, not screening.",
+    title: "Start spending Mondays recruiting, not screening.",
     desc: "The best part of your job isn't reading CVs, chasing calendar slots, or writing the same rejection for the fourteenth time this week. Driip eliminates all three, so you can spend your time on the part that actually requires a human.",
   },
 ]
@@ -58,7 +58,7 @@ export default function AgentFinderSection() {
           Driip works <em style={{ fontStyle: "normal", color: "#9F73E6" }}>differently</em><br />{" "}for everyone.
         </h2>
         <p className="section-sub" style={{ marginBottom: 48 }}>
-          That means everyone stops doing the part they hate. The whole hiring cycle moves faster. And nobody goes home at 7 pm with 171 unread resumes.
+          That means everyone stops doing the part they hate. The whole hiring cycle moves faster. And nobody goes home at 7 pm with 258 unread CVs.
         </p>
 
         <div

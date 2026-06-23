@@ -83,7 +83,7 @@ export default function Signup() {
                       onClick={() => setOpen(o => !o)}
                     >
                       <span style={{ color: value ? "#fff" : "rgba(255,255,255,0.2)" }}>
-                        {value || "Be honest. We’ve heard it all."}
+                        {value || "Be honest — we actually read every single one."}
                       </span>
                     </button>
                     {open && (
@@ -97,7 +97,7 @@ export default function Signup() {
                 </div>
               </div>
               <button type="submit" className="form-submit mono" style={{ width: "100%", marginTop: 20, padding: 14, borderRadius: 9, background: "#9F73E6", border: "none", color: "#0E0E10", fontSize: 14, fontFamily: "'Roboto Mono',monospace", fontWeight: 400, letterSpacing: ".04em", textTransform: "uppercase", cursor: "pointer" }}>
-                Request Early Access Pass
+                Get Early Access
               </button>
             </form>
           ) : (

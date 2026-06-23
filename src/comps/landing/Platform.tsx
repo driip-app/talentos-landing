@@ -4,12 +4,12 @@ export default function Platform() {
       <div className="platform-inner">
         <div className="platform-eyebrow mono">MEET THE AGENTS</div>
         <h2 className="platform-title syne">6 Agents. One OS.<br className="mobile-br" /> <em>Zero dropped tasks.</em></h2>
-        <p className="platform-sub">Driip agents give back 105+ hours per hire — time you&apos;ve been burning on everything else</p>
+        <p className="platform-sub">Driip agents give back up to 105 hours per hire — time you&apos;ve been burning on everything else</p>
         <div className="platform-grid">
           <div className="agent-card a1">
             <div className="agent-num mono">Agent Scout</div>
             <div className="agent-name syne">Talent Acquisition Specialist</div>
-            <div className="agent-desc">Delivers a ranked shortlist by the next morning, built on a 4-dimensional SCS framework. No more resumes sitting unread for 2 weeks.</div>
+            <div className="agent-desc">Delivers a ranked shortlist by the next morning, built on a 4-dimensional Structured Competency Scoring (SCS) framework. No more CVs sitting unread for 2 weeks.</div>
             <div className="agent-saving"><span className="saving-icon">⏱</span><span className="saving-text mono">38–40 HRS SAVED / POSTING</span></div>
           </div>
           <div className="agent-card a2">
@@ -27,19 +27,19 @@ export default function Platform() {
           <div className="agent-card a1">
             <div className="agent-num mono">Agent Hunt</div>
             <div className="agent-name syne">Talent Sourcing Assistant</div>
-            <div className="agent-desc">Boolean search across LinkedIn/GitHub; builds outreach lists; generates personalized messages.</div>
+            <div className="agent-desc">Boolean search across LinkedIn and GitHub, outreach list builder, personalized message generator.</div>
             <div className="agent-saving"><span className="saving-icon">⏱</span><span className="saving-text mono">15–25 HRS SAVED / HIRE</span></div>
           </div>
           <div className="agent-card a2">
             <div className="agent-num mono">Agent Hub</div>
             <div className="agent-name syne">Hiring Analyst</div>
-            <div className="agent-desc">Real-time pipeline view, time-to-hire tracking, bottleneck alerts, hire forecast.</div>
+            <div className="agent-desc">Monitors your pipeline in real time — time-to-hire tracking, bottleneck alerts, and hire forecasting in one view.</div>
             <div className="agent-saving"><span className="saving-icon">⏱</span><span className="saving-text mono">2–3 HRS SAVED / HIRE</span></div>
           </div>
           <div className="agent-card a3">
             <div className="agent-num mono">Agent Probe</div>
             <div className="agent-name syne">Phone Screener</div>
-            <div className="agent-desc">5–7 standardized questions, transcription, scoring, advances top candidates only.</div>
+            <div className="agent-desc">5–7 standardized questions, transcription, and scoring — only top candidates advance.</div>
             <div className="agent-saving"><span className="saving-icon">⏱</span><span className="saving-text mono">10–15 HRS SAVED / HIRE</span></div>
           </div>
         </div>
