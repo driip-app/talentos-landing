@@ -96,7 +96,7 @@ export default function Signup() {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="form-submit mono" style={{ width: "100%", marginTop: 20, padding: 14, borderRadius: 9, background: "#9F73E6", border: "none", color: "#0E0E10", fontSize: 14, fontFamily: "'Roboto Mono',monospace", fontWeight: 400, letterSpacing: ".04em", textTransform: "uppercase", cursor: "pointer" }}>
+              <button type="submit" className="form-submit" style={{ width: "100%", marginTop: 20, padding: 12, borderRadius: 6, background: "#9F73E6", border: "none", color: "#0E0E10", fontSize: 13, fontFamily: "'Inter', sans-serif", fontWeight: 400, letterSpacing: ".04em", textTransform: "none", cursor: "pointer", transition: "all 0.18s" }} onMouseEnter={e => { e.currentTarget.style.background = "#6342AC"; e.currentTarget.style.color = "#fff"; }} onMouseLeave={e => { e.currentTarget.style.background = "#9F73E6"; e.currentTarget.style.color = "#0E0E10"; }}>
                 Get Early Access
               </button>
             </form>

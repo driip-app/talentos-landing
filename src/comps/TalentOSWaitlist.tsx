@@ -614,7 +614,7 @@ function Result({ dominant, scores, onReplay }: {
               We're building this now.
             </div>
             <div style={{ fontSize:13, color:C.sub, fontFamily:DM, lineHeight:1.7, marginBottom:20 }}>
-              Leave your email and we'll reach out the moment TalentOS launches — with an onboarding path built around your <span style={{ color:pain.color }}>{pain.label}</span> profile.
+              Leave your email and we'll reach out the moment Driip launches — with an onboarding path built around your <span style={{ color:pain.color }}>{pain.label}</span> profile.
             </div>
             <div style={{ display:"flex", gap:8 }}>
               <input value={email} onChange={e=>setE(e.target.value)}
