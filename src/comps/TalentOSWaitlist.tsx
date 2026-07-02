@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from "react";
-import TiltedCard from "./TiltedCard";
 
 type PainKey = "screening" | "scheduling" | "comms";
 type Phase = "opening" | "scene" | "result";
@@ -135,7 +134,7 @@ const WORLDS: World[] = [
   {
     id: 3,
     location: "LINKEDIN · WEDNESDAY AFTERNOON",
-    ambient: "You opened this tab to check one thing. That was forty minutes ago.",
+    ambient: "",
     env: [
       "A candidate has viewed your profile twice today.",
       "Three people you interviewed last month are now listed as 'Open to Work'.",
@@ -166,8 +165,8 @@ const WORLDS: World[] = [
   },
   {
     id: 4,
-    location: "YOUR DESK AGAIN · FRIDAY · 6:08PM",
-    ambient: "The building is empty now. The light has gone orange.",
+    location: "FRIDAY EVENING · 6:08PM",
+    ambient: "",
     env: [
       "You've been here since 9:00am.",
       "You processed 107 applications today. There are 281 left.",
@@ -504,17 +503,17 @@ const RESULT_NARRATIVE: Record<PainKey, { reflection: string; future: string; re
     // Ryan: the result re-narrates the storyworld from outside — the reader now sees the pattern
     reflection: "Every morning you entered the same room and faced the same pile. The pile was never the problem. The problem was that the pile required *you* — every hour, every decision, every pair of eyes.",
     future:     "A world where Driip reads everything before you arrive. Where you walk in to a shortlist, not a stack. Where the pile doesn't exist because it was never yours to carry.",
-    reveal:     "Agent Scout of Driip screens every application the moment it arrives. It surfaces your top candidates by the time you finish your coffee.",
+    reveal:     "Agent Scout screens every application the moment it arrives. It surfaces your top candidates in a blink of an eye.",
   },
   scheduling: {
     reflection: "The calendar wasn't a tool. It became a negotiation — slow, fragile, dependent on other people's attention at the right moment. Good candidates don't wait for three people to agree on a Thursday.",
     future:     "A world where a slot appears before you ask for one. Where the invite is already sent. Where Thursday has been on the calendar since Monday morning.",
-    reveal:     "Agent Sync of Driip pulls availability from every interviewer simultaneously, finds the window, sends the invite, and chases the confirmations. You find out when it's done.",
+    reveal:     "Agent Sync pulls availability from every interviewer simultaneously, finds the window, sends the invite, and chases the confirmations. You find out when it's done.",
   },
   comms: {
-    reflection: "Every draft you didn't send was a small breach of the standard you hold yourself to. You knew what good looked like. You knew where the gap was. The gap was time — and time was already elsewhere.",
+    reflection: "Every draft you didn't send was a small breach of the standard you hold yourself to. You knew what good looked like. You knew the gap was time — and time was already elsewhere.",
     future:     "A world where every candidate hears from you, specifically, within hours. Where rejection feels human. Where the people you couldn't hire still leave thinking well of you.",
-    reveal:     "Agent Pulse of Driip keeps every candidate in the loop with personalised, thoughtful messages — while you spend your time only on the conversations that actually matter.",
+    reveal:     "Agent Pulse keeps every candidate in the loop with personalized, thoughtful messages — while you spend your time only on the conversations that actually matter.",
   },
 };
 
@@ -569,7 +568,7 @@ function Result({ dominant, scores, onReplay }: {
 
         {/* Pain profile — Ryan: revealing the structure of the world the reader has been inhabiting */}
         <div style={{ padding:"16px", background:C.card, border:`1px solid ${C.border2}`, borderRadius:3, marginBottom:28 }}>
-          <div style={{ fontSize:9, fontFamily:MO, color:C.sub, letterSpacing:"0.1em", marginBottom:14 }}>THE SHAPE OF YOUR WEEK</div>
+          <div style={{ fontSize:9, fontFamily:MO, color:C.sub, letterSpacing:"0.1em", marginBottom:14 }}>YOUR CURRENT ROLE</div>
           {sorted.map(([key, val]) => {
             const p = PAIN[key];
             const pct = total>0 ? Math.round((val/total)*100) : 0;
@@ -611,7 +610,7 @@ function Result({ dominant, scores, onReplay }: {
           <div>
             <div style={{ height:1, background:`linear-gradient(to right, ${C.border2}, transparent)`, marginBottom:24 }}/>
             <div style={{ fontSize:22, fontFamily:CG, fontWeight:700, color:C.cream, marginBottom:8 }}>
-              We're building this now.
+              We're building this world now!
             </div>
             <div style={{ fontSize:13, color:C.sub, fontFamily:DM, lineHeight:1.7, marginBottom:20 }}>
               Leave your email and we'll reach out the moment Driip launches — with an onboarding path built around your <span style={{ color:pain.color }}>{pain.label}</span> profile.
@@ -661,30 +660,9 @@ function Result({ dominant, scores, onReplay }: {
       </div>
       </div>
       {/* Right panel — the dominant pain made visible, picked from the reader's own answers */}
-      <div className="scene-split-image" style={{ width:"30%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
-        display:"flex", alignItems:"center", justifyContent:"center",
+      <div className="scene-split-image" style={{ width:"40%", minHeight:"100vh", flexShrink:0, position:"relative", overflow:"hidden",
         opacity:v?1:0, transition:"opacity 1.2s ease" }}>
-        <TiltedCard
-          imageSrc={pain.icon}
-          altText={pain.label}
-          captionText={pain.label}
-          containerHeight="560px"
-          containerWidth="340px"
-          imageHeight="440px"
-          imageWidth="340px"
-          rotateAmplitude={12}
-          scaleOnHover={1.08}
-          showMobileWarning={false}
-          showTooltip={true}
-          displayOverlayContent={true}
-          overlayContent={
-            <div style={{ position:"absolute", top:18, left:0, width:"340px", textAlign:"center",
-              fontSize:13, fontFamily:CG, fontWeight:700, color:"#fff", letterSpacing:"0.01em",
-              textShadow:"0 1px 6px rgba(0,0,0,0.6)" }}>
-              {pain.label}
-            </div>
-          }
-        />
+        <img src={pain.icon} alt={pain.label} style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover" }} />
       </div>
     </div>
   );
