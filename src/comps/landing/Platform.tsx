@@ -9,8 +9,8 @@ const ACCENT: Record<"a1" | "a2" | "a3", string> = {
 };
 
 const AGENTS: { variant: "a1" | "a2" | "a3"; num: string; name: string; desc: string; saving?: string }[] = [
-  { variant: "a1", num: "1", name: "Scribe", desc: "Unlike generic AI writers, Scribe adapts its writing style to match your brand, so your job posts remain consistent across all roles." },
-  { variant: "a2", num: "2", name: "Scout", desc: "The Structured Competency Scoring (SCS) framework evaluates skills, scope, and growth; then generates a ranked shortlist.", saving: "38–40 HRS SAVED / POSTING" },
+  { variant: "a1", num: "1", name: "Scribe", desc: "Unlike generic AI writers, Scribe adapts its writing style to match your brand, so your job posts remain consistent across all roles.", saving: "2–3 HRS SAVED / HIRE" },
+  { variant: "a2", num: "2", name: "Scout", desc: "The Structured Competency Scoring (SCS) framework evaluates skills, scope, and growth; then generates a ranked shortlist.", saving: "38–40 HRS SAVED / HIRE" },
   { variant: "a3", num: "3", name: "Hunt", desc: "Boolean search across LinkedIn and GitHub. Builds outreach lists and generates personalized first contact messages.", saving: "15–25 HRS SAVED / HIRE" },
   { variant: "a1", num: "4", name: "Sync", desc: "Checks each interview panelist’s calendar, finds mutual time slots, resolves conflicts, and sends the invite.", saving: "5–10 HRS SAVED / HIRE" },
   { variant: "a2", num: "5", name: "Probe", desc: "5-7 standardized questions, transcribed and scored. Only top candidates advance to a human conversation.", saving: "10–15 HRS SAVED / HIRE" },
