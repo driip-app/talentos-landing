@@ -122,7 +122,7 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
               background: "#9F73E6",
               color: "#0E0E10",
               borderRadius: 7,
-              fontWeight: 400,
+              fontWeight: 600,
               fontFamily: "'Inter', sans-serif",
               fontSize: 13,
               letterSpacing: "0.04em",

@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
+import { motion } from "motion/react";
 
 const TOTAL = 7;
+const EASE = [0.16, 1, 0.3, 1] as const;
 
 export default function Features() {
   const [activeIdx, setActiveIdx] = useState(0);
@@ -18,14 +20,44 @@ export default function Features() {
   return (
     <section className="features" id="features">
       <div className="features-inner">
-        <div className="section-eyebrow mono" style={{ color: "#fff" }}>AGENT SUPERPOWERS</div>
-        <h2 className="section-title syne">Your hiring OS that reads people,<br />{" "}books calendars, and writes emails.<br />{" "}You just approve.</h2>
-        <p className="section-sub">Stop managing a process and start making actual hires.</p>
+        <motion.div
+          className="section-eyebrow mono"
+          style={{ color: "#fff" }}
+          initial={{ opacity: 0, letterSpacing: "0.5em" }}
+          whileInView={{ opacity: 1, letterSpacing: "0.1em" }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1, ease: EASE }}
+        >
+          AGENT SUPERPOWERS
+        </motion.div>
+        <motion.h2
+          className="section-title syne"
+          initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0, y: 16 }}
+          whileInView={{ clipPath: "inset(0 0% 0 0)", opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1.1, delay: 0.1, ease: EASE }}
+        >
+          Your hiring OS that reads people,<br />{" "}books calendars, and writes emails.<br />{" "}You just approve.
+        </motion.h2>
+        <motion.p
+          className="section-sub"
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8, delay: 0.32, ease: EASE }}
+        >
+          Stop managing a process and start making actual hires.
+        </motion.p>
         <div className="features-carousel">
-          <div
+          <motion.div
             className="pcar-track-wrap"
             onMouseEnter={() => { pausedRef.current = true; }}
             onMouseLeave={() => { pausedRef.current = false; }}
+            initial={{ opacity: 0, y: 48, rotateX: 8, filter: "blur(8px)" }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0, filter: "blur(0px)" }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, delay: 0.4, ease: EASE }}
+            style={{ transformPerspective: 1400 }}
           >
             <div
               className="pcar-track"
@@ -279,7 +311,7 @@ export default function Features() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="pcar-dots">
             {["Smart Screening", "Bias-Free", "JD Builder", "ATS Connect", "Transparency", "Scheduling", "Comms Bot"].map((label, i) => (
               <button
