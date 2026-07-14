@@ -53,6 +53,7 @@ export default function Platform() {
             <motion.div
               key={agent.name}
               className={`agent-card ${agent.variant}`}
+              data-num={agent.num.padStart(2, "0")}
               initial={{ opacity: 0, y: 56, scale: 0.92, filter: "blur(10px)" }}
               whileInView={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
               viewport={{ once: true, margin: "-60px" }}
