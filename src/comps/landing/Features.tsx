@@ -36,8 +36,7 @@ export default function Features() {
           whileInView={{ clipPath: "inset(0 0% 0 0)", opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1.1, delay: 0.1, ease: EASE }}
-        >
-          Your hiring OS that reads people,<br />{" "}books calendars, and writes emails.<br />{" "}You just approve.
+        >The right candidates surface.<br />{" "}Everything else, handled.
         </motion.h2>
         <motion.p
           className="section-sub"
