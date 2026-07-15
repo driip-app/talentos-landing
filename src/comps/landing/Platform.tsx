@@ -65,16 +65,6 @@ export default function Platform() {
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, delay: i * 0.12 + 0.35, ease: EASE }}
               />
-              <motion.div
-                className="agent-num mono"
-                initial={{ opacity: 0, rotateX: 90 }}
-                whileInView={{ opacity: 1, rotateX: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: i * 0.12 + 0.25, ease: "backOut" }}
-                style={{ transformPerspective: 400 }}
-              >
-                {agent.num}
-              </motion.div>
               <div className="agent-name syne">{agent.name}</div>
               <div className="agent-desc">{agent.desc}</div>
               {agent.saving && (
