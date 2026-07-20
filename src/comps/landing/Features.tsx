@@ -20,16 +20,6 @@ export default function Features() {
   return (
     <section className="features" id="features">
       <div className="features-inner">
-        <motion.div
-          className="section-eyebrow mono"
-          style={{ color: "#fff" }}
-          initial={{ opacity: 0, letterSpacing: "0.5em" }}
-          whileInView={{ opacity: 1, letterSpacing: "0.1em" }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: EASE }}
-        >
-          AGENT SUPERPOWERS
-        </motion.div>
         <motion.h2
           className="section-title syne"
           initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0, y: 16 }}

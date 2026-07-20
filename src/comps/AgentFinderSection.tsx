@@ -54,16 +54,6 @@ export default function AgentFinderSection() {
       }}
     >
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-        <motion.div
-          className="mono"
-          style={{ fontSize: 10, letterSpacing: "0.5em", textTransform: "uppercase", color: "var(--teal)", marginBottom: 16 }}
-          initial={{ opacity: 0, letterSpacing: "0.5em" }}
-          whileInView={{ opacity: 1, letterSpacing: "0.12em" }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: EASE }}
-        >
-          FIND YOUR AGENT
-        </motion.div>
         <motion.h2
           className="syne section-title"
           style={{ marginBottom: 12 }}

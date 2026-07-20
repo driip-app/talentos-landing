@@ -55,7 +55,6 @@ export default function Signup() {
         <Threads color={[0.62, 0.45, 0.90]} amplitude={1.4} distance={0} enableMouseInteraction={true} />
       </div>
       <div className="signup-inner">
-        <div className="signup-eyebrow mono">GET EARLY ACCESS</div>
         <h2 className="signup-title syne">Your next great hire is<br className="mobile-br" /> in<br />{" "}that pile <em>right now.</em></h2>
         <p className="signup-sub">Join our waitlist. No enterprise pricing drama.</p>
         <div className="signup-form">

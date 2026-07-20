@@ -21,15 +21,6 @@ export default function Platform() {
   return (
     <section className="platform" id="platform">
       <div className="platform-inner">
-        <motion.div
-          className="platform-eyebrow mono"
-          initial={{ opacity: 0, letterSpacing: "0.5em" }}
-          whileInView={{ opacity: 1, letterSpacing: "0.1em" }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 1, ease: EASE }}
-        >
-          MEET THE AGENTS
-        </motion.div>
         <motion.h2
           className="platform-title syne"
           initial={{ opacity: 0, y: 28, filter: "blur(16px)" }}
