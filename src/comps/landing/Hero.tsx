@@ -44,13 +44,13 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
       </div>
       <div className="hero-inner">
         <h1 className="syne">
-          <span className="hero-title-word">Deploy Agents and</span>{" "}
-          <span className="hero-title-word">Hire The Team</span>
+          <span className="hero-title-word">Deploy agents and</span>{" "}
+          <span className="hero-title-word">hire the team</span>
           <br />
-          <em>that Shapes Your<br className="mobile-br" /> Company&apos;s Future</em>
+          <em>that shapes your<br className="mobile-br" /> company&apos;s future</em>
         </h1>
         <p className="hero-sub" style={{ fontFamily: "'Inter', sans-serif" }}>
-          Your agents handle every candidate touchpoint, so your team moves at the speed you need
+          Agents designed to complement, not replace, human decision-making
         </p>
         <div
           className={`hero-banner${isMobile ? " hero-banner-mobile" : ""}`}
