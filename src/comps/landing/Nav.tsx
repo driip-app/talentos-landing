@@ -31,7 +31,7 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
         displaySocials={false}
         displayItemNumbering
         menuButtonColor="#fff"
-        openMenuButtonColor="#fff"
+        openMenuButtonColor="#9F73E6"
         changeMenuColorOnOpen
         colors={["#9F73E6", "#6342AC"]}
         accentColor="#9F73E6"
