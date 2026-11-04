@@ -14,8 +14,10 @@ const mobileMenuItems = [
 
 export default function Nav({ onOpenWaitlist }: NavProps) {
   const [isMobile, setIsMobile] = useState(false);
+  const [menuOpenColor, setMenuOpenColor] = useState("");
 
   useEffect(() => {
+    setMenuOpenColor(getComputedStyle(document.documentElement).getPropertyValue("--dark").trim());
     const check = () => setIsMobile(window.innerWidth <= 1024);
     check();
     window.addEventListener("resize", check);
@@ -31,7 +33,7 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
         displaySocials={false}
         displayItemNumbering
         menuButtonColor="#fff"
-        openMenuButtonColor="#fff"
+        openMenuButtonColor={menuOpenColor || undefined}
         changeMenuColorOnOpen
         colors={["#9F73E6", "#6342AC"]}
         accentColor="#9F73E6"
