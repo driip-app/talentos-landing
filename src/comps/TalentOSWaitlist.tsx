@@ -39,6 +39,7 @@ const C = {
   text:    "#EDE5E0",
   sub:     "#7A7070",
   dim:     "#2E2630",
+  orange:  "#FF844B",
   gold:    "#9F73E6",
   goldA:   "rgba(159,115,230,0.09)",
   goldB:   "rgba(159,115,230,0.05)",
@@ -266,12 +267,12 @@ function WorldMap({ total, current }: { total: number; current: number }) {
             width: i < current ? 8 : i === current ? 10 : 8,
             height: i < current ? 8 : i === current ? 10 : 8,
             borderRadius:"50%",
-            background: i < current ? C.gold : i === current ? C.gold : "transparent",
-            border: `1px solid ${i <= current ? C.gold : C.border2}`,
+            background: i <= current ? C.orange : "transparent",
+            border: `1px solid ${i <= current ? C.orange : C.border2}`,
             transition:"all 0.4s ease",
-            boxShadow: i === current ? `0 0 10px ${C.gold}60` : "none",
+            boxShadow: i === current ? `0 0 10px ${C.orange}60` : "none",
           }}/>
-          {i < total-1 && <div style={{ width:22, height:1, background: i < current ? `${C.gold}50` : C.border, transition:"background 0.4s ease" }}/>}
+          {i < total-1 && <div style={{ width:22, height:1, background: i < current ? `${C.orange}50` : C.border, transition:"background 0.4s ease" }}/>}
         </div>
       ))}
     </div>
@@ -624,16 +625,15 @@ function Result({ dominant, scores, onReplay }: {
                 onBlur={e=>e.target.style.borderColor=C.border2}
               />
               <button type="button" onClick={submit} disabled={loading} style={{
-                padding:"12px 20px", borderRadius:2, cursor: loading ? "default" : "pointer",
-                background:C.gold, border:"none", color:C.bg,
-                fontSize:10, fontFamily:MO, fontWeight:500, letterSpacing:"0.09em",
-                whiteSpace:"nowrap", transition:"all 0.2s",
+                padding:"12px 20px", borderRadius:6, cursor: loading ? "default" : "pointer",
+                background:"var(--driip-orange)", border:"none", color:"var(--dark)",
+                fontSize:13, fontFamily:"'Inter', sans-serif", fontWeight:600, letterSpacing:"0.04em",
+                whiteSpace:"nowrap", transition:"all 0.18s",
                 opacity: loading ? 0.6 : 1,
-                boxShadow:`0 0 0 0 ${C.gold}`,
               }}
-                onMouseEnter={e=>{ if(!loading) e.currentTarget.style.boxShadow=`0 0 28px ${C.gold}40`; }}
-                onMouseLeave={e=>e.currentTarget.style.boxShadow="none"}>
-                {loading ? "SENDING..." : "NOTIFY ME"}
+                onMouseEnter={e=>{ if(!loading) e.currentTarget.style.filter="brightness(.92)"; }}
+                onMouseLeave={e=>e.currentTarget.style.filter=""}>
+                {loading ? "Sending..." : "Notify me"}
               </button>
             </div>
             <div style={{ marginTop:10, fontSize:9, color:C.dim, fontFamily:MO, letterSpacing:"0.06em" }}>
