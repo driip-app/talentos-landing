@@ -153,9 +153,9 @@ export default function Features() {
               <div className="feature-panel" id="p-ats">
                 <div>
                   <div className="fp-agent-tag a1 mono">ATS INTEGRATION</div>
-                  <h3 className="fp-title syne">Already on Greenhouse or Lever?<br />{" "}Connect in under 2 minutes.</h3>
+                  <h3 className="fp-title syne">Already on Lever, Ashby or HiBob?<br />{" "}Connect in under 2 minutes.</h3>
                   <div className="fp-bullets">
-                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Greenhouse, Lever, Workable, Ashby, BambooHR, and others supported</span></div>
+                    <div className="fp-bullet"><div className="fp-check t">✓</div><span>Lever, Ashby, HiBob supported</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>OAuth connection in under 2 minutes with no IT ticket required</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>New applications sync automatically and are scored as they arrive</span></div>
                     <div className="fp-bullet"><div className="fp-check t">✓</div><span>Manual upload supported: PDF, DOCX, or plain text</span></div>
@@ -166,10 +166,9 @@ export default function Features() {
                     <div className="mc-hdr"><div className="mc-dot"></div><div className="mc-dot"></div><div className="mc-dot"></div><div className="mc-ttl">Connected ATS integrations</div></div>
                     <div className="mc-body">
                       <div className="ats-grid">
-                        <div className="ats-item"><div className="ats-ico" style={{ background: "#24CA71", color: "#fff" }}>Gh</div><div><div className="ats-nm syne">Greenhouse</div><div className="ats-st" style={{ color: "#34D399" }}>● Connected</div></div></div>
-                        <div className="ats-item"><div className="ats-ico" style={{ background: "#5B36AC", color: "#fff" }}>Lv</div><div><div className="ats-nm syne">Lever</div><div className="ats-st" style={{ color: "#34D399" }}>● Connected</div></div></div>
-                        <div className="ats-item"><div className="ats-ico" style={{ background: "#0066FF", color: "#fff" }}>Wk</div><div><div className="ats-nm syne">Workable</div><div className="ats-st" style={{ color: "var(--dim)" }}>○ Connect</div></div></div>
-                        <div className="ats-item"><div className="ats-ico" style={{ background: "#F65B37", color: "#fff" }}>As</div><div><div className="ats-nm syne">Ashby</div><div className="ats-st" style={{ color: "var(--dim)" }}>○ Connect</div></div></div>
+                        <div className="ats-item"><div className="ats-ico logo">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/ats/lever.png" alt="Lever" /></div><div><div className="ats-nm syne">Lever</div><div className="ats-st" style={{ color: "var(--teal)" }}>● Connected</div></div></div>
+                        <div className="ats-item"><div className="ats-ico logo">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/ats/ashby.png" alt="Ashby" /></div><div><div className="ats-nm syne">Ashby</div><div className="ats-st" style={{ color: "var(--dim)" }}>○ Connect</div></div></div>
+                        <div className="ats-item"><div className="ats-ico logo">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/images/ats/hibob.svg" alt="HiBob" /></div><div><div className="ats-nm syne">HiBob</div><div className="ats-st" style={{ color: "var(--dim)" }}>○ Connect</div></div></div>
                         <div className="ats-full"><div className="ats-ico" style={{ background: "#17171b", color: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.07)", fontSize: 16 }}>📁</div><div><div className="ats-nm syne">Manual upload</div><div className="ats-st" style={{ color: "rgba(255,255,255,0.4)" }}>PDF · DOCX · Plain text</div></div></div>
                       </div>
                       <div style={{ marginTop: 10, padding: "8px 11px", background: "#17171b", borderRadius: 7, fontSize: 10, color: "rgba(255,255,255,0.4)", border: "1px solid rgba(255,255,255,0.07)" }}><span style={{ fontFamily: "'Roboto Mono',monospace", color: "var(--teal)" }}>↻</span> Synced 14 min ago · <strong style={{ color: "rgba(255,255,255,0.85)" }}>23 new applications</strong> scored</div>
