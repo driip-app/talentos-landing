@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 
-const MagicRings = dynamic(() => import("@/comps/Global/MagicRings/MagicRings"), { ssr: false });
+const GradientWaves = dynamic(() => import("@/comps/Global/GradientWaves/GradientWaves"), { ssr: false });
 
 interface HeroProps {
   onOpenWaitlist: () => void;
@@ -20,27 +20,7 @@ export default function Hero({ onOpenWaitlist }: HeroProps) {
   return (
     <section className="hero" id="top">
       <div className="hero-rings">
-        <MagicRings
-          color="#9F73E6"
-          colorTwo="#6342AC"
-          ringCount={6}
-          speed={1}
-          attenuation={10}
-          lineThickness={2}
-          baseRadius={0.35}
-          radiusStep={0.1}
-          scaleRate={0.1}
-          opacity={1}
-          noiseAmount={0.08}
-          ringGap={1.5}
-          fadeIn={0.7}
-          fadeOut={0.5}
-          followMouse
-          mouseInfluence={0.15}
-          hoverScale={1.15}
-          parallax={0.04}
-          clickBurst
-        />
+        <GradientWaves horizonColor="#6342AC" waveColor="#9F73E6" crestColor="#CEB5F8" />
       </div>
       <div className="hero-inner">
         <h1 className="syne">
