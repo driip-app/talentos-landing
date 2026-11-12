@@ -62,7 +62,7 @@ export default function AgentFinderSection() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 1.1, delay: 0.1, ease: EASE }}
         >
-          Driip works <em style={{ fontStyle: "normal", color: "#9F73E6" }}>differently</em><br />{" "}for everyone.
+          Driip works <em style={{ fontStyle: "normal", color: "#9F73E6" }}>differently</em> for everyone.
         </motion.h2>
         <motion.p
           className="section-sub"
