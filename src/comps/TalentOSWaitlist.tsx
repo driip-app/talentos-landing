@@ -2,6 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect, useRef } from "react";
 
+import { trackWaitlistJoined } from "@/lib/analytics";
+
 type PainKey = "screening" | "scheduling" | "comms";
 type Phase = "opening" | "scene" | "result";
 
@@ -543,7 +545,11 @@ function Result({ dominant, scores, onReplay }: {
       headers: { "Accept": "application/json", "Content-Type": "application/json" },
       body: JSON.stringify({ email, pain_profile: pain.label }),
     })
-      .then(res => { if (res.ok) setSent(true); })
+      .then(res => {
+        if (!res.ok) return;
+        trackWaitlistJoined(email, { form: "pain_quiz", pain_profile: pain.label });
+        setSent(true);
+      })
       .finally(() => setLoading(false));
   };
 

@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 
+import { trackWaitlistJoined } from "@/lib/analytics";
+
 const Threads = dynamic(() => import("@/comps/Threads"), { ssr: false });
 
 const OPTIONS = [
@@ -40,6 +42,10 @@ export default function Signup() {
         headers: { Accept: "application/json" },
       });
       if (res.ok) {
+        trackWaitlistJoined(String(new FormData(form).get("email") ?? ""), {
+          form: "signup_section",
+          headache: value,
+        });
         setSubmitted(true);
       } else {
         if (btn) btn.disabled = false;
