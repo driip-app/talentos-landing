@@ -2,17 +2,17 @@ import { useState, useEffect } from "react";
 import StaggeredMenu from "./StaggeredMenu";
 
 interface NavProps {
-  onOpenWaitlist: () => void;
+  onOpenEarlyAccess: () => void;
 }
 
 const mobileMenuItems = [
   { label: "Meet the Agents", ariaLabel: "See the agent lineup", link: "#platform" },
   { label: "Agent Superpowers", ariaLabel: "See what the agents can do", link: "#features" },
   { label: "Find Your Agent", ariaLabel: "Find the right agent for you", link: "#personas" },
-  { label: "Early Access Pass", ariaLabel: "Join the waitlist", link: "#demo" },
+  { label: "Early Access Pass", ariaLabel: "Request an early access pass", link: "#demo" },
 ];
 
-export default function Nav({ onOpenWaitlist }: NavProps) {
+export default function Nav({ onOpenEarlyAccess }: NavProps) {
   const [isMobile, setIsMobile] = useState(false);
   const [menuOpenColor, setMenuOpenColor] = useState("");
 
@@ -38,6 +38,8 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
         colors={["#9F73E6", "#6342AC"]}
         accentColor="#9F73E6"
         logoUrl="/images/driip-logo.png"
+        ctaLabel="Register / Login"
+        onCtaClick={onOpenEarlyAccess}
       />
     );
   }
@@ -54,7 +56,7 @@ export default function Nav({ onOpenWaitlist }: NavProps) {
         <a href="#personas">Find Your Agent</a>
         <a href="#demo">Early Access Pass</a>
       </div>
-      <a href="#demo" className="nav-cta" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none" }}>Join the waitlist</a>
+      <button type="button" onClick={onOpenEarlyAccess} className="nav-cta" style={{ fontFamily: "'Inter', sans-serif", textTransform: "none", border: "none", cursor: "pointer" }}>Register / Login</button>
     </nav>
   );
 }
