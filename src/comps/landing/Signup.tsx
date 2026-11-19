@@ -62,7 +62,7 @@ export default function Signup() {
       </div>
       <div className="signup-inner">
         <h2 className="signup-title syne">Your next great hire is<br className="mobile-br" /> in<br />{" "}that pile <em>right now.</em></h2>
-        <p className="signup-sub">Join our waitlist. No enterprise pricing drama.</p>
+        <p className="signup-sub">Request an early access pass. No enterprise pricing drama.</p>
         <div className="signup-form">
           {!submitted ? (
             <form onSubmit={handleSubmit}>
@@ -102,7 +102,7 @@ export default function Signup() {
                 </div>
               </div>
               <button type="submit" className="form-submit" style={{ width: "100%", marginTop: 20, padding: 12, borderRadius: 6, background: "var(--driip-orange)", border: "none", color: "var(--dark)", fontSize: 13, fontFamily: "'Inter', sans-serif", fontWeight: 600, letterSpacing: ".04em", textTransform: "none", cursor: "pointer", transition: "all 0.18s" }} onMouseEnter={e => { e.currentTarget.style.filter = "brightness(.92)"; }} onMouseLeave={e => { e.currentTarget.style.filter = ""; }}>
-                Get Early Access
+                Request Early Access Pass
               </button>
             </form>
           ) : (

@@ -1,15 +1,18 @@
 import Head from "next/head";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import Nav from "@/comps/landing/Nav";
 import Hero from "@/comps/landing/Hero";
 import Platform from "@/comps/landing/Platform";
 import Features from "@/comps/landing/Features";
 import Signup from "@/comps/landing/Signup";
+import EarlyAccessCard from "@/comps/landing/EarlyAccessCard";
 import AgentFinderSection from "@/comps/AgentFinderSection";
 import TalentOSWaitlist from "@/comps/TalentOSWaitlist";
 
 export default function TalentOSPage() {
   const [showWaitlist, setShowWaitlist] = useState(false);
+  const [showEarlyAccess, setShowEarlyAccess] = useState(false);
+  const closeEarlyAccess = useCallback(() => setShowEarlyAccess(false), []);
 
   return (
     <>
@@ -23,12 +26,13 @@ export default function TalentOSPage() {
           rel="stylesheet"
         />
       </Head>
-      <Nav onOpenWaitlist={() => setShowWaitlist(true)} />
+      <Nav onOpenEarlyAccess={() => setShowEarlyAccess(true)} />
       <Hero onOpenWaitlist={() => setShowWaitlist(true)} />
       <Platform />
       <Features />
       <AgentFinderSection />
       <Signup />
+      <EarlyAccessCard open={showEarlyAccess} onClose={closeEarlyAccess} />
       {showWaitlist && (
         <div style={{ position: "fixed", inset: 0, zIndex: 1000, overflowY: "auto" }}>
           <button

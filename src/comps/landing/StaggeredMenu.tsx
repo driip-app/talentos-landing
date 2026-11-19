@@ -27,6 +27,9 @@ export interface StaggeredMenuProps {
   changeMenuColorOnOpen?: boolean;
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
+  /** Optional button shown in the header next to the menu toggle. */
+  ctaLabel?: string;
+  onCtaClick?: () => void;
 }
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
@@ -44,7 +47,9 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   accentColor = '#9F73E6',
   isFixed = false,
   onMenuOpen,
-  onMenuClose
+  onMenuClose,
+  ctaLabel,
+  onCtaClick
 }: StaggeredMenuProps) => {
   const [open, setOpen] = useState(false);
   const openRef = useRef(false);
@@ -403,6 +408,12 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
             />
           </a>
 
+          <div className="flex items-center gap-4 pointer-events-auto">
+          {ctaLabel && onCtaClick && !open && (
+            <button type="button" className="sm-cta" onClick={onCtaClick}>
+              {ctaLabel}
+            </button>
+          )}
           <button
             ref={toggleBtnRef}
             className="sm-toggle relative inline-flex items-center gap-[0.3rem] bg-transparent border-0 cursor-pointer font-medium leading-none overflow-visible pointer-events-auto"
@@ -441,6 +452,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
               />
             </span>
           </button>
+          </div>
         </header>
 
         <aside
