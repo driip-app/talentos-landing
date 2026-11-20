@@ -34,7 +34,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filt
 .nav-logo img{width:90px;height:auto;display:block;}
 .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);transition:color .15s;}
 .nav-links a:hover{color:var(--driip);}
-.nav-cta{background:var(--driip-orange);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;font-family:'Roboto Mono',monospace;transition:all .18s;white-space:nowrap;}
+.nav-cta{background:var(--driip-orange);color:var(--dark);padding:8px 18px;border-radius:6px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;font-family:'Roboto Mono',monospace;transition:all .18s;white-space:nowrap;}
 .nav-cta:hover{background:var(--driip-orange);color:var(--dark);filter:brightness(.92);transform:translateY(-1px);}
 
 .hero{background:var(--dark);padding:96px 48px 88px;position:relative;overflow:hidden;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
@@ -68,7 +68,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(8,8,11,0.96);backdrop-filt
 .hero-banner:hover::after{animation:bannerSheen 0.65s ease forwards;}
 @keyframes bannerSheen{from{left:-70%}to{left:130%}}
 .hero-banner-text{font-family:'Geom',sans-serif;font-size:16px;font-weight:700;color:rgba(255,255,255,0.88);}
-.hero-cta{background:var(--driip-orange);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:12px;font-weight:400;letter-spacing:.04em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
+.hero-cta{background:var(--driip-orange);color:var(--dark);width:134px;height:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-radius:8px;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:all .18s;font-family:'Roboto Mono',monospace;}
 .hero-cta:hover{background:var(--driip-orange);color:var(--dark);filter:brightness(.92);transform:translateY(-1px);}
 .hero-stats{display:flex;gap:28px;padding:18px 0;}
 .stat-num{font-family:'Geom',sans-serif;font-size:26px;font-weight:800;color:var(--lime);line-height:1;margin-bottom:3px;}
